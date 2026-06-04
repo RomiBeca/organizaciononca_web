@@ -1,0 +1,37 @@
+/* quienes_somos.css*/
+.hero-nosotros {
+      min-height: 68vh;
+    padding-top: 341px; /* 👈 clave */
+  background: url("../img/5.otros_elementos/Wallpaper/Gemini_Generated_Image_1.png") no-repeat center center;
+  background-size: cover;
+}
+
+.container_tituloNosotros {
+}
+
+------ .card {
+  max-width: 320px; /* Achica la card */
+  margin: 0 auto; /* La centra dentro de su columna */
+  border-radius: 15px;
+}
+
+.card img {
+  display: block; /* Permite centrar la imagen */
+  margin: 0 auto; /* Centro horizontal */
+  border-radius: 15px; /* Puntas redondeadas */
+  object-fit: cover; /* Ajuste visual atractivo */
+}
+.profesor_cd {
+  padding-top: 35px;
+}
+#felipePhoto {
+  width: 57%;
+  object-fit: cover;
+  display: block;
+}
+#camiloPhoto {
+  width: 80%;
+}
+.cv {
+  text-align: center;
+}

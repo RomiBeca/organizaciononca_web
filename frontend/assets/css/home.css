@@ -1,0 +1,152 @@
+.quees {
+  margin-top: 10rem;
+  margin-bottom: 8rem;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+
+/* ========================================= */
+/*   BOTÓN "CONOCER MÁS"                     */
+/* ========================================= */
+
+.masDnosotros {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.boton-quienes {
+  height: 60px;
+  width: 363px;
+  font-weight: 700;
+  font-size: x-large;
+}
+
+/* ========================================= */
+/*   CARDS ACCESOS RÁPIDOS                  */
+/* ========================================= */
+
+.acces-card {
+  width: 100%;
+  min-height: 150px;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+
+  /* 🔥 BASE AMARILLA (CAMBIO CLAVE) */
+  background-color: #ffc107;
+  color: #000;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* TEXTOS */
+.acces-card h4,
+.acces-card h3 {
+  margin-bottom: 10px;
+}
+
+.acces-card p {
+  margin: 0;
+  color: #000;
+}
+
+/* ========================================= */
+/* OVERLAY GENERAL (para TODAS)             */
+/* ========================================= */
+
+.acces-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+/* Texto sobre overlay */
+.acces-card h3,
+.acces-card h4,
+.acces-card p {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+/* ========================================= */
+/* HOVER GENERAL (animación base)           */
+/* ========================================= */
+
+.acces-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Activar overlay */
+.acces-card:hover::before {
+  opacity: 1;
+}
+
+/* Texto blanco en hover */
+.acces-card:hover h3,
+.acces-card:hover h4,
+.acces-card:hover p {
+  color: #fff;
+}
+
+/* ========================================= */
+/* 🔥 IMÁGENES PERSONALIZADAS POR CARD      */
+/* ========================================= */
+
+/* CLASES */
+.clases-card:hover {
+  background-image: url("../img/2.logos/organizaçãoOnça_jaguar.png"); /* 👈 CAMBIA ESTO */
+  background-size: cover;
+  background-position: center;
+}
+
+/* GALERÍA */
+.galeria-card:hover {
+  background-image: url("../img/6.Galeria/2025/1.Presentacion_dia_de_la_danza_27abril2025/IMG-20250507-WA0017.jpg"); /* 👈 CAMBIA ESTO */
+  background-size: cover;
+  background-position: center;
+}
+
+/* SAO PAULO */
+.sao-card:hover {
+  background-image: url("../img/5.otros_elementos/brasil.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ========================================= */
+/* CARD DESTACADA (SAO PAULO)               */
+/* ========================================= */
+
+.destaque-card {
+  min-height: 180px;
+  border: 2px solid #000;
+}
+
+/* ========================================= */
+/*   CARD PNG SIN FONDO                     */
+/* ========================================= */
+
+#cf-card {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+#cf-sfondo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}

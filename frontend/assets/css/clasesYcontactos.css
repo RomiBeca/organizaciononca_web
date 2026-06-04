@@ -1,0 +1,85 @@
+/* calendario.css */
+
+/* =============================
+   CONTENEDOR GENERAL
+   ============================= */
+.container {
+  border-radius: 8px;
+}
+
+#logo_sobreCalendario {
+  width: 150px;
+}
+
+/* =============================
+   EVENTOS ESPECIALES (NARANJO)
+   ============================= */
+.bg-evento {
+  background-color: #ff8c42 !important; /* Naranjo cálido */
+  color: #000000 !important; /* Texto negro */
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.text-orange {
+  color: #ff8c42;
+}
+.text-feriado {
+  color: #d10000 !important;
+  font-weight: bold;
+}
+
+/* =============================
+   CALENDARIO — ESTILOS BASE
+   ============================= */
+.calendar-box {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background: white;
+}
+
+.calendar-box table {
+  width: 100%;
+  text-align: center;
+}
+
+.calendar-box th {
+  padding: 10px;
+  background: #eeeeee7c;
+}
+
+/* Celdas de días */
+.calendar-box td {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Hover general */
+.calendar-box td:hover {
+  background: #d0f0d0;
+}
+
+/* =============================
+   FORZAR ESTILOS PARA FERIADOS
+   ============================= */
+td.text-danger {
+  color: #dc3545 !important; /* Rojo Bootstrap */
+  font-weight: bold !important;
+}
+
+/* =============================
+   FORZAR COLOR PARA DÍAS CON TEXTO OSCURO
+   (cuando no son feriados ni eventos)
+   ============================= */
+td.text-dark {
+  color: #000000 !important;
+}
+/*================================
+Contactos
+===================================
+*/
+.btnWhatsApp {
+  margin-left: 15px;
+}

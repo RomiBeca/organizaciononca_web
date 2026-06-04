@@ -1,0 +1,6 @@
+.hero-nosotros {
+  min-height: 35vh;
+  padding-top: 22px; /* 👈 clave */
+  background: url("../img/5.otros_elementos/iclogo.png") no-repeat center center;
+  background-size: cover;
+}

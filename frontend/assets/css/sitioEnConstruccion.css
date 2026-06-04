@@ -1,0 +1,82 @@
+/* =============================== */
+/*  ESTRUCTURA GENERAL PARA FOOTER */
+/* =============================== */
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =============================== */
+/*               HERO              */
+/* =============================== */
+
+.construction-hero {
+  flex: 1;
+  padding: 90px 20px;
+
+  /* Fondo negro + logo transparente encima */
+  background-color: #000; /* <<<<<< AQUI SE SOLUCIONA */
+  background-image: url("../img/logos/organização onças - fin Fondo_brasilChile_jaguar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; /* Mantiene el logo sin deformarse */
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Capa oscura encima para dar contraste */
+.construction-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* =============================== */
+/*            TEXTO CENTRAL        */
+/* =============================== */
+
+.construction-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 10px;
+
+  background: rgba(165, 42, 42, 0.5);
+}
+
+.construction-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.construction-text p {
+  font-size: 1.3rem;
+}
+
+/* =============================== */
+/*         ICONO ANIMADO           */
+/* =============================== */
+
+.icon-animado {
+  font-size: 5rem;
+  color: #ffc107;
+  animation: giro 3s infinite linear;
+}
+
+@keyframes giro {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

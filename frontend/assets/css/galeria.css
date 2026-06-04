@@ -1,0 +1,62 @@
+/* ========================================================= */
+/*                       HERO PRINCIPAL                      */
+/* ========================================================= */
+.galeria-hero {
+  height: 45vh;
+   background: url("../img/5.otros_elementos/7.Wallpaper/Gemini_Generated_Image_3.png") center/cover no-repeat;
+  position: relative;
+}
+
+.galeria-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* ========================================================= */
+/*                     IMÁGENES GENERALES                    */
+/* ========================================================= */
+.galeria-img {
+  border-radius: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.galeria-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ========================================================= */
+/*                   ESTILO DE SECCIONES TITULOS             */
+/* ========================================================= */
+.galeria-section h3 {
+  border-left: 6px solid #ffc107;
+  padding-left: 10px;
+}
+
+/* ========================================================= */
+/*                      TARJETAS DE EVENTO                   */
+/* ========================================================= */
+.galeria-card {
+  background-color: #ffffff;
+  border-left: 8px solid #ffc107;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 12px;
+}
+
+.galeria-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================================= */
+/*                     MINIATURAS EN EVENTOS                 */
+/* ========================================================= */
+.galeria-small {
+  height: 120px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}

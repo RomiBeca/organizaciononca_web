@@ -1,0 +1,30 @@
+/* ---------- HERO PERSONALIZADO ---------- */
+.hero {
+  min-height: 91vh; /* Altura mínima para que no se corte */
+  background: url("../img/5.otros_elementos/Wallpaper/Gemini_Generated_Image_4.png") no-repeat
+    center center;
+  background-size: cover; /* Ajusta la imagen manteniendo proporción */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* ========================================= */
+/*   titulo y subtitulo home*/
+/* ========================================= */
+
+.titulo1 {
+  color: white;
+  text-shadow: 0 0 12px black;
+  font-size: 3rem;
+}
+
+.subtitulo1 {
+  color: #fdd835;
+  text-shadow: 0 0 8px black;
+  font-size: 1.3rem;
+}
