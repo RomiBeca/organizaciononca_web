@@ -39,3 +39,18 @@
 .cv {
   text-align: center;
 }
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 991px) {
+  .hero-nosotros  { padding-top: 100px; min-height: 50vh; }
+  #historiaPhoto  { width: 85%; }
+  #camiloPhoto    { width: 60%; }
+  #felipePhoto    { width: 55%; }
+}
+
+@media (max-width: 767px) {
+  .hero-nosotros  { padding-top: 80px; min-height: 40vh; }
+  #historiaPhoto  { width: 100%; }
+  #camiloPhoto    { width: 70%; }
+  #felipePhoto    { width: 65%; }
+}

@@ -83,3 +83,15 @@ Contactos
 .btnWhatsApp {
   margin-left: 15px;
 }
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 575px) {
+  .calendar-box td,
+  .calendar-box th {
+    padding: 5px 2px;
+    font-size: 0.72rem;
+  }
+  .calendar-box {
+    padding: 10px;
+  }
+}

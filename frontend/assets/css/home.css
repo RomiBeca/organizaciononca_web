@@ -84,7 +84,8 @@
 
 .boton-quienes {
   height: 60px;
-  width: 363px;
+  width: 100%;
+  max-width: 363px;
   font-weight: 700;
   font-size: x-large;
 }
@@ -194,6 +195,23 @@
 .destaque-card {
   min-height: 180px;
   border: 2px solid #000;
+}
+
+/* ========================================= */
+/* RESPONSIVE                               */
+/* ========================================= */
+@media (max-width: 767px) {
+  .quees {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .boton-quienes {
+    font-size: 1.1rem;
+    height: auto;
+    padding: 0.75rem 1rem;
+  }
 }
 
 /* ========================================= */
