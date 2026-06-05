@@ -1,3 +1,36 @@
+/* ── THEME VARIABLES ─────────────────────────────────────────── */
+:root,
+[data-bs-theme="dark"] {
+  --onca-bg-section: #1a1a1a;
+  --onca-bg-card:    #2a2a2a;
+  --onca-text:       #ffffff;
+  --onca-text-muted: #bbbbbb;
+}
+
+[data-bs-theme="light"] {
+  --onca-bg-section: #f4f4f4;
+  --onca-bg-card:    #ffffff;
+  --onca-text:       #212529;
+  --onca-text-muted: #6c757d;
+}
+
+/* ── NAVBAR CONTROLS ─────────────────────────────────────────── */
+.nav-ui-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding-left: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+.btn-lang {
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 0.15rem 0.5rem;
+}
+
 /* ---------- HERO PERSONALIZADO ---------- */
 .hero {
   min-height: 91vh; /* Altura mínima para que no se corte */

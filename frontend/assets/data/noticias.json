@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "mes": "Junio 2026",
+    "mes_pt": "Junho 2026",
+    "fecha": "Viernes 12 Jun 2026",
+    "fecha_pt": "Sexta 12 Jun 2026",
+    "titulo": "Roda Especial – inauguración nuevo espacio",
+    "titulo_pt": "Roda Especial – inauguração do novo espaço",
+    "resumen": "Roda abierta de inauguración. ¡Todos bienvenidos!",
+    "resumen_pt": "Roda aberta de inauguração. Todos são bem-vindos!",
+    "descripcion": "Ven a compartir y disfrutar con nosotros nuestro nuevo espacio de entrenamiento.",
+    "descripcion_pt": "Venha compartilhar e aproveitar nosso novo espaço de treinamento.",
+    "imagen": "img/7.Noticias/RodaInaguracionNuevoesoacio_12.png",
+    "destacado": true
+  }
+]

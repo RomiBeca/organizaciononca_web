@@ -1,3 +1,71 @@
+/* ========================================= */
+/*   SECCIÓN NOTICIAS / EVENTOS ESPECIALES  */
+/* ========================================= */
+
+.noticias-section {
+  background-color: #1a1a1a;
+  border-top: 4px solid #ffc107;
+  border-bottom: 4px solid #ffc107;
+}
+
+.noticias-section h2 {
+  color: #fff;
+}
+
+.noticias-badge {
+  background-color: #ffc107;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35em 0.85em;
+  border-radius: 20px;
+  animation: pulseBadge 2s ease-in-out infinite;
+}
+
+@keyframes pulseBadge {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+  50%       { box-shadow: 0 0 0 8px rgba(255, 193, 7, 0); }
+}
+
+.noticia-card {
+  background-color: var(--onca-bg-card);
+  border-left: 4px solid #ffc107;
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noticia-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(255, 193, 7, 0.2);
+}
+
+.noticia-fecha {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffc107;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.noticia-titulo {
+  color: var(--onca-text);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.noticia-desc {
+  color: var(--onca-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* ========================================= */
+
 .quees {
   margin-top: 10rem;
   margin-bottom: 8rem;
@@ -111,11 +179,6 @@
 }
 
 /* GALERÍA */
-.galeria-card:hover {
-  background-image: url("../img/6.Galeria/2025/1.Presentacion_dia_de_la_danza_27abril2025/IMG-20250507-WA0017.jpg"); /* 👈 CAMBIA ESTO */
-  background-size: cover;
-  background-position: center;
-}
 
 /* SAO PAULO */
 .sao-card:hover {
@@ -145,6 +208,7 @@
 }
 
 #cf-sfondo {
+  border-radius: 22px;
   display: block;
   width: 100%;
   height: auto;

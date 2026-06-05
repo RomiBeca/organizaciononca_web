@@ -1,14 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="La raíz de Organização Onça: nuestra conexión con São Paulo, Brasil. Historia, linaje de Mestre Bimba y el Contramestre Cabelo Pé de Serra.">
-    <link rel="icon" type="image/png" href="../img/2.logos/organizaçãoOnça_jaguar.png">
+    <meta
+      name="description"
+      content="La raíz de Organização Onça: nuestra conexión con São Paulo, Brasil. Historia, linaje de Mestre Bimba y el Contramestre Cabelo Pé de Serra."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../img/2.logos/organizaçãoOnça_jaguar.png"
+    />
 
     <!-- BOOTSTRAP -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,6 +26,12 @@
     <link rel="stylesheet" href="../css/sao_paulo.css" />
 
     <title>São Paulo - Organização Onça</title>
+    <script>
+      document.documentElement.setAttribute(
+        "data-bs-theme",
+        localStorage.getItem("onca-theme") || "dark",
+      );
+    </script>
   </head>
 
   <body>
@@ -41,21 +54,60 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="nosotros.html">Nosotros</a>
+              <a class="nav-link" href="nosotros.html" data-i18n="nav.nosotros"
+                >Nosotros</a
+              >
             </li>
-
             <li class="nav-item">
-              <a class="nav-link" href="clases_contactos.html">Clases & Horarios</a>
+              <a class="nav-link" href="galeria.html" data-i18n="nav.galeria"
+                >Galería</a
+              >
             </li>
-
             <li class="nav-item">
-              <a class="nav-link" href="galeria.html">Galería</a>
+              <a class="nav-link" href="noticias.html" data-i18n="nav.noticias"
+                >Noticias</a
+              >
             </li>
-
             <li class="nav-item">
-              <a class="nav-link active" href="sao_paulo.html">São Paulo</a>
+              <a
+                class="nav-link active"
+                href="sao_paulo.html"
+                data-i18n="nav.saopaulo"
+                >São Paulo</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="clases_contactos.html"
+                data-i18n="nav.clases"
+                >Clases & Horarios</a
+              >
             </li>
           </ul>
+          <div class="nav-ui-controls">
+            <button
+              id="btn-lang-es"
+              onclick="uiSetLang('es')"
+              class="btn btn-lang btn-warning"
+            >
+              ES
+            </button>
+            <button
+              id="btn-lang-pt"
+              onclick="uiSetLang('pt')"
+              class="btn btn-lang btn-outline-secondary"
+            >
+              PT
+            </button>
+            <button
+              data-theme-icon
+              onclick="uiToggleTheme()"
+              class="btn btn-lang btn-outline-secondary ms-1"
+            >
+              ☀
+            </button>
+          </div>
         </div>
       </div>
     </nav>
@@ -64,8 +116,7 @@
     <!-- HERO PRINCIPAL -->
     <!-- ========================================================= -->
     <section
-      class="hero-nosotros d-flex justify-content-center align-items-center text-center "
-     
+      class="hero-nosotros d-flex justify-content-center align-items-center text-center"
     >
       <div class="container text-white bg-dark bg-opacity-50">
         <h1 class="fw-bold">São Paulo – Raíz de la Organização Onça</h1>
@@ -106,7 +157,8 @@
               <img
                 src="../img/1.Profesores/Brasil/formatura_29-30_nov.jpg"
                 alt="grupo organizacion oncas"
-                class="card-img-top" loading="lazy"
+                class="card-img-top"
+                loading="lazy"
               />
             </div>
           </div>
@@ -131,7 +183,8 @@
               <img
                 src="../img/arbol_onca.jpg"
                 alt="Árbol Genealógico Organização Onça"
-                class="card-img-top" loading="lazy"
+                class="card-img-top"
+                loading="lazy"
               />
             </div>
           </div>
@@ -164,16 +217,85 @@
           <div class="col-lg-6">
             <div class="card shadow">
               <img
-                src="../img/fotos_Horizontal/roda_SP.jpg"
+                src="../img/2.logos/logo_vChile_CMCabelo(SFondo).png"
                 alt="Roda en São Paulo"
-                class="card-img-top" loading="lazy"
+                class="card-img-top"
+                loading="lazy"
               />
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- ========================================================= -->
+    <!-- SECCIÓN 4.0: MESTRE Joel-->
+    <!-- ========================================================= -->
+    <section class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-5">Mestre Joel</h2>
 
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow p-3">
+              <img
+                src="../img/1.Profesores/Brasil/mestre_joel.png"
+                class="card-img-top rounded"
+                alt="Mestre Joel"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-8 mt-4">
+            <p class="fs-5">
+              Nacido el 28 de febrero de 1944 en Santo Amaro, Brasil, Mestre Joel
+              creció en Feira de Santana y se inició en la capoeira bajo la guía de
+              Mestre Arara, discípulo directo de Mestre Bimba. Desde sus primeros
+              años como practicante, se distinguió por su compromiso con las raíces
+              y tradiciones de este arte. Durante la década de 1960 comenzó a viajar
+              con frecuencia a São Paulo, donde fue figura clave en la fundación y
+              expansión de varios grupos de capoeira. En 1972, Mestre Bimba lo
+              reconoció oficialmente como mestre.
+            </p>
+            <p class="fs-5">
+              Fundó también la Associação de Capoeira Ilha de Itapuã, consolidando
+              así su legado como formador y organizador .
+            <p class="fs-5">
+              Su influencia trascendió Bahía y dejó una huella imborrable en la
+              capoeira paulista. Es recordado como uno de los primeros mestres en
+              grabar música de capoeira, preservando para las generaciones futuras
+              las canciones y tradiciones que dan vida a este arte marcial.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================= -->
+    <!-- SECCIÓN 4.1: MESTRE Cobrinha-->
+    <!-- ========================================================= -->
+    <section class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-5">Mestre Cobrinha</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow p-3">
+              <img
+                src="../img/1.Profesores/Brasil/mestreCobrinha.jpg"
+                class="card-img-top rounded"
+                alt="Mestre Cobrinha"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-8 mt-4">
+            <p class="fs-5">
+              Mestre Cobrinha hijo de Mestre Joel, referente de la capoeira en
+              sao pablo y la roda de la plaza de la republica .
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- ========================================================= -->
     <!-- SECCIÓN 4: CONTRAMESTRE -->
     <!-- ========================================================= -->
@@ -223,7 +345,8 @@
               <img
                 src="../img/3.graduaciones/cuerdas Niños.jpg"
                 alt="Graduación niños Organização Onça"
-                class="card-img-top" loading="lazy"
+                class="card-img-top"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="fw-bold">Graduación – Niños</h5>
@@ -237,7 +360,8 @@
               <img
                 src="../img/3.graduaciones/Cuerdas Adultos.jpg"
                 alt="Graduación adultos Organização Onça"
-                class="card-img-top" loading="lazy"
+                class="card-img-top"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="fw-bold">Graduación – Adultos</h5>
@@ -260,5 +384,6 @@
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/ui.js"></script>
   </body>
 </html>

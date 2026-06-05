@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Noticias y eventos de Organização Onça – Capoeira en Chile." />
+    <link rel="icon" type="image/png" href="../img/2.logos/organizaçãoOnça_jaguar.png" />
+
+    <!-- BOOTSTRAP -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/noticias.css" />
+
+    <title>Noticias – Organização Onça</title>
+    <script>document.documentElement.setAttribute('data-bs-theme',localStorage.getItem('onca-theme')||'dark');</script>
+  </head>
+
+  <body>
+    <!-- ========================================================= -->
+    <!-- NAVBAR -->
+    <!-- ========================================================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="/index.html">Home</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html" data-i18n="nav.galeria">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="noticias.html" data-i18n="nav.noticias">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sao_paulo.html" data-i18n="nav.saopaulo">São Paulo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clases_contactos.html" data-i18n="nav.clases">Clases & Horarios</a>
+            </li>
+          </ul>
+          <div class="nav-ui-controls">
+            <button id="btn-lang-es" onclick="uiSetLang('es')" class="btn btn-lang btn-warning">ES</button>
+            <button id="btn-lang-pt" onclick="uiSetLang('pt')" class="btn btn-lang btn-outline-secondary">PT</button>
+            <button data-theme-icon onclick="uiToggleTheme()" class="btn btn-lang btn-outline-secondary ms-1">☀</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========================================================= -->
+    <!-- HERO -->
+    <!-- ========================================================= -->
+    <section class="hero-noticias d-flex justify-content-center align-items-center text-center">
+      <div class="container text-white">
+        <h1 class="fw-bold" data-i18n="noticias.hero.titulo">Noticias & Eventos</h1>
+        <p class="mt-2 fs-5" data-i18n="noticias.hero.sub">Lo que está pasando en Organização Onça</p>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- CONTENIDO: se llena con JS desde noticias.json           -->
+    <!-- ========================================================= -->
+    <section class="py-5" style="background-color:var(--onca-bg-section)">
+      <div class="container">
+        <div id="noticias-page-container">
+          <p class="text-center text-body-secondary" id="loading-msg" data-i18n="noticias.cargando">Cargando noticias…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================================= -->
+    <footer class="py-4 bg-dark text-white border-top border-secondary">
+      <div class="container text-center">
+        <p class="mb-0">Organização Onça © 2026</p>
+        <p class="mb-0">contacto@onca.cl</p>
+      </div>
+    </footer>
+
+    <!-- MODAL AFICHE -->
+    <div class="modal fade" id="modal-afiche" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark border-secondary">
+          <div class="modal-header border-secondary py-2 px-3">
+            <h6 class="modal-title text-white mb-0" id="modal-afiche-titulo"></h6>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body p-2 text-center">
+            <img id="modal-afiche-img" src="" alt="" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/ui.js"></script>
+
+    <script>
+      (async () => {
+        const container = document.getElementById('noticias-page-container');
+        const lang = localStorage.getItem('onca-lang') || 'es';
+
+        try {
+          const res = await fetch('../data/noticias.json');
+          if (!res.ok) throw new Error();
+          const noticias = await res.json();
+
+          if (!noticias.length) {
+            container.innerHTML = `<p class="text-center text-body-secondary py-5">${window.uiT('noticias.vacia')}</p>`;
+            return;
+          }
+
+          // Agrupar por mes (usando campo localizado)
+          const porMes = {};
+          noticias.forEach(n => {
+            const mes = n['mes_' + lang] || n.mes;
+            if (!porMes[mes]) porMes[mes] = [];
+            porMes[mes].push(n);
+          });
+
+          const verAfiche = window.uiT('noticias.ver');
+          const destacadoLabel = lang === 'pt' ? 'Destaque' : 'Destacado';
+
+          container.innerHTML = Object.entries(porMes).map(([mes, items]) => `
+            <div class="mb-5">
+              <h3 class="mes-titulo">${mes}</h3>
+              <div class="row g-4">
+                ${items.map(n => `
+                  <div class="col-md-6" id="noticia-${n.id}">
+                    <div class="noticia-full-card${n.destacado ? ' noticia-destacada' : ''}">
+                      ${n.imagen
+                        ? `<div class="noticia-img-wrapper" data-bs-toggle="modal" data-bs-target="#modal-afiche" data-src="../${n.imagen}" data-alt="${n['titulo_' + lang] || n.titulo}">
+                             <img src="../${n.imagen}" alt="${n['titulo_' + lang] || n.titulo}" class="noticia-full-img" loading="lazy">
+                             <div class="noticia-img-overlay"><span>${verAfiche}</span></div>
+                           </div>`
+                        : `<div class="noticia-img-placeholder"></div>`
+                      }
+                      <div class="noticia-full-body">
+                        ${n.destacado ? `<span class="badge-destacado">${destacadoLabel}</span>` : ''}
+                        <div class="noticia-fecha">${n['fecha_' + lang] || n.fecha}</div>
+                        <h4 class="noticia-titulo">${n['titulo_' + lang] || n.titulo}</h4>
+                        <p class="noticia-desc">${n['descripcion_' + lang] || n.descripcion}</p>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `).join('');
+
+          // Modal afiche
+          document.getElementById('modal-afiche').addEventListener('show.bs.modal', e => {
+            const trigger = e.relatedTarget;
+            document.getElementById('modal-afiche-img').src = trigger.dataset.src;
+            document.getElementById('modal-afiche-img').alt = trigger.dataset.alt;
+            document.getElementById('modal-afiche-titulo').textContent = trigger.dataset.alt;
+          });
+
+          // Ir al anchor si viene desde home (#noticia-X)
+          if (location.hash) {
+            setTimeout(() => {
+              const el = document.querySelector(location.hash);
+              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+          }
+
+        } catch {
+          container.innerHTML = `<p class="text-center text-body-secondary py-5">${window.uiT('noticias.error')}<br><small>${window.uiT('noticias.error.sub')}</small></p>`;
+        }
+      })();
+    </script>
+  </body>
+</html>

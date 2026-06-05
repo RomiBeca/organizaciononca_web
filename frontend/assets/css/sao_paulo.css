@@ -4,3 +4,10 @@
   background: url("../img/5.otros_elementos/iclogo.png") no-repeat center center;
   background-size: cover;
 }
+p{
+  text-align: justify;
+  padding: 0 15px;
+}
+li{
+  text-align: justify;
+}

@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../../css/galeria.css" />
 
     <title>Galería - Capoeira Organização Onça</title>
+    <script>document.documentElement.setAttribute('data-bs-theme',localStorage.getItem('onca-theme')||'dark');</script>
   </head>
 
   <body>
@@ -45,18 +46,26 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="../nosotros.html">Nosotros</a>
+              <a class="nav-link" href="../nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../clases_contactos.html">Clases & Horarios</a>
+              <a class="nav-link active" href="../galeria.html" data-i18n="nav.galeria">Galería</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="../galeria.html">Galería</a>
+              <a class="nav-link" href="../noticias.html" data-i18n="nav.noticias">Noticias</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../sao_paulo.html">São Paulo</a>
+              <a class="nav-link" href="../sao_paulo.html" data-i18n="nav.saopaulo">São Paulo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../clases_contactos.html" data-i18n="nav.clases">Clases & Horarios</a>
             </li>
           </ul>
+          <div class="nav-ui-controls">
+            <button id="btn-lang-es" onclick="uiSetLang('es')" class="btn btn-lang btn-warning">ES</button>
+            <button id="btn-lang-pt" onclick="uiSetLang('pt')" class="btn btn-lang btn-outline-secondary">PT</button>
+            <button data-theme-icon onclick="uiToggleTheme()" class="btn btn-lang btn-outline-secondary ms-1">☀</button>
+          </div>
         </div>
       </div>
     </nav>
@@ -98,7 +107,7 @@
               </p>
 
               <a
-                href="sitioEnConstruccion.html"
+                href="./galeria_danza_2025.html"
                 class="btn btn-warning fw-bold"
               >
                 Ver galería completa →
@@ -110,19 +119,19 @@
               <div class="row g-3">
                 <div class="col-4">
                   <img
-                    src="../../img/6.Galeria/2025/1.Presentacion dia de la danza 27 abril 2025/IMG-20250507-WA0017.jpg"
+                    src="../../img/6.Galeria/2025/1.Presentacion_dia_de_la_danza_27abril2025/IMG-20250507-WA0017.jpg"
                     class="img-fluid rounded galeria-small" loading="lazy"
                   />
                 </div>
                 <div class="col-4">
                   <img
-                    src="../../img/6.Galeria/2025/1.Presentacion dia de la danza 27 abril 2025/IMG-20250507-WA0019.jpg"
+                    src="../../img/6.Galeria/2025/1.Presentacion_dia_de_la_danza_27abril2025/IMG-20250507-WA0019.jpg"
                     class="img-fluid rounded galeria-small" loading="lazy"
                   />
                 </div>
                 <div class="col-4">
                   <img
-                    src="../../img/6.Galeria/2025/1.Presentacion dia de la danza 27 abril 2025/IMG-20250507-WA0024.jpg"
+                    src="../../img/6.Galeria/2025/1.Presentacion_dia_de_la_danza_27abril2025/IMG-20250507-WA0024.jpg"
                     class="img-fluid rounded galeria-small" loading="lazy"
                   />
                 </div>
@@ -147,7 +156,7 @@
               </p>
 
               <a
-                href="./sitioEnConstruccion.html"
+                href="./galeria_mestre_lev_2025.html"
                 class="btn btn-warning fw-bold"
               >
                 Ver galería completa →
@@ -159,19 +168,19 @@
               <div class="row g-3">
                 <div class="col-4">
                   <img
-                    src="../../img/6.Galeria/2025/2.Mestre Levi octubre 2025/20251022_223416.jpg"
+                    src="../../img/6.Galeria/2025/2.Mestre_Lev_Octubre 2025/20251022_223416.jpg"
                     class="img-fluid rounded galeria-small" loading="lazy"
                   />
                 </div>
                 <div class="col-4">
                   <img
-                    src="../../img/6.Galeria/2025/2.Mestre Levi octubre 2025/camiloYMLevi.jpg"
+                    src="../../img/6.Galeria/2025/2.Mestre_Lev_Octubre 2025/camiloYMLevi.jpg"
                     class="img-fluid rounded galeria-small" loading="lazy"
                   />
                 </div>
                 <div class="col-4">
                   <img
-                    src="../../img/6.Galeria/2025/2.Mestre Levi octubre 2025/felipeYMLevi.jpg"
+                    src="../../img/6.Galeria/2025/2.Mestre_Lev_Octubre 2025/felipeYMLevi.jpg"
                     class="img-fluid rounded galeria-small" loading="lazy"
                   />
                 </div>
@@ -191,12 +200,11 @@
               </h3>
               <h4 class="fw-bold text-dark">14 de Diciembre 2025</h4>
               <p class="text-muted">
-                Fotografias de nuestro momento compartiendo con el gran mestre
-                Levi. Haz clic para ver todas las fotos del evento.
+                Fotografias de las trocas de nuestros queridos profesores  Camilo y Felipe. 
               </p>
 
               <a
-                href="./sitioEnConstruccion.html"
+                href="./galeria_batizado_2025.html"
                 class="btn btn-warning fw-bold"
               >
                 Ver galería completa →
@@ -208,19 +216,19 @@
               <div class="row g-3">
                 <div class="col-4">
                   <img
-                    src="../../img/6.Galeria/2025/4.Batizado y troca_BrasilSP_14Dic2025/_MG_1159.jpg"
+                    src="../../img/6.Galeria/2025/4.Batizado_ y_ troca_BrasilSP_14Dic2025/_MG_1159.jpg"
                     class="img-fluid rounded galeria-small" loading="lazy"
                   />
                 </div>
                 <div class="col-4">
                   <img
-                    src="../../img/6.Galeria/2025/4.Batizado y troca_BrasilSP_14Dic2025/_MG_1214.jpg"
+                    src="../../img/6.Galeria/2025/4.Batizado_ y_ troca_BrasilSP_14Dic2025/_MG_1214.jpg"
                     class="img-fluid rounded galeria-small" loading="lazy"
                   />
                 </div>
                 <div class="col-4">
                   <img
-                    src="../../img/6.Galeria/2025/4.Batizado y troca_BrasilSP_14Dic2025/_MG_5175.jpg"
+                    src="../../img/6.Galeria/2025/4.Batizado_ y_ troca_BrasilSP_14Dic2025/_MG_5175.jpg"
                     class="img-fluid rounded galeria-small" loading="lazy"
                   />
                 </div>
@@ -240,12 +248,11 @@
               </h3>
               <h4 class="fw-bold text-dark">20 de Diciembre 2025</h4>
               <p class="text-muted">
-                Fotografias de nuestro momento compartiendo con el gran mestre
-                Levi. Haz clic para ver todas las fotos del evento.
+                Presentacion de Maculele y muestra de capoeira  en el cierre de año de los talleres del centro cultural rojas magallanes.
               </p>
 
               <a
-                href="./sitioEnConstruccion.html"
+                href="./galeria_talleres_2025.html"
                 class="btn btn-warning fw-bold"
               >
                 Ver galería completa →
@@ -257,19 +264,19 @@
               <div class="row g-3">
                 <div class="col-4">
                   <img
-                    src="../../img/6.Galeria/2025/5.Muestra de talleres 2025 centro cultural rojas magallanes/IMG_9797.jpg"
+                    src="../../img/6.Galeria/2025/5.Muestra_talleres_ 2025_centro_cultural_rojas_magallanes/IMG_9797.jpg"
                     class="img-fluid rounded galeria-small" loading="lazy"
                   />
                 </div>
                 <div class="col-4">
                   <img
-                    src="../../img/6.Galeria/2025/5.Muestra de talleres 2025 centro cultural rojas magallanes/IMG_9763.jpg"
+                    src="../../img/6.Galeria/2025/5.Muestra_talleres_ 2025_centro_cultural_rojas_magallanes/IMG_9763.jpg"
                     class="img-fluid rounded galeria-small" loading="lazy"
                   />
                 </div>
                 <div class="col-4">
                   <img
-                    src="../../img/6.Galeria/2025/5.Muestra de talleres 2025 centro cultural rojas magallanes/IMG_9648.jpg"
+                    src="../../img/6.Galeria/2025/5.Muestra_talleres_ 2025_centro_cultural_rojas_magallanes/IMG_9648.jpg"
                     class="img-fluid rounded galeria-small" loading="lazy"
                   />
                 </div>
@@ -292,5 +299,6 @@
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/ui.js"></script>
   </body>
 </html>

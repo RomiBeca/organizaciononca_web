@@ -69,6 +69,20 @@ const eventosEspeciales = {
         comentario: "Intensivo 2026 batizado y troca Capoeira Raza y Oncas",
       },
     ],
+    5: [
+      {
+        dia: 5,
+        color: "bg-warning",
+        nombre: "Inicio de clases en Junta vecinal 'villa lomas de Macul, unidad n°18'",
+        comentario: "Inicio de clases en Junta vecinal 'villa lomas de Macul, unidad n°18'",
+      },
+      {
+        dia: 12,
+        color: "bg-warning",
+        nombre: "Roda de inauguracion Junta vecinal villa lomas de Macul, unidad n°18",
+        comentario: "Roda de inauguracion nuevo espacio de clases",
+      },
+    ],
   },
 };
 
@@ -211,7 +225,7 @@ function generarCalendario() {
     // ======================================
     const evento = eventosEspeciales[year]?.[month]?.find((e) => e.dia === dia);
     if (evento) {
-      celda.classList.add("bg-evento");
+      celda.classList.add(evento.color || "bg-evento");
       tooltip = evento.comentario || evento.nombre;
     }
 
