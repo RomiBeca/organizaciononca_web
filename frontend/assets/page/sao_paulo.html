@@ -47,6 +47,7 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-label="Abrir menú"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,59 +55,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="nosotros.html" data-i18n="nav.nosotros"
-                >Nosotros</a
-              >
+              <a class="nav-link" href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="galeria.html" data-i18n="nav.galeria"
-                >Galería</a
-              >
+              <a class="nav-link" href="galeria.html" data-i18n="nav.galeria">Galería</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="noticias.html" data-i18n="nav.noticias"
-                >Noticias</a
-              >
+              <a class="nav-link active" href="sao_paulo.html" data-i18n="nav.saopaulo">São Paulo</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="sao_paulo.html"
-                data-i18n="nav.saopaulo"
-                >São Paulo</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="clases_contactos.html"
-                data-i18n="nav.clases"
-                >Clases & Horarios</a
-              >
+              <a class="nav-link" href="clases_contactos.html" data-i18n="nav.clases">Clases & Horarios</a>
             </li>
           </ul>
           <div class="nav-ui-controls">
-            <button
-              id="btn-lang-es"
-              onclick="uiSetLang('es')"
-              class="btn btn-lang btn-warning"
-            >
-              ES
-            </button>
-            <button
-              id="btn-lang-pt"
-              onclick="uiSetLang('pt')"
-              class="btn btn-lang btn-outline-secondary"
-            >
-              PT
-            </button>
-            <button
-              data-theme-icon
-              onclick="uiToggleTheme()"
-              class="btn btn-lang btn-outline-secondary ms-1"
-            >
-              ☀
-            </button>
+            <button id="btn-lang-es" onclick="uiSetLang('es')" class="btn btn-lang btn-warning">ES</button>
+            <button id="btn-lang-pt" onclick="uiSetLang('pt')" class="btn btn-lang btn-outline-secondary">PT</button>
+            <button data-theme-icon onclick="uiToggleTheme()" class="btn btn-lang btn-outline-secondary ms-1">☀</button>
           </div>
         </div>
       </div>
@@ -119,8 +83,8 @@
       class="hero-nosotros d-flex justify-content-center align-items-center text-center"
     >
       <div class="container text-white bg-dark bg-opacity-50">
-        <h1 class="fw-bold">São Paulo – Raíz de la Organização Onça</h1>
-        <p class="fs-5 mt-3">
+        <h1 class="fw-bold" data-i18n="saopaulo.hero.titulo">São Paulo – Raíz de la Organização Onça</h1>
+        <p class="fs-5 mt-3" data-i18n="saopaulo.hero.sub">
           El corazón del grupo, donde tradición, música y movimiento se
           encuentran.
         </p>
@@ -135,8 +99,8 @@
         <div class="row align-items-center">
           <!-- TEXTO -->
           <div class="col-lg-6 mb-4">
-            <h2 class="fw-bold mb-3">Nuestros Orígenes</h2>
-            <p class="fs-5">
+            <h2 class="fw-bold mb-3" data-i18n="saopaulo.origenes.titulo">Nuestros Orígenes</h2>
+            <p class="fs-5" data-i18n="saopaulo.origenes.p1">
               La Organización Onça nace a partir de una de las raíces más
               tradicionales de la Capoeira Regional en Salvador, Bahia.
               Provenimos directamente de la línea de Mestre Bimba, creador de la
@@ -144,7 +108,7 @@
               método, disciplina e identidad cultural.
             </p>
 
-            <p class="fs-5">
+            <p class="fs-5" data-i18n="saopaulo.origenes.p2">
               La historia continúa con Mestre Joel, discípulo de Mestre Bimba,
               quien difundió esta esencia en Itapuã y formó a Mestre Cobrinha,
               consolidando la línea Onça que hoy preservamos y expandimos.
@@ -156,7 +120,7 @@
             <div class="card shadow">
               <img
                 src="../img/1.Profesores/Brasil/formatura_29-30_nov.jpg"
-                alt="grupo organizacion oncas"
+                alt="Formatura Organização Onça en Brasil"
                 class="card-img-top"
                 loading="lazy"
               />
@@ -169,10 +133,10 @@
     <!-- ========================================================= -->
     <!-- SECCIÓN 2: ÁRBOL GENEALÓGICO -->
     <!-- ========================================================= -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-body-tertiary">
       <div class="container text-center">
-        <h2 class="fw-bold mb-4">Nuestra Linaje – Árbol Genealógico</h2>
-        <p class="fs-5 mb-4">
+        <h2 class="fw-bold mb-4" data-i18n="saopaulo.linaje.titulo">Nuestra Linaje – Árbol Genealógico</h2>
+        <p class="fs-5 mb-4" data-i18n="saopaulo.linaje.sub">
           La raíz de nuestra capoeira: Mestre Bimba → Mestre Joel → Mestre
           Cobrinha → Contramestre Cabelo Pé de Serra.
         </p>
@@ -200,14 +164,14 @@
         <div class="row align-items-center flex-lg-row-reverse">
           <!-- TEXTO -->
           <div class="col-lg-6 mb-4">
-            <h2 class="fw-bold mb-3">La Matriz en São Paulo</h2>
-            <p class="fs-5">
+            <h2 class="fw-bold mb-3" data-i18n="saopaulo.matriz.titulo">La Matriz en São Paulo</h2>
+            <p class="fs-5" data-i18n="saopaulo.matriz.p1">
               Desde São Paulo se desarrolla y fortalece nuestra línea,
               manteniendo viva la esencia dejada por nuestros mestres y
               proyectándonos hacia el futuro de la capoeira en el mundo.
             </p>
 
-            <p class="fs-5">
+            <p class="fs-5" data-i18n="saopaulo.matriz.p2">
               Este espacio es un punto de encuentro, aprendizaje y formación,
               donde tradición y modernidad conviven en armonía.
             </p>
@@ -218,7 +182,7 @@
             <div class="card shadow">
               <img
                 src="../img/2.logos/logo_vChile_CMCabelo(SFondo).png"
-                alt="Roda en São Paulo"
+                alt="Logo Organização Onça Chile con Contramestre Cabelo"
                 class="card-img-top"
                 loading="lazy"
               />
@@ -227,12 +191,13 @@
         </div>
       </div>
     </section>
+
     <!-- ========================================================= -->
-    <!-- SECCIÓN 4.0: MESTRE Joel-->
+    <!-- SECCIÓN 4.0: MESTRE Joel -->
     <!-- ========================================================= -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-body-tertiary">
       <div class="container text-center">
-        <h2 class="fw-bold mb-5">Mestre Joel</h2>
+        <h2 class="fw-bold mb-5" data-i18n="saopaulo.joel.titulo">Mestre Joel</h2>
 
         <div class="row justify-content-center">
           <div class="col-md-6">
@@ -240,13 +205,14 @@
               <img
                 src="../img/1.Profesores/Brasil/mestre_joel.png"
                 class="card-img-top rounded"
-                alt="Mestre Joel"
+                alt="Mestre Joel, fundador de la línea Onça"
+                loading="lazy"
               />
             </div>
           </div>
 
           <div class="col-md-8 mt-4">
-            <p class="fs-5">
+            <p class="fs-5" data-i18n="saopaulo.joel.p1">
               Nacido el 28 de febrero de 1944 en Santo Amaro, Brasil, Mestre Joel
               creció en Feira de Santana y se inició en la capoeira bajo la guía de
               Mestre Arara, discípulo directo de Mestre Bimba. Desde sus primeros
@@ -256,10 +222,11 @@
               expansión de varios grupos de capoeira. En 1972, Mestre Bimba lo
               reconoció oficialmente como mestre.
             </p>
-            <p class="fs-5">
+            <p class="fs-5" data-i18n="saopaulo.joel.p2">
               Fundó también la Associação de Capoeira Ilha de Itapuã, consolidando
-              así su legado como formador y organizador .
-            <p class="fs-5">
+              así su legado como formador y organizador.
+            </p>
+            <p class="fs-5" data-i18n="saopaulo.joel.p3">
               Su influencia trascendió Bahía y dejó una huella imborrable en la
               capoeira paulista. Es recordado como uno de los primeros mestres en
               grabar música de capoeira, preservando para las generaciones futuras
@@ -269,12 +236,13 @@
         </div>
       </div>
     </section>
+
     <!-- ========================================================= -->
-    <!-- SECCIÓN 4.1: MESTRE Cobrinha-->
+    <!-- SECCIÓN 4.1: MESTRE Cobrinha -->
     <!-- ========================================================= -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-body-tertiary">
       <div class="container text-center">
-        <h2 class="fw-bold mb-5">Mestre Cobrinha</h2>
+        <h2 class="fw-bold mb-5" data-i18n="saopaulo.cobrinha.titulo">Mestre Cobrinha</h2>
 
         <div class="row justify-content-center">
           <div class="col-md-6">
@@ -282,26 +250,28 @@
               <img
                 src="../img/1.Profesores/Brasil/mestreCobrinha.jpg"
                 class="card-img-top rounded"
-                alt="Mestre Cobrinha"
+                alt="Mestre Cobrinha, capoeira São Paulo"
+                loading="lazy"
               />
             </div>
           </div>
 
           <div class="col-md-8 mt-4">
-            <p class="fs-5">
-              Mestre Cobrinha hijo de Mestre Joel, referente de la capoeira en
-              sao pablo y la roda de la plaza de la republica .
+            <p class="fs-5" data-i18n="saopaulo.cobrinha.p1">
+              Mestre Cobrinha, hijo de Mestre Joel, referente de la capoeira en
+              São Paulo y la roda de la Plaza de la República.
             </p>
           </div>
         </div>
       </div>
     </section>
+
     <!-- ========================================================= -->
-    <!-- SECCIÓN 4: CONTRAMESTRE -->
+    <!-- SECCIÓN 4.2: CONTRAMESTRE -->
     <!-- ========================================================= -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-body-tertiary">
       <div class="container text-center">
-        <h2 class="fw-bold mb-5">Contramestre Cabelo Pé de Serra</h2>
+        <h2 class="fw-bold mb-5" data-i18n="saopaulo.cabelo.titulo">Contramestre Cabelo Pé de Serra</h2>
 
         <div class="row justify-content-center">
           <div class="col-md-6">
@@ -309,13 +279,14 @@
               <img
                 src="../img/1.Profesores/Brasil/cabeloPe_pendon.jpg"
                 class="card-img-top rounded"
-                alt="Contramestre Cabelo"
+                alt="Contramestre Cabelo Pé de Serra"
+                loading="lazy"
               />
             </div>
           </div>
 
           <div class="col-md-8 mt-4">
-            <p class="fs-5">
+            <p class="fs-5" data-i18n="saopaulo.cabelo.p1">
               Contramestre Cabelo es uno de los principales responsables de la
               preservación, enseñanza y expansión de nuestra línea. Supervisa y
               acompaña los grupos fuera de Brasil, garantizando que nuestra
@@ -331,8 +302,8 @@
     <!-- ========================================================= -->
     <section class="py-5">
       <div class="container text-center">
-        <h2 class="fw-bold mb-4">Graduaciones – Organização Onça</h2>
-        <p class="fs-5 mb-4">
+        <h2 class="fw-bold mb-4" data-i18n="saopaulo.graduaciones.titulo">Graduaciones – Organização Onça</h2>
+        <p class="fs-5 mb-4" data-i18n="saopaulo.graduaciones.sub">
           Cada graduación simboliza el crecimiento espiritual, técnico y
           cultural de nuestros alumnos. Una tradición que celebramos con
           alegría, respeto y unión.
@@ -349,7 +320,7 @@
                 loading="lazy"
               />
               <div class="card-body">
-                <h5 class="fw-bold">Graduación – Niños</h5>
+                <h5 class="fw-bold" data-i18n="saopaulo.grad.ninos">Graduación – Niños</h5>
               </div>
             </div>
           </div>
@@ -364,7 +335,7 @@
                 loading="lazy"
               />
               <div class="card-body">
-                <h5 class="fw-bold">Graduación – Adultos</h5>
+                <h5 class="fw-bold" data-i18n="saopaulo.grad.adultos">Graduación – Adultos</h5>
               </div>
             </div>
           </div>
@@ -377,8 +348,10 @@
     <!-- ========================================================= -->
     <footer class="py-4 bg-dark text-white">
       <div class="container text-center">
-        <p class="mb-0">Organização Onça © 2026</p>
-      
+        <p class="mb-2" data-i18n="footer.copy">Organização Onça © 2026</p>
+        <a href="https://instagram.com/organizacaooncaschile" target="_blank" class="text-warning" aria-label="Instagram @organizacaooncaschile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
       </div>
     </footer>
 

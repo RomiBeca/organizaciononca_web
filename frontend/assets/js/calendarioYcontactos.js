@@ -158,20 +158,18 @@ const calendarBody = document.getElementById("calendarBody");
 const prevBtn = document.getElementById("prevMonth");
 const nextBtn = document.getElementById("nextMonth");
 
-const meses = [
-  "Enero",
-  "Febrero",
-  "Marzo",
-  "Abril",
-  "Mayo",
-  "Junio",
-  "Julio",
-  "Agosto",
-  "Septiembre",
-  "Octubre",
-  "Noviembre",
-  "Diciembre",
+const mesesES = [
+  "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+  "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
 ];
+const mesesPT = [
+  "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+  "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro",
+];
+
+function getMeses() {
+  return (localStorage.getItem("onca-lang") || "es") === "pt" ? mesesPT : mesesES;
+}
 
 // =============================================
 // FUNCIÓN PRINCIPAL — GENERA EL CALENDARIO
@@ -181,7 +179,7 @@ function generarCalendario() {
   const year = fechaActual.getFullYear();
   const month = fechaActual.getMonth();
 
-  calendarTitle.textContent = `${meses[month]} ${year}`;
+  calendarTitle.textContent = `${getMeses()[month]} ${year}`;
 
   const primerDia = new Date(year, month, 1).getDay();
   const ultimoDia = new Date(year, month + 1, 0).getDate();
