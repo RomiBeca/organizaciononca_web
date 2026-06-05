@@ -103,8 +103,8 @@ const _T = {
     "clases.lugares.titulo": "📍 Lugares de Entrenamiento",
     "clases.rojas.titulo": "Centro Cultural Rojas Magallanes",
     "clases.rojas.domingo": "Domingo:",
-    "clases.rojas.ninos": "Niños: 12:00 – 13:00",
-    "clases.rojas.adultos": "Adultos: 13:00 – 14:30",
+    "clases.rojas.ninos": "Niños: 10:00 – 11:00",
+    "clases.rojas.adultos": "Adultos: 11:00 – 12:30",
     "clases.rojas.precio": "Precio mensual:",
     "clases.rojas.precio.val": "1 clase a la semana:",
     "clases.semana.titulo": "Clases en la semana",
@@ -126,8 +126,7 @@ const _T = {
     "clases.legend.evento": "Evento especial",
 
     "footer.copy": "Organização Onça © 2026",
-    "footer.contacto": "contacto@onca.cl",
-    "footer.instagram": "Instagram",
+     "footer.instagram": "Instagram",
   },
   pt: {
     "nav.nosotros": "Nós",
@@ -224,8 +223,8 @@ const _T = {
     "clases.lugares.titulo": "📍 Locais de Treino",
     "clases.rojas.titulo": "Centro Cultural Rojas Magallanes",
     "clases.rojas.domingo": "Domingo:",
-    "clases.rojas.ninos": "Crianças: 12:00 – 13:00",
-    "clases.rojas.adultos": "Adultos: 13:00 – 14:30",
+    "clases.rojas.ninos": "Crianças: 10:00 – 11:00",
+    "clases.rojas.adultos": "Adultos: 11:00 – 12:30",
     "clases.rojas.precio": "Preço mensal:",
     "clases.rojas.precio.val": "1 aula por semana:",
     "clases.semana.titulo": "Aulas na semana",
@@ -247,7 +246,6 @@ const _T = {
     "clases.legend.evento": "Evento especial",
 
     "footer.copy": "Organização Onça © 2026",
-    "footer.contacto": "contacto@onca.cl",
     "footer.instagram": "Instagram",
   },
 };
