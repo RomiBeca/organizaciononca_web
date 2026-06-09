@@ -14,8 +14,11 @@
       href="frontend/assets/img/2.logos/organizaçãoOnça_jaguar.png"
     />
 
+    <!-- Precarga la imagen del hero para que no aparezca tarde -->
+    <link rel="preload" as="image" href="frontend/assets/img/5.otros_elementos/Wallpaper/Gemini_Generated_Image_4.png" fetchpriority="high" />
+
     <!-- BOOTSTRAP -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,6 +27,10 @@
     <!-- TUS CSS -->
     <link rel="stylesheet" href="frontend/assets/css/style.css" />
     <link rel="stylesheet" href="frontend/assets/css/home.css" />
+
+    <!-- Scripts con defer: se descargan en paralelo con el HTML, no lo bloquean -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="frontend/assets/js/ui.js"></script>
 
     <title>Capoeira - Organização Onça</title>
     <script>document.documentElement.setAttribute('data-bs-theme',localStorage.getItem('onca-theme')||'dark');</script>
@@ -177,6 +184,9 @@
                 src="./frontend/assets/img/1.Profesores/Chile/felipeYcamilo,fondoblancoAtaqur.png"
                 class="card-img-top"
                 alt="Capoeira imagen felipe y camilo"
+                loading="lazy"
+                width="600"
+                height="600"
               />
             </div>
           </div>
@@ -252,10 +262,6 @@
         </a>
       </div>
     </footer>
-
-    <!-- BOOTSTRAP JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="frontend/assets/js/ui.js"></script>
 
     <script>
       (async () => {

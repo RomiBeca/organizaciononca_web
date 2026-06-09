@@ -64,6 +64,11 @@
   margin-bottom: 1rem;
 }
 
+/* Reserva espacio mientras el JS carga las noticias (evita salto de layout) */
+#noticias-container:empty {
+  min-height: 180px;
+}
+
 /* ========================================= */
 
 .quees {
