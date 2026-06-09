@@ -1,4 +1,11 @@
-/* calendario.css */
+/* =============================
+   ELIMINA EL FONDO PANTERA
+   (sobreescribe .hero de style.css)
+   ============================= */
+section.hero {
+  background-image: none;
+  min-height: auto;
+}
 
 /* =============================
    CONTENEDOR GENERAL
@@ -82,6 +89,31 @@ Contactos
 */
 .btnWhatsApp {
   margin-left: 15px;
+}
+
+/* =============================
+   DÍAS CLICKEABLES DEL CALENDARIO
+   ============================= */
+.cal-clickable {
+  cursor: pointer !important;
+  position: relative;
+}
+
+.cal-clickable::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+.cal-clickable:hover {
+  filter: brightness(0.88);
 }
 
 /* ── RESPONSIVE ──────────────────────────────────────────── */
