@@ -74,7 +74,7 @@ const eventosEspeciales = {
     ],
     5: [
       { dia: 5,  color: "bg-warning", nombre: "Inicio de clases — Junta Vecinal Villa Lomas de Macul", comentario: "Inicio de clases en Junta vecinal 'villa lomas de Macul, unidad n°18'" },
-      { dia: 12, color: "bg-warning", nombre: "Roda de Inauguración", comentario: "Roda de inauguracion nuevo espacio de clases" },
+      { dia: 12, color: "bg-danger", nombre: "Roda de Inauguración", comentario: "Roda de inauguracion nuevo espacio de clases en Junta de Vecinos Villa Lomas de Macul" },
     ],
   },
 };
@@ -129,12 +129,13 @@ function mostrarDetalle(dia, month, data) {
   // Título: Mes + Día
   document.getElementById("diaModal-titulo").textContent = `${getMeses()[month]} ${dia}`;
 
-  // Si es un evento especial (tipo string simple)
+  // Si es un evento especial
   if (data.type === "evento") {
     document.querySelector("#diaModal-lugar span").textContent = data.nombre || "";
     document.querySelector("#diaModal-horario span").textContent = data.comentario || "";
-    document.getElementById("diaModal-precio").style.display = "none";
-    document.getElementById("diaModal-mapa").style.display = "none";
+    document.getElementById("diaModal-dias").style.display = "none";
+    document.getElementById("diaModal-horarios").style.display = "none";
+    document.getElementById("diaModal-precios").style.display = "none";
   } else {
     // Es una clase (rojas o junta)
     const detalle = clasesDetalle[data.type];
@@ -149,6 +150,7 @@ function mostrarDetalle(dia, month, data) {
     
     // Días
     document.querySelector("#diaModal-dias span").textContent = window.uiT(detalle.diasKey);
+    document.getElementById("diaModal-dias").style.display = "";
     
     // Horarios (múltiples)
     const horariosContainer = document.querySelector("#diaModal-horarios ul");
@@ -180,15 +182,6 @@ function mostrarDetalle(dia, month, data) {
       document.getElementById("diaModal-precios").style.display = "";
     } else {
       document.getElementById("diaModal-precios").style.display = "none";
-    }
-    
-    // Mapa
-    const mapaContainer = document.getElementById("diaModal-mapa");
-    if (detalle.ubicacion) {
-      mapaContainer.innerHTML = `<iframe src="${detalle.ubicacion}" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
-      mapaContainer.style.display = "";
-    } else {
-      mapaContainer.style.display = "none";
     }
   }
 
