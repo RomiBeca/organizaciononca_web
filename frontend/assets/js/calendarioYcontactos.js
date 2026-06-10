@@ -5,22 +5,51 @@
 const clasesSemanales = {
   0: {
     color: "bg-warning",
-    nombre: "Centro Cultural Rojas Magallanes",
-    horario: "Niños: 10:00 – 11:00 · Adultos: 11:00 – 12:30",
-    precio: "1 clase/semana: $25.000 mensual",
+    key: "clases.rojas", // Referencia a las claves i18n
+    type: "rojas"
   },
   1: {
     color: "bg-warning",
-    nombre: 'Junta de Vecinos "Villa Lomas de Macul" unidad n°18',
-    horario: "19:30 – 21:30",
-    precio: "Niños y adultos mayores: Gratis · Público general: $2.000/clase",
+    key: "clases.junta",
+    type: "junta"
   },
   5: {
     color: "bg-warning",
-    nombre: 'Junta de Vecinos "Villa Lomas de Macul" unidad n°18',
-    horario: "19:30 – 21:30",
-    precio: "Niños y adultos mayores: Gratis · Público general: $2.000/clase",
+    key: "clases.junta",
+    type: "junta"
   },
+};
+
+// =============================================
+// ESTRUCTURA DETALLADA DE CLASES (para modal)
+// =============================================
+const clasesDetalle = {
+  rojas: {
+    nombreKey: "clases.rojas.titulo",
+    diasKey: "clases.rojas.domingo",
+    horariosKeys: [
+      "clases.rojas.ninos",
+      "clases.rojas.adultos"
+    ],
+    preciosKeys: [
+      "clases.rojas.precio.val"
+    ],
+    preciosValores: ["$25.000"],
+    ubicacion: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.723567843041!2d-70.59330962450666!3d-33.534572073356465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d0ee6a4ed651%3A0xdc686a5dbe86ba5!2sCentro%20Cultural%20Rojas%20Magallanes!5e0!3m2!1ses-419!2scl!4v1781116092634!5m2!1ses-419!2scl"
+  },
+  junta: {
+    nombreKey: "clases.junta.titulo",
+    diasKey: "clases.junta.dias",
+    horariosKeys: [
+      "clases.junta.horario"
+    ],
+    preciosKeys: [
+      "clases.junta.gratis",
+      "clases.junta.general"
+    ],
+    preciosValores: ["", ""],
+    ubicacion: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5594.999796233695!2d-70.60110354382047!3d-33.506403799365415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d17c369666eb%3A0x2068b0240f7f0dd!2sUnidad%20Vecinal%20N%C2%B018%2C%20Macul!5e0!3m2!1ses-419!2scl!4v1781116003416!5m2!1ses-419!2scl"
+  }
 };
 
 // =============================================
@@ -92,22 +121,75 @@ function getMeses() {
 }
 
 // =============================================
-// MOSTRAR MODAL CON DETALLE DEL DÍA
+// MOSTRAR MODAL CON DETALLE DEL DÍA (ACTUALIZADO)
 // =============================================
 function mostrarDetalle(dia, month, data) {
-  document.getElementById("diaModal-titulo").textContent =
-    getMeses()[month] + " " + dia;
-  document.querySelector("#diaModal-lugar span").textContent =
-    data.nombre || "";
-  document.querySelector("#diaModal-horario span").textContent =
-    data.horario || data.comentario || "";
+  const lang = localStorage.getItem("onca-lang") || "es";
+  
+  // Título: Mes + Día
+  document.getElementById("diaModal-titulo").textContent = `${getMeses()[month]} ${dia}`;
 
-  const precioRow = document.getElementById("diaModal-precio");
-  if (data.precio) {
-    precioRow.querySelector("span").textContent = data.precio;
-    precioRow.style.display = "";
+  // Si es un evento especial (tipo string simple)
+  if (data.type === "evento") {
+    document.querySelector("#diaModal-lugar span").textContent = data.nombre || "";
+    document.querySelector("#diaModal-horario span").textContent = data.comentario || "";
+    document.getElementById("diaModal-precio").style.display = "none";
+    document.getElementById("diaModal-mapa").style.display = "none";
   } else {
-    precioRow.style.display = "none";
+    // Es una clase (rojas o junta)
+    const detalle = clasesDetalle[data.type];
+    
+    if (!detalle) {
+      console.warn("Detalle de clase no encontrado:", data.type);
+      return;
+    }
+
+    // Nombre del lugar
+    document.querySelector("#diaModal-lugar span").textContent = window.uiT(detalle.nombreKey);
+    
+    // Días
+    document.querySelector("#diaModal-dias span").textContent = window.uiT(detalle.diasKey);
+    
+    // Horarios (múltiples)
+    const horariosContainer = document.querySelector("#diaModal-horarios ul");
+    horariosContainer.innerHTML = "";
+    
+    if (detalle.horariosKeys && detalle.horariosKeys.length > 0) {
+      detalle.horariosKeys.forEach(key => {
+        const li = document.createElement("li");
+        li.textContent = window.uiT(key);
+        horariosContainer.appendChild(li);
+      });
+      document.getElementById("diaModal-horarios").style.display = "";
+    } else {
+      document.getElementById("diaModal-horarios").style.display = "none";
+    }
+    
+    // Precios (múltiples)
+    const preciosContainer = document.querySelector("#diaModal-precios ul");
+    preciosContainer.innerHTML = "";
+    
+    if (detalle.preciosKeys && detalle.preciosKeys.length > 0) {
+      detalle.preciosKeys.forEach((key, index) => {
+        const li = document.createElement("li");
+        const texto = window.uiT(key);
+        const valor = detalle.preciosValores[index];
+        li.innerHTML = valor ? `${texto} <strong class="text-success">${valor}</strong>` : `<strong class="text-success">${texto}</strong>`;
+        preciosContainer.appendChild(li);
+      });
+      document.getElementById("diaModal-precios").style.display = "";
+    } else {
+      document.getElementById("diaModal-precios").style.display = "none";
+    }
+    
+    // Mapa
+    const mapaContainer = document.getElementById("diaModal-mapa");
+    if (detalle.ubicacion) {
+      mapaContainer.innerHTML = `<iframe src="${detalle.ubicacion}" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+      mapaContainer.style.display = "";
+    } else {
+      mapaContainer.style.display = "none";
+    }
   }
 
   bootstrap.Modal.getOrCreateInstance(document.getElementById("diaModal")).show();
@@ -151,7 +233,7 @@ function generarCalendario() {
     const evento = eventosEspeciales[year]?.[month]?.find(e => e.dia === dia);
     if (evento) {
       celda.classList.add(evento.color || "bg-evento");
-      eventoData = { nombre: evento.nombre, horario: evento.comentario };
+      eventoData = { nombre: evento.nombre, comentario: evento.comentario, type: "evento" };
       celda.title = evento.nombre;
     }
 
@@ -159,21 +241,20 @@ function generarCalendario() {
     if (clasesSemanales[diaSemana] && !feriado && !evento) {
       const cls = clasesSemanales[diaSemana];
       celda.classList.add(cls.color, "text-dark");
-      eventoData = cls;
-      celda.title = cls.nombre;
+      eventoData = { type: cls.type }; // Solo pasamos el tipo, todo lo demás viene de clasesDetalle
+      celda.title = window.uiT(cls.key + ".titulo");
     }
 
     // 4. Parque
     if (diasParque[year]?.[month]?.includes(dia)) {
-      eventoData = { nombre: "Actividad en Parque", horario: "" };
+      eventoData = { nombre: "Actividad en Parque", horario: "", type: "evento" };
       celda.title = "Actividad en Parque";
     }
 
     // Click solo en días con evento (no feriados solos)
     if (eventoData && !feriado) {
-      const snap = { ...eventoData, _dia: dia, _month: month };
       celda.classList.add("cal-clickable");
-      celda.addEventListener("click", () => mostrarDetalle(snap._dia, snap._month, snap));
+      celda.addEventListener("click", () => mostrarDetalle(dia, month, eventoData));
     }
 
     fila.appendChild(celda);
