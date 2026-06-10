@@ -20,6 +20,9 @@ const clasesSemanales = {
   },
 };
 
+// Fecha a partir de la cual comienzan las clases (5 de junio 2026)
+const FECHA_INICIO_CLASES = new Date(2026, 5, 5); // mes 5 = junio (0-indexed)
+
 // =============================================
 // ESTRUCTURA DETALLADA DE CLASES (para modal)
 // =============================================
@@ -118,6 +121,14 @@ const mesesPT = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","
 
 function getMeses() {
   return (localStorage.getItem("onca-lang") || "es") === "pt" ? mesesPT : mesesES;
+}
+
+// =============================================
+// FUNCIÓN AUXILIAR: verificar si una fecha es posterior al inicio de clases
+// =============================================
+function esClaseHabilitada(dia, month, year) {
+  const fechaDia = new Date(year, month, dia);
+  return fechaDia >= FECHA_INICIO_CLASES;
 }
 
 // =============================================
@@ -230,8 +241,8 @@ function generarCalendario() {
       celda.title = evento.nombre;
     }
 
-    // 3. Clases semanales (amarillo) — solo si no hay evento especial ni feriado
-    if (clasesSemanales[diaSemana] && !feriado && !evento) {
+    // 3. Clases semanales (amarillo) — solo si no hay evento especial ni feriado, Y si está habilitado
+    if (clasesSemanales[diaSemana] && !feriado && !evento && esClaseHabilitada(dia, month, year)) {
       const cls = clasesSemanales[diaSemana];
       celda.classList.add(cls.color, "text-dark");
       eventoData = { type: cls.type }; // Solo pasamos el tipo, todo lo demás viene de clasesDetalle

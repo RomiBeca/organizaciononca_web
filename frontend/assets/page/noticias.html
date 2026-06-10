@@ -131,13 +131,9 @@
             <img id="modal-afiche-img" src="" alt="" class="img-fluid rounded">
           </div>
           <div class="modal-footer border-secondary py-2 px-3 d-flex gap-2 justify-content-center">
-            <button type="button" class="btn btn-sm btn-outline-light" id="btn-share-whatsapp" aria-label="Compartir en WhatsApp">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.782 1.14l-.046.027-4.783-.791.8 4.605-.029.046a9.884 9.884 0 001.378 4.659c.469.822 1.023 1.567 1.696 2.18a9.936 9.936 0 006.305 2.127c5.455 0 9.927-4.47 9.927-9.926 0-2.609-.997-5.071-2.809-6.92a9.936 9.936 0 00-7.052-2.92z"/></svg>
-              WhatsApp
-            </button>
-            <button type="button" class="btn btn-sm btn-outline-light" id="btn-share-instagram" aria-label="Compartir en Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
-              Instagram
+            <button type="button" class="btn btn-sm btn-outline-light" id="btn-share-afiche" aria-label="Compartir afiche">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+              Compartir
             </button>
           </div>
         </div>
@@ -203,29 +199,45 @@
 
           // Modal afiche
           const modalAfiche = document.getElementById('modal-afiche');
+          const btnShare = document.getElementById('btn-share-afiche');
+
           modalAfiche.addEventListener('show.bs.modal', e => {
             const trigger = e.relatedTarget;
             document.getElementById('modal-afiche-img').src = trigger.dataset.src;
             document.getElementById('modal-afiche-img').alt = trigger.dataset.alt;
             document.getElementById('modal-afiche-titulo').textContent = trigger.dataset.alt;
             
-            // Guardar la imagen actual para compartir
+            // Guardar datos para compartir
             modalAfiche.dataset.imageSrc = trigger.dataset.src;
             modalAfiche.dataset.imageAlt = trigger.dataset.alt;
           });
 
-          // Botones de compartir
-          document.getElementById('btn-share-whatsapp').addEventListener('click', () => {
+          // Botón de compartir con Web Share API
+          btnShare.addEventListener('click', async () => {
             const titulo = document.getElementById('modal-afiche-titulo').textContent;
-            const texto = encodeURIComponent(`📍 ${titulo}\n\n🥁 Organização Onça Chile\nhttps://organizacaooncachile.cl`);
-            window.open(`https://wa.me/?text=${texto}`, '_blank');
-          });
+            const texto = `📍 ${titulo}\n\n🥁 Organização Onça Chile\nhttps://organizacaooncachile.cl`;
 
-          document.getElementById('btn-share-instagram').addEventListener('click', () => {
-            const titulo = document.getElementById('modal-afiche-titulo').textContent;
-            const mensaje = `📍 ${titulo} - Organização Onça Chile 🥁\nVisita: organizacaooncachile.cl`;
-            alert(`${mensaje}\n\n⚠️ Abre Instagram y comparte este afiche en tu historia o feed`);
-            window.open('https://www.instagram.com/', '_blank');
+            // Verificar si el navegador soporta Web Share API
+            if (navigator.share) {
+              try {
+                await navigator.share({
+                  title: 'Organização Onça Chile',
+                  text: texto,
+                  url: 'https://organizacaooncachile.cl'
+                });
+              } catch (err) {
+                // Usuario canceló la acción
+                console.log('Compartir cancelado');
+              }
+            } else {
+              // Fallback: copiar al portapapeles y mostrar mensaje
+              const textoCompleto = `${texto}`;
+              navigator.clipboard.writeText(textoCompleto).then(() => {
+                alert('📋 Texto copiado al portapapeles. Puedes pegarlo en WhatsApp, Instagram o tu red favorita.');
+              }).catch(() => {
+                alert(`📍 ${titulo}\n\n🥁 Organização Onça Chile\nhttps://organizacaooncachile.cl`);
+              });
+            }
           });
 
           // Ir al anchor si viene desde home (#noticia-X)
