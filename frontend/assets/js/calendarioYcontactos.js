@@ -203,7 +203,7 @@ nextBtn.addEventListener("click", () => {
 // CONTACTO
 // =============================================
 const instagramOncas   = "organizacaooncaschile";
-const telefonoContacto = "+56963680280";
+const telefonoContacto = "+56963711123";
 const mensaje          = "Hola! Quiero información sobre clases de capoeira";
 
 const instagramLink = document.getElementById("instagramLink");
