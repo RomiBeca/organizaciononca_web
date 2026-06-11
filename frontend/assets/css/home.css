@@ -184,7 +184,12 @@
   background-position: center;
 }
 
-/* GALERÍA */
+/* GALERÍA — cambia la imagen en la línea de abajo */
+.galeria-card:hover {
+  background-image: url("../img/6.Galeria/2025/5.Muestra_talleres_2025_centro_cultural_rojas_magallanes/IMG_9797.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
 /* SAO PAULO */
 .sao-card:hover {

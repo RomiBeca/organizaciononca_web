@@ -68,13 +68,16 @@
               <a class="nav-link" href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="clases_contactos.html" data-i18n="nav.clases">Clases & Horarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="noticias.html" data-i18n="nav.noticias">Noticias</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="galeria.html" data-i18n="nav.galeria">Galería</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="sao_paulo.html" data-i18n="nav.saopaulo">São Paulo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="clases_contactos.html" data-i18n="nav.clases">Clases & Horarios</a>
             </li>
           </ul>
           <div class="nav-ui-controls">
@@ -189,6 +192,12 @@
                         <div class="noticia-fecha">${n['fecha_' + lang] || n.fecha}</div>
                         <h4 class="noticia-titulo">${n['titulo_' + lang] || n.titulo}</h4>
                         <p class="noticia-desc">${n['descripcion_' + lang] || n.descripcion}</p>
+                        <div class="d-flex justify-content-end mt-2">
+                          <button class="btn btn-sm btn-outline-warning btn-compartir-card" data-titulo="${n['titulo_' + lang] || n.titulo}" data-id="${n.id}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                            ${lang === 'pt' ? 'Compartilhar' : 'Compartir'}
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -237,6 +246,23 @@
               }).catch(() => {
                 alert(`📍 ${titulo}\n\n🥁 Organização Onça Chile\nhttps://organizacaooncachile.cl`);
               });
+            }
+          });
+
+          // Compartir desde card
+          container.addEventListener('click', async e => {
+            const btn = e.target.closest('.btn-compartir-card');
+            if (!btn) return;
+            const titulo = btn.dataset.titulo;
+            const id = btn.dataset.id;
+            const url = `https://organizacaooncachile.cl/frontend/assets/page/noticias.html#noticia-${id}`;
+            const texto = `📍 ${titulo}\n\n🥁 Organização Onça Chile\n${url}`;
+            if (navigator.share) {
+              try { await navigator.share({ title: titulo, text: texto, url }); } catch {}
+            } else {
+              navigator.clipboard.writeText(texto).then(() => {
+                alert('📋 Texto copiado al portapapeles.');
+              }).catch(() => { alert(texto); });
             }
           });
 
