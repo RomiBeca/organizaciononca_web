@@ -8,8 +8,8 @@
 }
 
 [data-bs-theme="light"] {
-  --onca-bg-section: #f4f4f4;
-  --onca-bg-card:    #ffffff;
+  --onca-bg-section: #d0d0d0;
+  --onca-bg-card:    #e8e8e8;
   --onca-text:       #212529;
   --onca-text-muted: #5a6268;
 }
@@ -19,9 +19,7 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-  padding-left: 0.75rem;
-  margin-left: 0.75rem;
+  margin-right: 0.5rem;
 }
 
 .btn-lang {
@@ -29,6 +27,27 @@
   font-weight: 700;
   line-height: 1.5;
   padding: 0.15rem 0.5rem;
+}
+
+.lang-select {
+  font-size: 0.78rem;
+  font-weight: 700;
+  background-color: #212529;
+  color: #ffc107;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  padding: 0.15rem 0.4rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.lang-select option {
+  background-color: #212529;
+  color: #fff;
+}
+
+.lang-select:focus {
+  box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.4);
 }
 
 /* ---------- HERO PERSONALIZADO ---------- */
@@ -60,6 +79,11 @@
   color: #fdd835;
   text-shadow: 0 0 8px black;
   font-size: 1.3rem;
+}
+
+/* Fondo del body en modo claro */
+[data-bs-theme="light"] body {
+  background-color: #c8c8c8;
 }
 
 /* ── RESPONSIVE ──────────────────────────────────────────── */

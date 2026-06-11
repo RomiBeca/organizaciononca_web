@@ -66,6 +66,15 @@
       <div class="container">
         <a class="navbar-brand fw-bold" href="../../../index.html">Home</a>
 
+        <div class="nav-ui-controls">
+          <select id="lang-select" class="lang-select" onchange="uiSetLang(this.value)">
+            <option value="es">ES</option>
+            <option value="pt">PT</option>
+            <option value="en">EN</option>
+          </select>
+          <button data-theme-icon onclick="uiToggleTheme()" class="btn btn-lang btn-outline-secondary ms-1">☀</button>
+        </div>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -94,11 +103,6 @@
               <a class="nav-link active" href="sao_paulo.html" data-i18n="nav.saopaulo">São Paulo</a>
             </li>
           </ul>
-          <div class="nav-ui-controls">
-            <button id="btn-lang-es" onclick="uiSetLang('es')" class="btn btn-lang btn-warning">ES</button>
-            <button id="btn-lang-pt" onclick="uiSetLang('pt')" class="btn btn-lang btn-outline-secondary">PT</button>
-            <button data-theme-icon onclick="uiToggleTheme()" class="btn btn-lang btn-outline-secondary ms-1">☀</button>
-          </div>
         </div>
       </div>
     </nav>

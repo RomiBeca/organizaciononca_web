@@ -43,8 +43,14 @@
 }
 
 .galeria-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background-image: none !important;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtítulos de fecha dentro de tarjetas de evento — legibles en dark mode */
+[data-bs-theme="dark"] .galeria-card h4 {
+  color: #c8c8c8 !important;
 }
 
 /* ========================================================= */

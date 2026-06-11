@@ -248,3 +248,46 @@ td.text-dark {
 [data-bs-theme="dark"] .map-responsive {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* Días sin evento ni fondo especial → blancos en dark mode */
+[data-bs-theme="dark"] .calendar-box td.text-dark:not([class*="bg-"]) {
+  color: #ffffff !important;
+}
+
+/* =============================
+   MAPAS — TAMAÑO REDUCIDO
+   ============================= */
+.list-group-item iframe {
+  width: 100% !important;
+  max-width: 280px !important;
+  height: 180px !important;
+  margin: 0.5rem auto 0;
+  border-radius: 8px;
+  display: block;
+}
+
+/* =============================
+   PRECIOS — LABEL / VALOR
+   ============================= */
+.precio-label,
+.precio-valor {
+  font-size: 0.85rem;
+}
+
+/* Dark mode: etiqueta blanca, valor amarillo */
+[data-bs-theme="dark"] .precio-label {
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] .precio-valor {
+  color: #ffc107 !important;
+}
+
+/* Light mode: etiqueta oscura, valor verde */
+[data-bs-theme="light"] .precio-label {
+  color: #212529;
+}
+
+[data-bs-theme="light"] .precio-valor {
+  color: #198754 !important;
+}
