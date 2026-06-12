@@ -69,11 +69,16 @@
         <a class="navbar-brand fw-bold" href="index.html">Home</a>
 
         <div class="nav-ui-controls">
-          <select id="lang-select" class="lang-select" onchange="uiSetLang(this.value)">
-            <option value="es">ES</option>
-            <option value="pt">PT</option>
-            <option value="en">EN</option>
-          </select>
+          <div class="dropdown">
+            <button class="btn btn-lang btn-outline-secondary dropdown-toggle lang-flag-trigger" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Cambiar idioma">
+              <img id="lang-flag-img" src="frontend/assets/img/5.otros_elementos/iconos-banderas/chile.png" alt="Idioma" />
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end lang-flag-menu">
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('es')" data-lang="es"><img src="frontend/assets/img/5.otros_elementos/iconos-banderas/chile.png" alt="" /> Español</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('pt')" data-lang="pt"><img src="frontend/assets/img/5.otros_elementos/iconos-banderas/brasil.png" alt="" /> Português</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="frontend/assets/img/5.otros_elementos/iconos-banderas/reino-unido.png" alt="" /> English</button></li>
+            </ul>
+          </div>
           <button data-theme-icon onclick="uiToggleTheme()" class="btn btn-lang btn-outline-secondary ms-1">☀</button>
         </div>
 

@@ -13,7 +13,7 @@ const _T = {
     "nav.galeria": "Galería",
     "nav.noticias": "Noticias",
     "nav.saopaulo": "São Paulo",
-    "nav.clases": "Clases & Horarios",
+    "nav.clases": "Clases & Contacto",
 
     "home.hero.titulo": "Capoeira: Movimiento, Cultura y Libertad",
     "home.hero.sub": "Ven a Jogar con nosotros",
@@ -98,6 +98,7 @@ const _T = {
     "saopaulo.grad.ninos": "Graduación – Niños",
     "saopaulo.grad.adultos": "Graduación – Adultos",
 
+    "clases.titulo": "Clases de Capoeira en Santiago",
     "clases.hero.titulo": "Clases de Capoeira",
     "clases.hero.sub": "Entrena con nosotros y vive una experiencia cultural, musical y deportiva. Tenemos clases durante toda la semana en distintos puntos de Santiago.",
     "clases.lugares.titulo": "📍 Lugares de Entrenamiento",
@@ -137,7 +138,7 @@ const _T = {
     "nav.galeria": "Gallery",
     "nav.noticias": "News",
     "nav.saopaulo": "São Paulo",
-    "nav.clases": "Classes & Schedule",
+    "nav.clases": "Classes & Contact",
 
     "home.hero.titulo": "Capoeira: Movement, Culture and Freedom",
     "home.hero.sub": "Come Jogar with us",
@@ -222,6 +223,7 @@ const _T = {
     "saopaulo.grad.ninos": "Graduation – Children",
     "saopaulo.grad.adultos": "Graduation – Adults",
 
+    "clases.titulo": "Capoeira Classes in Santiago",
     "clases.hero.titulo": "Capoeira Classes",
     "clases.hero.sub": "Train with us and live a cultural, musical and sports experience. We have classes throughout the week at different points in Santiago.",
     "clases.lugares.titulo": "📍 Training Locations",
@@ -261,7 +263,7 @@ const _T = {
     "nav.galeria": "Galeria",
     "nav.noticias": "Notícias",
     "nav.saopaulo": "São Paulo",
-    "nav.clases": "Aulas & Horários",
+    "nav.clases": "Aulas & Contato",
 
     "home.hero.titulo": "Capoeira: Movimento, Cultura e Liberdade",
     "home.hero.sub": "Venha Jogar conosco",
@@ -346,6 +348,7 @@ const _T = {
     "saopaulo.grad.ninos": "Graduação – Crianças",
     "saopaulo.grad.adultos": "Graduação – Adultos",
 
+    "clases.titulo": "Aulas de Capoeira em Santiago",
     "clases.hero.titulo": "Aulas de Capoeira",
     "clases.hero.sub": "Treine conosco e viva uma experiência cultural, musical e esportiva. Temos aulas durante toda a semana em diferentes pontos de Santiago.",
     "clases.lugares.titulo": "📍 Locais de Treino",
@@ -394,8 +397,15 @@ function _applyLang(lang) {
 }
 
 function _updateLangButtons(lang) {
-  const sel = document.getElementById("lang-select");
-  if (sel) sel.value = lang;
+  document.querySelectorAll(".lang-flag-btn").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.lang === lang);
+  });
+  const activeBtn = document.querySelector(`.lang-flag-btn[data-lang="${lang}"]`);
+  const triggerImg = document.getElementById("lang-flag-img");
+  if (activeBtn && triggerImg) {
+    const src = activeBtn.querySelector("img")?.src;
+    if (src) triggerImg.src = src;
+  }
 }
 
 // ── THEME ─────────────────────────────────────────────────────────
@@ -403,9 +413,15 @@ function _updateThemeBtn() {
   const isDark =
     (document.documentElement.getAttribute("data-bs-theme") || "dark") ===
     "dark";
+  const lang = localStorage.getItem("onca-lang") || "es";
+  const labels = {
+    es: ["Modo claro", "Modo oscuro"],
+    en: ["Light mode", "Dark mode"],
+    pt: ["Modo claro", "Modo escuro"],
+  }[lang] || ["Modo claro", "Modo oscuro"];
   document.querySelectorAll("[data-theme-icon]").forEach((btn) => {
     btn.textContent = isDark ? "☀" : "🌙";
-    btn.title = isDark ? "Modo claro" : "Modo oscuro";
+    btn.title = isDark ? labels[0] : labels[1];
   });
 }
 

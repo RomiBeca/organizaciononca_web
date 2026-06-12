@@ -67,11 +67,16 @@
         <a class="navbar-brand fw-bold" href="../../../index.html">Home</a>
 
         <div class="nav-ui-controls">
-          <select id="lang-select" class="lang-select" onchange="uiSetLang(this.value)">
-            <option value="es">ES</option>
-            <option value="pt">PT</option>
-            <option value="en">EN</option>
-          </select>
+          <div class="dropdown">
+            <button class="btn btn-lang btn-outline-secondary dropdown-toggle lang-flag-trigger" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Cambiar idioma">
+              <img id="lang-flag-img" src="../img/5.otros_elementos/iconos-banderas/chile.png" alt="Idioma" />
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end lang-flag-menu">
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('es')" data-lang="es"><img src="../img/5.otros_elementos/iconos-banderas/chile.png" alt="" /> Español</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('pt')" data-lang="pt"><img src="../img/5.otros_elementos/iconos-banderas/brasil.png" alt="" /> Português</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="../img/5.otros_elementos/iconos-banderas/reino-unido.png" alt="" /> English</button></li>
+            </ul>
+          </div>
           <button data-theme-icon onclick="uiToggleTheme()" class="btn btn-lang btn-outline-secondary ms-1">☀</button>
         </div>
 
@@ -170,10 +175,10 @@
       <div class="container">
         <div class="row align-items-center flex-lg-row-reverse">
           <div class="col-lg-6 mb-4">
-            <h2 class="fw-bold mb-3" data-i18n="nosotros.filosofia.titulo">
+            <h2 class="fw-bold mb-3 tituloNF" data-i18n="nosotros.filosofia.titulo">
               Nuestra Filosofía
             </h2>
-            <p class="fs-5" data-i18n="nosotros.filosofia.p1">
+            <p class="fs-5 parrafoNF" data-i18n="nosotros.filosofia.p1">
               En Organização Onça creemos en la Capoeira como una herramienta
               transformadora que promueve el respeto, la disciplina y la
               creatividad. Nuestra filosofía se basa en los valores de la
@@ -182,7 +187,7 @@
               espiritualmente a través de la práctica de la Capoeira.
             </p>
 
-            <p class="fs-5" data-i18n="nosotros.filosofia.p2">
+            <p class="fs-5 parrafoNF" data-i18n="nosotros.filosofia.p2">
               Nos esforzamos por mantener viva la capoeira y todas sus aristas
               como el maculele, samba de roda entre otras instancias de la
               cultura afrobrasileña, promoviendo la diversidad y el intercambio

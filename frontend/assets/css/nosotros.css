@@ -6,7 +6,13 @@
   background-size: cover;
 }
 
+.tituloNF {
+  color: #000000 !important;
+}
 
+.parrafoNF {
+  color: #000000; 
+}
 
 .card {
   margin: 0 auto;
