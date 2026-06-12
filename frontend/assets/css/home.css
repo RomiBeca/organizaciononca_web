@@ -53,7 +53,7 @@
 }
 
 .noticia-titulo {
-  color: #000;
+  color: #000 !important;
   font-weight: 700;
   margin-bottom: 0.75rem;
 }
