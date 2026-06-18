@@ -230,6 +230,81 @@ td.text-dark {
 }
 
 /* =============================
+   DÍAS PASADOS DEL CALENDARIO
+   ============================= */
+.cal-pasado {
+  opacity: 0.38;
+  filter: grayscale(0.7);
+}
+
+/* Pasados CON evento: más visibles porque son clickeables */
+.cal-pasado.cal-clickable {
+  opacity: 0.6;
+  filter: grayscale(0.35);
+}
+
+/* Reemplaza el punto por una patita 🐾 */
+.cal-pasado.cal-clickable::after {
+  content: "🐾";
+  bottom: auto;
+  top: 0px;
+  right: 1px;
+  left: auto;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.8;
+  transform: none;
+  transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), opacity 0.2s ease;
+}
+
+.cal-pasado.cal-clickable:hover {
+  opacity: 0.92;
+  filter: grayscale(0);
+}
+
+.cal-pasado.cal-clickable:hover::after {
+  opacity: 1;
+  transform: scale(1.9) rotate(-20deg);
+}
+
+/* =============================
+   DÍA ACTUAL — CÍRCULO AMARILLO
+   ============================= */
+.cal-hoy {
+  position: relative !important;
+}
+
+.cal-hoy::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  background: #ffc107;
+  border-radius: 50%;
+  z-index: 0;
+  animation: hoyPulse 2.2s ease-in-out infinite;
+}
+
+.cal-hoy span {
+  position: relative;
+  z-index: 1;
+  color: #000 !important;
+  font-weight: 900;
+}
+
+@keyframes hoyPulse {
+  0%, 100% { box-shadow: 0 0 0 0px rgba(255, 193, 7, 0.55); }
+  50%       { box-shadow: 0 0 0 7px rgba(255, 193, 7, 0); }
+}
+
+/* =============================
    DARK MODE SUPPORT
    ============================= */
 [data-bs-theme="dark"] .calendar-box {

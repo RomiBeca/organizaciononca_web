@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "año": 2025,
+    "titulo": "Batizado y Troca – Brasil São Paulo, Diciembre 2025",
+    "descripcion": "Graduación y intercambio en São Paulo con Organização Onça Brasil.",
+    "plataforma": "youtube",
+    "embed_id": "PEGA_AQUI_EL_ID_DE_YOUTUBE"
+  },
+  {
+    "id": 2,
+    "año": 2025,
+    "titulo": "Roda – Muestra Cultural Centro Rojas Magallanes",
+    "descripcion": "Muestra de capoeira en el Centro Cultural Rojas Magallanes, 2025.",
+    "plataforma": "instagram",
+    "url": "https://www.instagram.com/reel/PEGA_AQUI_EL_ID_DEL_REEL/"
+  },
+  {
+    "id": 3,
+    "año": 2026,
+    "titulo": "Batizado y troca de cuerdas Capoeira Raza y Organização Onças chile - Santiago Chile Enero 2026 ",
+    "descripcion": "Evento de batizado y troca de cuerdas de ambos grupos",
+    "plataforma": "youtube",
+    "embed_id": "Wuw2HQ4vN70"
+  },
+  {
+    "id": 4,
+    "año": 2026,
+    "titulo": "Entrenamiento en Instagram",
+    "descripcion": "Momentos de entrenamiento compartidos en Instagram.",
+    "plataforma": "instagram",
+    "url": "https://www.instagram.com/reel/PEGA_AQUI_EL_ID_DEL_REEL/"
+  }
+]

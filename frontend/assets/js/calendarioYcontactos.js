@@ -134,11 +134,12 @@ function esClaseHabilitada(dia, month, year) {
 // =============================================
 // MOSTRAR MODAL CON DETALLE DEL DÍA (ACTUALIZADO)
 // =============================================
-function mostrarDetalle(dia, month, data) {
+function mostrarDetalle(dia, month, data, esPasado = false) {
   const lang = localStorage.getItem("onca-lang") || "es";
-  
-  // Título: Mes + Día
-  document.getElementById("diaModal-titulo").textContent = `${getMeses()[month]} ${dia}`;
+
+  // Título: Mes + Día (+ badge "Pasado" si aplica)
+  const tituloEl = document.getElementById("diaModal-titulo");
+  tituloEl.innerHTML = `${getMeses()[month]} ${dia}${esPasado ? ' <span class="badge bg-secondary ms-2 align-middle" style="font-size:.65rem;vertical-align:middle">Pasado</span>' : ''}`;
 
   // Si es un evento especial
   if (data.type === "evento") {
@@ -212,18 +213,23 @@ function generarCalendario() {
   const ultimoDia = new Date(year, month + 1, 0).getDate();
   const inicio    = primerDia === 0 ? 6 : primerDia - 1;
 
+  const hoy = new Date();
+  hoy.setHours(0, 0, 0, 0);
+
   calendarBody.innerHTML = "";
   let fila = document.createElement("tr");
 
   for (let i = 0; i < inicio; i++) fila.appendChild(document.createElement("td"));
 
   for (let dia = 1; dia <= ultimoDia; dia++) {
-    const celda     = document.createElement("td");
-    celda.textContent = dia;
+    const celda = document.createElement("td");
+    celda.innerHTML = `<span>${dia}</span>`;
     celda.classList.add("text-dark");
 
-    const diaSemana = new Date(year, month, dia).getDay();
-    let eventoData  = null;
+    const diaSemana  = new Date(year, month, dia).getDay();
+    const fechaDia   = new Date(year, month, dia);
+    const esPasado   = fechaDia < hoy;
+    let eventoData   = null;
 
     // 1. Feriados (rojo)
     const feriado = feriadosChile[year]?.[month]?.find(f => f.dia === dia);
@@ -245,7 +251,7 @@ function generarCalendario() {
     if (clasesSemanales[diaSemana] && !feriado && !evento && esClaseHabilitada(dia, month, year)) {
       const cls = clasesSemanales[diaSemana];
       celda.classList.add(cls.color, "text-dark");
-      eventoData = { type: cls.type }; // Solo pasamos el tipo, todo lo demás viene de clasesDetalle
+      eventoData = { type: cls.type };
       celda.title = window.uiT(cls.key + ".titulo");
     }
 
@@ -255,10 +261,17 @@ function generarCalendario() {
       celda.title = "Actividad en Parque";
     }
 
+    // 5. Días pasados: atenuar / Día actual: círculo amarillo
+    if (esPasado) {
+      celda.classList.add("cal-pasado");
+    } else if (fechaDia.getTime() === hoy.getTime()) {
+      celda.classList.add("cal-hoy");
+    }
+
     // Click solo en días con evento (no feriados solos)
     if (eventoData && !feriado) {
       celda.classList.add("cal-clickable");
-      celda.addEventListener("click", () => mostrarDetalle(dia, month, eventoData));
+      celda.addEventListener("click", () => mostrarDetalle(dia, month, eventoData, esPasado));
     }
 
     fila.appendChild(celda);
@@ -306,3 +319,22 @@ document.getElementById("btnWhatsApp").addEventListener("click", () => {
 
 // Inicializar
 generarCalendario();
+
+// =============================================
+// RELOJ HORA CHILE (America/Santiago)
+// =============================================
+(function iniciarReloj() {
+  const el = document.getElementById("reloj-chile");
+  if (!el) return;
+  function tick() {
+    el.textContent = new Date().toLocaleTimeString("es-CL", {
+      timeZone: "America/Santiago",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+    });
+  }
+  tick();
+  setInterval(tick, 1000);
+})();

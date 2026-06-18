@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="es">
+﻿<!doctype html>
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,7 +49,7 @@
     <script defer src="frontend/assets/js/ui.js"></script>
 
     <title>Capoeira - Organização Onça</title>
-    <script>document.documentElement.setAttribute('data-bs-theme',localStorage.getItem('onca-theme')||'dark');</script>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN1YXZMQ9Q"></script>
     <script>
@@ -79,7 +79,7 @@
               <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="frontend/assets/img/5.otros_elementos/iconos-banderas/reino-unido.png" alt="" /> English</button></li>
             </ul>
           </div>
-          <button data-theme-icon onclick="uiToggleTheme()" class="btn btn-lang btn-outline-secondary ms-1">☀</button>
+          
         </div>
 
         <button
@@ -133,6 +133,28 @@
     </section>
 
     <!-- ========================================================= -->
+    <!-- SECCIÓN: CONTADORES ANIMADOS                              -->
+    <!-- ========================================================= -->
+    <section class="py-4 counter-section">
+      <div class="container">
+        <div class="row text-center g-3">
+          <div class="col-4">
+            <div class="counter-num" data-target="20" data-suffix="+">20+</div>
+            <div class="counter-label">Años de experiencia</div>
+          </div>
+          <div class="col-4">
+            <div class="counter-num" data-target="2" data-suffix="">2</div>
+            <div class="counter-label">Profesores</div>
+          </div>
+          <div class="col-4">
+            <div class="counter-num" data-target="2" data-suffix="">2</div>
+            <div class="counter-label">Sedes activas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
     <!-- SECCIÓN: NOTICIAS / EVENTOS ESPECIALES                    -->
     <!-- Se oculta automáticamente si noticias.json está vacío     -->
     <!-- Para agregar/editar noticias: editar noticias.json        -->
@@ -145,8 +167,10 @@
           <span class="noticias-badge" data-i18n="home.noticias.badge">Novedad</span>
         </div>
 
-        <div class="row justify-content-center g-4 " id="noticias-container">
-          <!-- Se llena dinámicamente desde noticias.json -->
+        <div class="row justify-content-center g-4" id="noticias-container">
+          <div class="col-md-6 col-lg-4"><div class="skeleton" style="height:175px"></div></div>
+          <div class="col-md-6 col-lg-4"><div class="skeleton" style="height:175px"></div></div>
+          <div class="col-md-6 col-lg-4"><div class="skeleton" style="height:175px"></div></div>
         </div>
 
         <div class="text-center mt-4">
@@ -192,17 +216,6 @@
               </p>
             </div>
 
-            <div class="masDnosotros">
-              <h2 data-i18n="home.quees.onca">Capoeira Organização Onças en Chile</h2>
-
-              <a
-                href="frontend/assets/page/nosotros.html"
-                class="btn btn-warning btn-outline-dark mt-3 boton-quienes"
-                data-i18n="home.quees.btn"
-              >
-                Conocer más de nosotros
-              </a>
-            </div>
           </div>
 
           <div class="col-lg-6">
@@ -223,55 +236,132 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- SECCIÓN ACCESOS RÁPIDOS -->
+    <!-- BANNER: CONOCER MÁS DE NOSOTROS                           -->
     <!-- ========================================================= -->
-    <section class="py-5 bg-body-tertiary">
-      <div class="container text-center">
-        <h2 class="fw-bold mb-5" data-i18n="home.explora.titulo">Explora más</h2>
+    <section class="py-5 text-center" style="background:linear-gradient(135deg,#111 0%,#1e1e1e 100%);border-top:3px solid #ffc107;border-bottom:3px solid #ffc107">
+      <div class="container">
+        <p class="text-warning fw-bold text-uppercase letter-spacing mb-2" style="letter-spacing:.12em;font-size:.85rem">Quiénes somos</p>
+        <h2 class="fw-bold text-white mb-3" data-i18n="home.quees.onca">Capoeira Organização Onças en Chile</h2>
+        <p class="text-body-secondary fs-5 mb-4 mx-auto" style="max-width:560px">
+          Conoce nuestra historia, filosofía y al equipo detrás de la escuela.
+        </p>
+        <a href="frontend/assets/page/nosotros.html" class="btn btn-warning btn-lg fw-bold px-5" data-i18n="home.quees.btn">
+          Conocer más de nosotros →
+        </a>
+      </div>
+    </section>
 
-        <!-- FILA SUPERIOR -->
-        <div class="row justify-content-center g-4 mb-4">
-          <!-- 🔥 CLASES -->
-          <div class="col-md-6">
-            <a
-              href="frontend/assets/page/clases_contactos.html"
-              class="text-decoration-none"
-            >
-              <div class="card shadow-sm p-4 acces-card clases-card h-100">
-                <h4 class="fw-bold" data-i18n="home.explora.clases.titulo">Clases y contactos</h4>
-                <p data-i18n="home.explora.clases.desc">Horarios y lugares donde entrenamos en Chile.</p>
-              </div>
+    <!-- ========================================================= -->
+    <!-- SECCIÓN: STRIP DE FOTOS RECIENTES                         -->
+    <!-- ========================================================= -->
+    <section class="py-5 foto-strip-section">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+          <h2 class="fw-bold mb-0 text-white">Últimas Fotos</h2>
+          <a href="frontend/assets/page/galeria.html" class="btn btn-outline-warning btn-sm">Ver galería completa →</a>
+        </div>
+        <div class="row g-2">
+          <div class="col-4 col-md-2">
+            <a href="frontend/assets/page/page_photo/galeria_danza_2025.html">
+              <img src="frontend/assets/img/6.Galeria/2025/1.Presentacion_dia_de_la_danza_27abril2025/IMG-20250507-WA0017.jpg" alt="Presentación Día de la Danza 2025" class="foto-strip-img" loading="lazy">
             </a>
           </div>
-
-          <!-- 🔥 GALERÍA -->
-          <div class="col-md-6">
-            <a
-              href="./frontend/assets/page/galeria.html"
-              class="text-decoration-none"
-            >
-              <div class="card shadow-sm p-4 acces-card galeria-card h-100">
-                <h4 class="fw-bold" data-i18n="home.explora.galeria.titulo">Galería</h4>
-                <p data-i18n="home.explora.galeria.desc">Fotos de rodas, entrenamientos y eventos.</p>
-              </div>
+          <div class="col-4 col-md-2">
+            <a href="frontend/assets/page/page_photo/galeria_danza_2025.html">
+              <img src="frontend/assets/img/6.Galeria/2025/1.Presentacion_dia_de_la_danza_27abril2025/IMG-20250507-WA0024.jpg" alt="Presentación Día de la Danza 2025" class="foto-strip-img" loading="lazy">
+            </a>
+          </div>
+          <div class="col-4 col-md-2">
+            <a href="frontend/assets/page/page_photo/galeria_mestre_lev_2025.html">
+              <img src="frontend/assets/img/6.Galeria/2025/2-visita-chile-mestre-levi-octubre-2025/20251022_223416.jpg" alt="Visita Mestre Levi a Chile 2025" class="foto-strip-img" loading="lazy">
+            </a>
+          </div>
+          <div class="col-4 col-md-2">
+            <a href="frontend/assets/page/page_photo/galeria_mestre_lev_2025.html">
+              <img src="frontend/assets/img/6.Galeria/2025/2-visita-chile-mestre-levi-octubre-2025/camiloYMLevi.jpg" alt="Camilo con Mestre Levi 2025" class="foto-strip-img" loading="lazy">
+            </a>
+          </div>
+          <div class="col-4 col-md-2">
+            <a href="frontend/assets/page/page_photo/galeria_batizado_2025.html">
+              <img src="frontend/assets/img/6.Galeria/2025/4-Batizado-y-Troca-BrasilSP-14Dic2025/MG_1134.jpg" alt="Batizado y Troca Brasil SP 2025" class="foto-strip-img" loading="lazy">
+            </a>
+          </div>
+          <div class="col-4 col-md-2">
+            <a href="frontend/assets/page/page_photo/galeria_talleres_2025.html">
+              <img src="frontend/assets/img/6.Galeria/2025/5.Muestra_talleres_2025_centro_cultural_rojas_magallanes/IMG_9797.jpg" alt="Talleres Rojas Magallanes 2025" class="foto-strip-img" loading="lazy">
             </a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- FILA INFERIOR -->
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <a
-              href="./frontend/assets/page/sao_paulo.html"
-              class="text-decoration-none"
-            >
-              <!-- 🔥 SAO PAULO -->
-              <div class="card shadow-lg p-5 acces-card destaque-card sao-card">
-                <h3 class="fw-bold">São Paulo</h3>
+    <!-- ========================================================= -->
+    <!-- SECCIÓN: TESTIMONIOS (oculta hasta tener testimonios reales) -->
+    <!-- Para activar: quitar el style="display:none"               -->
+    <!-- ========================================================= -->
+    <section class="py-5 testimonial-section" style="display:none">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-5">Lo que dicen nuestros alumnos</h2>
+        <div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial-card text-center px-3 py-2">
+                <p class="testimonial-quote">"La capoeira cambió mi vida. Aprendí disciplina, música y encontré una familia. Los profesores Camilo y Felipe son increíbles."</p>
+                <p class="testimonial-author mt-3">— María G., alumna desde 2025</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-card text-center px-3 py-2">
+                <p class="testimonial-quote">"Empecé sin saber nada de capoeira y hoy me siento parte de algo único. El ambiente es acogedor y el nivel de enseñanza es excelente."</p>
+                <p class="testimonial-author mt-3">— Carlos M., alumno desde 2025</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-card text-center px-3 py-2">
+                <p class="testimonial-quote">"No solo aprendes a moverte, también aprendes cultura, historia y música afrobrasileña. Es mucho más que un deporte."</p>
+                <p class="testimonial-author mt-3">— Valentina R., alumna desde 2025</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center gap-3 mt-4">
+            <button class="btn btn-sm btn-warning px-3" data-bs-target="#testimoniosCarousel" data-bs-slide="prev" aria-label="Anterior">‹</button>
+            <button class="btn btn-sm btn-warning px-3" data-bs-target="#testimoniosCarousel" data-bs-slide="next" aria-label="Siguiente">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <p class="mb-0" data-i18n="home.explora.sao.desc">
-                  Nuestra conexión con Brasil y la raíz del grupo.
-                </p>
+    <!-- ========================================================= -->
+    <!-- SECCIÓN ACCESOS RÁPIDOS -->
+    <!-- ========================================================= -->
+    <section class="py-4 bg-body-tertiary">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-3" data-i18n="home.explora.titulo">Explora más</h2>
+        <div class="row justify-content-center g-3">
+          <!-- CLASES -->
+          <div class="col-md-4 col-sm-6">
+            <a href="frontend/assets/page/clases_contactos.html" class="text-decoration-none">
+              <div class="card shadow-sm p-3 acces-card acces-card-sm clases-card h-100">
+                <h5 class="fw-bold mb-1" data-i18n="home.explora.clases.titulo">Clases y contactos</h5>
+                <p class="mb-0 small" data-i18n="home.explora.clases.desc">Horarios y lugares donde entrenamos en Chile.</p>
+              </div>
+            </a>
+          </div>
+          <!-- GALERÍA -->
+          <div class="col-md-4 col-sm-6">
+            <a href="./frontend/assets/page/galeria.html" class="text-decoration-none">
+              <div class="card shadow-sm p-3 acces-card acces-card-sm galeria-card h-100">
+                <h5 class="fw-bold mb-1" data-i18n="home.explora.galeria.titulo">Galería</h5>
+                <p class="mb-0 small" data-i18n="home.explora.galeria.desc">Fotos de rodas, entrenamientos y eventos.</p>
+              </div>
+            </a>
+          </div>
+          <!-- SÃO PAULO -->
+          <div class="col-md-4 col-sm-6">
+            <a href="./frontend/assets/page/sao_paulo.html" class="text-decoration-none">
+              <div class="card shadow-sm p-3 acces-card acces-card-sm sao-card h-100">
+                <h5 class="fw-bold mb-1">São Paulo</h5>
+                <p class="mb-0 small" data-i18n="home.explora.sao.desc">Nuestra conexión con Brasil y la raíz del grupo.</p>
               </div>
             </a>
           </div>
@@ -292,6 +382,30 @@
     </footer>
 
     <script>
+      (function () {
+        const counters = document.querySelectorAll('.counter-num[data-target]');
+        if (!counters.length) return;
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            const el = e.target;
+            const target = parseInt(el.dataset.target);
+            const suffix = el.dataset.suffix || '';
+            let current = 0;
+            const step = Math.ceil(target / 40);
+            const timer = setInterval(() => {
+              current = Math.min(current + step, target);
+              el.textContent = current + suffix;
+              if (current >= target) clearInterval(timer);
+            }, 30);
+            obs.unobserve(el);
+          });
+        }, { threshold: 0.6 });
+        counters.forEach(c => obs.observe(c));
+      })();
+    </script>
+
+    <script>
       (async () => {
         const section   = document.getElementById('noticias-section');
         const container = document.getElementById('noticias-container');
@@ -307,9 +421,10 @@
           }
 
           const lang = window.uiLang ? window.uiLang() : (localStorage.getItem('onca-lang') || 'es');
+          const hoy = new Date().toISOString().slice(0, 10);
           container.innerHTML = noticias.map(n => `
             <div class="col-md-6 col-lg-4">
-              <div class="noticia-card">
+              <div class="noticia-card${n.fecha_iso && n.fecha_iso < hoy ? ' noticia-pasada' : ''}">
                 <div class="noticia-fecha">${n['fecha_' + lang] || n.fecha}</div>
                 <h5 class="noticia-titulo">${n['titulo_' + lang] || n.titulo}</h5>
                 <p class="noticia-desc">${n['resumen_' + lang] || n.resumen}</p>

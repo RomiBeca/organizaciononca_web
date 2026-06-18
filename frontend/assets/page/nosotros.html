@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,12 +42,6 @@
     <link rel="stylesheet" href="../css/nosotros.css" />
 
     <title>Quiénes Somos - Organização Onça</title>
-    <script>
-      document.documentElement.setAttribute(
-        "data-bs-theme",
-        localStorage.getItem("onca-theme") || "dark",
-      );
-    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN1YXZMQ9Q"></script>
     <script>
@@ -77,7 +71,7 @@
               <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="../img/5.otros_elementos/iconos-banderas/reino-unido.png" alt="" /> English</button></li>
             </ul>
           </div>
-          <button data-theme-icon onclick="uiToggleTheme()" class="btn btn-lang btn-outline-secondary ms-1">☀</button>
+          
         </div>
 
         <button
@@ -171,18 +165,14 @@
     <!-- ========================================================= -->
     <!-- SECCIÓN 2: FILOSOFÍA DEL GRUPO -->
     <!-- ========================================================= -->
-    <section class="py-5 bg-light" data-bs-theme="light">
+    <section class="py-5" style="background-color:var(--onca-bg-card)">
       <div class="container">
         <div class="row align-items-center flex-lg-row-reverse">
           <div class="col-lg-6 mb-4">
             <h2 class="fw-bold mb-3 tituloNF" data-i18n="nosotros.filosofia.titulo">
               Nuestra Filosofía
             </h2>
-<<<<<<< HEAD
-            <p class="fs-5 parrafoNF" data-i18n="nosotros.filosofia.p1">
-=======
-            <p class="fs-5 pFilosofia" data-i18n="nosotros.filosofia.p1" >
->>>>>>> 8f6394e (class parrafopfilosofia)
+            <p class="fs-5 parrafoNF" data-i18n="nosotros.filosofia.p1" >
               En Organização Onça creemos en la Capoeira como una herramienta
               transformadora que promueve el respeto, la disciplina y la
               creatividad. Nuestra filosofía se basa en los valores de la
@@ -242,7 +232,7 @@
                 id="camiloPhoto"
                 src="../img/1.Profesores/Chile/Camilo_2_2.jpg"
                 class="card-img-top rounded"
-                alt="Profesor"
+                alt="Profesor Camilo Donoso, Grau 2° - Organização Onça Chile"
               />
             </div>
           </div>
@@ -252,7 +242,7 @@
                 id="felipePhoto"
                 src="../img/1.Profesores/Chile/felipe_2.jpg"
                 class="card-img-top rounded"
-                alt="Profesor"
+                alt="Profesor Felipe Donoso, Grau 2° - Organização Onça Chile"
               />
             </div>
           </div>

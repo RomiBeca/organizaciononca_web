@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="../css/galeria.css" />
 
     <title>Galería - Capoeira Organização Onça</title>
-    <script>document.documentElement.setAttribute('data-bs-theme',localStorage.getItem('onca-theme')||'dark');</script>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN1YXZMQ9Q"></script>
     <script>
@@ -66,7 +66,7 @@
               <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="../img/5.otros_elementos/iconos-banderas/reino-unido.png" alt="" /> English</button></li>
             </ul>
           </div>
-          <button data-theme-icon onclick="uiToggleTheme()" class="btn btn-lang btn-outline-secondary ms-1">☀</button>
+          
         </div>
 
         <button
@@ -106,7 +106,7 @@
     <header
       class="galeria-hero d-flex justify-content-center align-items-center"
     >
-      <div class="container text-center text-white">
+      <div class="container text-center text-white" style="position:relative;z-index:1">
         <h1 class="fw-bold display-4" data-i18n="galeria.hero.titulo">Galería</h1>
         <p class="fs-5 mt-3" data-i18n="galeria.hero.sub">Nuestra historia en imágenes.</p>
       </div>
@@ -116,34 +116,37 @@
     <!-- CONTENIDO DE GALERÍA -->
     <!-- ========================================================= -->
     <section class="py-5">
-      <!-- container-fluid para mayor ancho -->
       <div class="container-fluid px-md-5">
-        <h2 class="fw-bold text-center mb-5" data-i18n="galeria.momentos.titulo">Nuestros Momentos</h2>
+        <h2 class="fw-bold text-center mb-2" data-i18n="galeria.momentos.titulo">Nuestros Momentos</h2>
+        <p class="text-center text-body-secondary mb-5">Selecciona un año para ver fotos y videos</p>
 
-        <!-- ROW -->
         <div class="row justify-content-center g-4">
           <!-- CARD 2025 -->
           <div class="col-md-6 col-lg-5">
-            <a href="./page_photo/galeria_2025.html" class="text-decoration-none">
-              <div class="card shadow-sm p-4 acces-card text-center h-100">
-                <h4 class="fw-bold">2025</h4>
-                <p data-i18n="galeria.2025.desc">
-                  Fotos de rodas, entrenamientos y eventos del 2025. Ven y
-                  revive nuestros momentos.
-                </p>
+            <a href="./page_photo/galeria_seleccion_2025.html" class="text-decoration-none">
+              <div class="card shadow-lg acces-card galeria-year-card year-2025-card text-center h-100">
+                <div class="year-card-content">
+                  <div class="year-number">2025</div>
+                  <p class="year-desc" data-i18n="galeria.2025.desc">
+                    Fotos de rodas, entrenamientos y eventos del 2025.
+                  </p>
+                  <span class="year-badge">4 eventos · Fotos & Videos</span>
+                </div>
               </div>
             </a>
           </div>
 
           <!-- CARD 2026 -->
           <div class="col-md-6 col-lg-5">
-            <a href="./page_photo/galeria_2026.html" class="text-decoration-none">
-              <div class="card shadow-sm p-4 acces-card text-center h-100">
-                <h4 class="fw-bold">2026</h4>
-                <p data-i18n="galeria.2026.desc">
-                  Fotos de rodas, entrenamientos y eventos del 2026. Seguimos
-                  construyendo historia.
-                </p>
+            <a href="./page_photo/galeria_seleccion_2026.html" class="text-decoration-none">
+              <div class="card shadow-lg acces-card galeria-year-card year-2026-card text-center h-100">
+                <div class="year-card-content">
+                  <div class="year-number">2026</div>
+                  <p class="year-desc" data-i18n="galeria.2026.desc">
+                    Seguimos construyendo historia este año.
+                  </p>
+                  <span class="year-badge">Fotos & Videos</span>
+                </div>
               </div>
             </a>
           </div>

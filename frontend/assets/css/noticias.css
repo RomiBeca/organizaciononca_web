@@ -58,6 +58,37 @@
   border: 2px solid #ffc107;
 }
 
+.noticia-full-card.noticia-pasada {
+  opacity: 0.45;
+  filter: grayscale(1);
+  position: relative;
+}
+
+.noticia-full-card.noticia-pasada::after {
+  content: 'Evento pasado';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(20, 20, 20, 0.82);
+  color: #ccc;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.45em 1.4em;
+  border-radius: 20px;
+  border: 1.5px solid #888;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.noticia-full-card.noticia-pasada:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 .noticia-img-wrapper {
   position: relative;
   cursor: pointer;

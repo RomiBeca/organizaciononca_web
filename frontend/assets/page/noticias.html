@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="../css/noticias.css" />
 
     <title>Noticias – Organização Onça</title>
-    <script>document.documentElement.setAttribute('data-bs-theme',localStorage.getItem('onca-theme')||'dark');</script>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN1YXZMQ9Q"></script>
     <script>
@@ -61,7 +61,7 @@
               <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="../img/5.otros_elementos/iconos-banderas/reino-unido.png" alt="" /> English</button></li>
             </ul>
           </div>
-          <button data-theme-icon onclick="uiToggleTheme()" class="btn btn-lang btn-outline-secondary ms-1">☀</button>
+          
         </div>
 
         <button
@@ -267,6 +267,7 @@
 
           const verAfiche = window.uiT('noticias.ver');
           const destacadoLabel = lang === 'pt' ? 'Destaque' : 'Destacado';
+          const hoy = new Date().toISOString().slice(0, 10);
 
           container.innerHTML = Object.entries(porMes).map(([mes, items]) => `
             <div class="mb-5">
@@ -274,7 +275,7 @@
               <div class="row g-4">
                 ${items.map(n => `
                   <div class="col-md-6" id="noticia-${n.id}">
-                    <div class="noticia-full-card${n.destacado ? ' noticia-destacada' : ''}">
+                    <div class="noticia-full-card${n.destacado ? ' noticia-destacada' : ''}${n.fecha_iso && n.fecha_iso < hoy ? ' noticia-pasada' : ''}">
                       ${n.imagen
                         ? `<div class="noticia-img-wrapper" data-bs-toggle="modal" data-bs-target="#modal-afiche" data-src="../${n.imagen}" data-alt="${n['titulo_' + lang] || n.titulo}">
                              <img src="../${n.imagen}" alt="${n['titulo_' + lang] || n.titulo}" class="noticia-full-img" loading="lazy">

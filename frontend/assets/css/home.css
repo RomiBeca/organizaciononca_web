@@ -43,6 +43,37 @@
   box-shadow: 0 12px 30px rgba(255, 193, 7, 0.2);
 }
 
+.noticia-card.noticia-pasada {
+  opacity: 0.45;
+  filter: grayscale(1);
+  position: relative;
+}
+
+.noticia-card.noticia-pasada::after {
+  content: 'Evento pasado';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(20, 20, 20, 0.82);
+  color: #ccc;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.45em 1.4em;
+  border-radius: 20px;
+  border: 1.5px solid #888;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.noticia-card.noticia-pasada:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 .noticia-fecha {
   font-size: 0.78rem;
   font-weight: 700;
@@ -123,6 +154,7 @@
 }
 
 /* TEXTOS */
+.acces-card h5,
 .acces-card h4,
 .acces-card h3 {
   margin-bottom: 10px;
@@ -148,6 +180,7 @@
 }
 
 /* Texto sobre overlay */
+.acces-card h5,
 .acces-card h3,
 .acces-card h4,
 .acces-card p {
@@ -171,10 +204,20 @@
 }
 
 /* Texto blanco en hover */
+.acces-card:hover h5,
 .acces-card:hover h3,
 .acces-card:hover h4,
 .acces-card:hover p {
   color: #fff;
+}
+
+/* ========================================= */
+/* VARIANTE COMPACTA (Explora más)          */
+/* ========================================= */
+
+.acces-card-sm {
+  min-height: 90px !important;
+  padding: 1rem !important;
 }
 
 /* ========================================= */
@@ -226,6 +269,77 @@
     height: auto;
     padding: 0.75rem 1rem;
   }
+}
+
+/* ========================================= */
+/*   CONTADORES ANIMADOS                    */
+/* ========================================= */
+.counter-section {
+  background: #111;
+  border-top: 3px solid #ffc107;
+  border-bottom: 3px solid #ffc107;
+}
+.counter-num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffc107;
+  line-height: 1;
+}
+.counter-label {
+  color: #aaa;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-top: 0.4rem;
+}
+
+/* ========================================= */
+/*   STRIP DE FOTOS                         */
+/* ========================================= */
+.foto-strip-section {
+  background-color: #111;
+}
+.foto-strip-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.82);
+  display: block;
+}
+.foto-strip-img:hover {
+  transform: scale(1.06);
+  filter: brightness(1);
+}
+
+/* ========================================= */
+/*   TESTIMONIOS                            */
+/* ========================================= */
+.testimonial-section {
+  background-color: var(--onca-bg-card);
+}
+.testimonial-card {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.testimonial-quote {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--onca-text);
+  line-height: 1.8;
+}
+.testimonial-author {
+  color: #ffc107;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 767px) {
+  .counter-num { font-size: 2.2rem; }
+  .counter-label { font-size: 0.7rem; }
+  .testimonial-quote { font-size: 1rem; }
 }
 
 /* ========================================= */
