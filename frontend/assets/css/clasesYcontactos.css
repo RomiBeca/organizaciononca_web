@@ -1,4 +1,37 @@
 /* =============================
+   SUBTÍTULO DE SECCIÓN
+   ============================= */
+.subtituloclases {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subtituloclases .lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.divider-onca {
+  width: 64px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #ffc107, transparent);
+  border-radius: 2px;
+  margin-top: 1rem;
+}
+
+/* Caja destacada "familia" */
+.familia-box {
+  background: rgba(255, 193, 7, 0.07);
+  border-left: 3px solid #ffc107;
+  padding: 0.7rem 1rem;
+  border-radius: 0 6px 6px 0;
+  color: #d0d0d0;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* =============================
    ELIMINA EL FONDO PANTERA
    (sobreescribe .hero de style.css)
    ============================= */

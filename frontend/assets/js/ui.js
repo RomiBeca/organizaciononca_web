@@ -1,4 +1,4 @@
-// ── TRANSLATIONS ─────────────────────────────────────────────────
+// ── TRADUCCIONES ESTÁTICAS (ES / PT / EN) ────────────────────────
 const _T = {
   es: {
     "nav.nosotros": "Nosotros",
@@ -84,7 +84,7 @@ const _T = {
     "saopaulo.cobrinha.titulo": "Mestre Cobrinha",
     "saopaulo.cobrinha.p1": "Mestre Cobrinha, hijo de Mestre Joel, referente de la capoeira en São Paulo y la roda de la Plaza de la República.",
     "saopaulo.cabelo.titulo": "Contramestre Cabelo Pé de Serra",
-    "saopaulo.cabelo.p1": "Contramestre Cabelo es uno de los principales responsables de la preservación, enseñanza y expansión de nuestra línea. Supervisa y acompaña los grupos fuera de Brasil, garantizando que nuestra esencia permanezca firme y auténtica.",
+    "saopaulo.cabelo.p1": "Contramestre Cabelo es uno de los principales responsables de la preservación, enseñanza y expansión de nuestra línea. Supervisiona y acompaña los grupos fuera de Brasil, garantizando que nuestra esencia permanezca firme y auténtica.",
     "saopaulo.graduaciones.titulo": "Graduaciones – Organização Onça",
     "saopaulo.graduaciones.sub": "Cada graduación simboliza el crecimiento espiritual, técnico y cultural de nuestros alumnos. Una tradición que celebramos con alegría, respeto y unión.",
     "saopaulo.grad.ninos": "Graduación – Niños",
@@ -93,24 +93,23 @@ const _T = {
     "clases.titulo": "Clases de Capoeira en Santiago",
     "clases.hero.titulo": "Clases de Capoeira",
     "clases.hero.sub": "Entrena con nosotros y vive una experiencia cultural, musical y deportiva. Tenemos clases durante toda la semana en distintos puntos de Santiago.",
-    "clases.lugares.titulo": "📍 Lugares de Entrenamiento",
+    "clases.lugares.titulo": "📍 Lugares de Entrenamiento ",
     "clases.rojas.titulo": "Centro Cultural Rojas Magallanes",
+    "clases.rojas.parrafo":"A pasos del metro Rojas Magallanes L4",
     "clases.rojas.domingo": "Domingo:",
     "clases.rojas.ninos": "Niños: 10:00 – 11:00",
     "clases.rojas.adultos": "Adultos: 11:00 – 12:30",
     "clases.rojas.precio": "Precio mensual:",
     "clases.rojas.precio.val": "1 clase a la semana:",
+    "clases.reloj.label": "Hora en Chile:",
     "clases.semana.titulo": "Clases en la semana",
-    "clases.junta.titulo": 'Junta de Vecinos "Villa Lomas de Macul" unidad n°18',
+    "clases.junta.titulo": 'Junta de Vecinos "Villa Lomas de Macul" n°18',
+    "clases.junta.parrafo":"Cercano a metro Pedrero (L5) o metro Macul (L4)",
     "clases.junta.dias": "Lunes y viernes:",
-    "clases.junta.horario": "Horario: 19:30 - 21:30",
+    "clases.junta.horario": "Horario: 19:30 – 21:30",
     "clases.junta.precio": "Precio por Clase:",
     "clases.junta.gratis": "Niños y adultos mayores: Gratis",
     "clases.junta.general": "Público General: $2.000",
-    "clases.junta.gratis-label": "Niños y adultos mayores:",
-    "clases.junta.gratis-val": "Gratis",
-    "clases.junta.general-label": "Público General:",
-    "clases.junta.general-val": "$2.000",
     "clases.semana.desc": "Próximamente",
     "clases.airlibre.titulo": "Clases al aire libre",
     "clases.airlibre.desc": "Próximamente",
@@ -123,135 +122,10 @@ const _T = {
     "clases.legend.evento": "Evento especial",
 
     "footer.copy": "Organização Onça © 2026",
-    "footer.instagram": "Instagram",
   },
-  en: {
-    "nav.nosotros": "About Us",
-    "nav.galeria": "Gallery",
-    "nav.noticias": "News",
-    "nav.saopaulo": "São Paulo",
-    "nav.clases": "Classes & Contact",
 
-    "home.hero.titulo": "Capoeira: Movement, Culture and Freedom",
-    "home.hero.sub": "Come Jogar with us",
-
-    "home.noticias.titulo": "News",
-    "home.noticias.badge": "New",
-    "home.noticias.btn": "View all news",
-
-    "home.quees.titulo": "What is Capoeira?",
-    "home.quees.p1":
-      "Capoeira is an Afro-Brazilian cultural expression that combines martial arts, music, dance and acrobatics in a single practice. Its origins date back to the 16th century, when enslaved Africans in Brazil developed this form of combat as a method of resistance and self-defense, disguising it within rhythmic movements to avoid repression.",
-    "home.quees.p2":
-      "Over time, capoeira evolved from a persecuted practice to become a cultural symbol of Brazil and an intangible heritage recognized in 2014 by UNESCO worldwide.",
-    "home.quees.p3":
-      "Today, capoeira is practiced all over the world, not only as a physical activity, but also as a tool for integral development. It fosters discipline, coordination, body expression and community work, keeping alive a tradition that connects history, culture and movement.",
-    "home.quees.onca": "Capoeira Organização Onças in Chile",
-    "home.quees.btn": "Learn more about us",
-
-    "home.explora.titulo": "Explore more",
-    "home.explora.clases.titulo": "Classes and contacts",
-    "home.explora.clases.desc": "Schedules and places where we train in Chile.",
-    "home.explora.galeria.titulo": "Gallery",
-    "home.explora.galeria.desc": "Photos of rodas, trainings and events.",
-    "home.explora.sao.desc": "Our connection with Brazil and the roots of the group.",
-
-    "nosotros.hero.titulo": "Who We Are",
-    "nosotros.hero.sub":
-      "A family that grows through movement, music and Afro-Brazilian tradition.",
-    "nosotros.historia.titulo": "Organização Onça (Chile)",
-    "nosotros.historia.p1":
-      "Organização Onça - Chile was founded in 2025, under the supervision of Contramestre Cabelo Pé de Serra. Since then, we have grown as a community, sharing the passion for capoeira.",
-    "nosotros.historia.p2":
-      "With a long history of rodas, workshops and events, we have established ourselves as a space for meeting, learning and celebrating Afro-Brazilian culture in Santiago, Chile. Being part of the history of capoeira in Chile, we continue building our path, looking toward the future with hearts full of joy and commitment to this extraordinary martial art.",
-    "nosotros.filosofia.titulo": "Our Philosophy",
-    "nosotros.filosofia.p1":
-      "At Organização Onça we believe in Capoeira as a transformative tool that promotes respect, discipline and creativity. Our philosophy is based on the values of community, inclusion and continuous learning, fostering an environment where each individual can grow both physically and spiritually through the practice of Capoeira.",
-    "nosotros.filosofia.p2":
-      "We strive to keep capoeira and all its branches alive, such as maculelê, samba de roda and other expressions of Afro-Brazilian culture, promoting diversity and cultural exchange within our community.",
-    "nosotros.equipo.titulo": "Our Team",
-    "nosotros.camilo.titulo": "Professor Camilo Donoso",
-    "nosotros.camilo.cv":
-      "Professor Grau 2° Camilo Donoso began capoeira at the young age of 7 around 2000 in a community capoeira workshop alongside his brother, and from that moment this discipline became part of his life. With more than 20 years of experience in Capoeira, he was initially part of the Sul da Bahia group founded by Mestre Zequinha, with whom he maintains an excellent relationship to this day.",
-    "nosotros.felipe.titulo": "Professor Felipe Donoso",
-    "nosotros.felipe.cv":
-      "Professor Grau 2° Felipe Donoso has more than 20 years of experience in Capoeira. He began as a child in the 2000s alongside his brother Camilo, sharing the capoeira path since childhood. He trained under the guidance of Mestre Zequinha, from the Sul da Bahia group, with whom he maintains an excellent relationship to this day.",
-
-    "noticias.hero.titulo": "News & Events",
-    "noticias.hero.sub": "What's happening at Organização Onça",
-    "noticias.cargando": "Loading news…",
-    "noticias.vacia": "No news published at this time.",
-    "noticias.error": "Could not load news.",
-    "noticias.error.sub":
-      "Make sure to open the site from a server (e.g.: Live Server in VS Code).",
-    "noticias.ver": "View poster",
-
-    "galeria.hero.titulo": "Gallery",
-    "galeria.hero.sub": "Our history in images.",
-    "galeria.momentos.titulo": "Our Moments",
-    "galeria.2025.desc": "Photos of rodas, trainings and events from 2025. Come and relive our moments.",
-    "galeria.2026.desc": "Photos of rodas, trainings and events from 2026. We keep building history.",
-
-    "saopaulo.hero.titulo": "São Paulo – Root of Organização Onça",
-    "saopaulo.hero.sub": "The heart of the group, where tradition, music and movement meet.",
-    "saopaulo.origenes.titulo": "Our Origins",
-    "saopaulo.origenes.p1": "Organização Onça springs from one of the most traditional roots of Capoeira Regional in Salvador, Bahia. We come directly from the lineage of Mestre Bimba, creator of Capoeira Regional and responsible for transforming the art into a method, discipline and cultural identity.",
-    "saopaulo.origenes.p2": "The story continues with Mestre Joel, a disciple of Mestre Bimba, who spread this essence in Itapuã and trained Mestre Cobrinha, consolidating the Onça line that we preserve and expand today.",
-    "saopaulo.linaje.titulo": "Our Lineage – Family Tree",
-    "saopaulo.linaje.sub": "The root of our capoeira: Mestre Bimba → Mestre Joel → Mestre Cobrinha → Contramestre Cabelo Pé de Serra.",
-    "saopaulo.matriz.titulo": "The Home Base in São Paulo",
-    "saopaulo.matriz.p1": "From São Paulo our line develops and strengthens, keeping alive the essence left by our mestres and projecting us toward the future of capoeira in the world.",
-    "saopaulo.matriz.p2": "This space is a meeting point, learning and training center, where tradition and modernity coexist in harmony.",
-    "saopaulo.joel.titulo": "Mestre Joel",
-    "saopaulo.joel.p1": "Born on February 28, 1944 in Santo Amaro, Brazil, Mestre Joel grew up in Feira de Santana and began capoeira under the guidance of Mestre Arara, a direct disciple of Mestre Bimba. From his earliest years as a practitioner, he distinguished himself by his commitment to the roots and traditions of this art. During the 1960s he began traveling frequently to São Paulo, where he was a key figure in the founding and expansion of several capoeira groups. In 1972, Mestre Bimba officially recognized him as a mestre.",
-    "saopaulo.joel.p2": "He also founded the Associação de Capoeira Ilha de Itapuã, consolidating his legacy as a trainer and organizer.",
-    "saopaulo.joel.p3": "His influence transcended Bahia and left an indelible mark on São Paulo capoeira. He is remembered as one of the first mestres to record capoeira music, preserving for future generations the songs and traditions that give life to this martial art.",
-    "saopaulo.cobrinha.titulo": "Mestre Cobrinha",
-    "saopaulo.cobrinha.p1": "Mestre Cobrinha, son of Mestre Joel, a reference for capoeira in São Paulo and the roda at República Square.",
-    "saopaulo.cabelo.titulo": "Contramestre Cabelo Pé de Serra",
-    "saopaulo.cabelo.p1": "Contramestre Cabelo is one of the main people responsible for the preservation, teaching and expansion of our line. He supervises and accompanies the groups outside Brazil, ensuring that our essence remains firm and authentic.",
-    "saopaulo.graduaciones.titulo": "Graduations – Organização Onça",
-    "saopaulo.graduaciones.sub": "Each graduation symbolizes the spiritual, technical and cultural growth of our students. A tradition we celebrate with joy, respect and unity.",
-    "saopaulo.grad.ninos": "Graduation – Children",
-    "saopaulo.grad.adultos": "Graduation – Adults",
-
-    "clases.titulo": "Capoeira Classes in Santiago",
-    "clases.hero.titulo": "Capoeira Classes",
-    "clases.hero.sub": "Train with us and live a cultural, musical and sports experience. We have classes throughout the week at different points in Santiago.",
-    "clases.lugares.titulo": "📍 Training Locations",
-    "clases.rojas.titulo": "Centro Cultural Rojas Magallanes",
-    "clases.rojas.domingo": "Sunday:",
-    "clases.rojas.ninos": "Children: 10:00 – 11:00",
-    "clases.rojas.adultos": "Adults: 11:00 – 12:30",
-    "clases.rojas.precio": "Monthly price:",
-    "clases.rojas.precio.val": "1 class per week:",
-    "clases.semana.titulo": "Weekday classes",
-    "clases.junta.titulo": '"Villa Lomas de Macul" Neighborhood Association unit n°18',
-    "clases.junta.dias": "Mondays and Fridays:",
-    "clases.junta.horario": "Schedule: 19:30 - 21:30",
-    "clases.junta.precio": "Price per Class:",
-    "clases.junta.gratis": "Children and seniors: Free",
-    "clases.junta.general": "General Public: $2.000",
-    "clases.junta.gratis-label": "Children and seniors:",
-    "clases.junta.gratis-val": "Free",
-    "clases.junta.general-label": "General Public:",
-    "clases.junta.general-val": "$2.000",
-    "clases.semana.desc": "Coming soon",
-    "clases.airlibre.titulo": "Outdoor classes",
-    "clases.airlibre.desc": "Coming soon",
-    "clases.contacto.titulo": "Want to train with us?",
-    "clases.contacto.sub": "Write to us directly or follow us for more information.",
-    "clases.calendar.prev": "◀ Previous month",
-    "clases.calendar.next": "Next month ▶",
-    "clases.legend.clases": "Trainings",
-    "clases.legend.parque": "Outdoor activity",
-    "clases.legend.evento": "Special event",
-
-    "footer.copy": "Organização Onça © 2026",
-    "footer.instagram": "Instagram",
-  },
   pt: {
-    "nav.nosotros": "Nós",
+    "nav.nosotros": "Sobre Nós",
     "nav.galeria": "Galeria",
     "nav.noticias": "Notícias",
     "nav.saopaulo": "São Paulo",
@@ -266,11 +140,11 @@ const _T = {
 
     "home.quees.titulo": "O que é a Capoeira?",
     "home.quees.p1":
-      "A capoeira é uma expressão cultural afro-brasileira que combina luta, música, dança e acrobacia em uma única prática. Sua origem remonta ao século XVI, quando africanos escravizados no Brasil desenvolveram essa forma de combate como método de resistência e autodefesa, disfarçando-a em movimentos rítmicos para evitar a repressão.",
+      "A capoeira é uma expressão cultural afro-brasileira que combina luta, música, dança e acrobacia em uma única prática. Sua origem remonta ao século XVI, quando pessoas africanas escravizadas no Brasil desenvolveram essa forma de combate como método de resistência e autodefesa, ocultando-a em movimentos rítmicos para evitar a repressão.",
     "home.quees.p2":
       "Com o tempo, a capoeira evoluiu de uma prática perseguida para se tornar um símbolo cultural do Brasil e patrimônio imaterial reconhecido em 2014 pela UNESCO em nível mundial.",
     "home.quees.p3":
-      "Hoje, a capoeira é praticada em todo o mundo, não apenas como atividade física, mas também como ferramenta de formação integral. Fomenta a disciplina, a coordenação, a expressão corporal e o trabalho em comunidade, mantendo viva uma tradição que conecta história, cultura e movimento.",
+      "Hoje em dia, a capoeira é praticada em todo o mundo, não apenas como atividade física, mas também como ferramenta de formação integral. Promove a disciplina, a coordenação, a expressão corporal e o trabalho em comunidade, mantendo viva uma tradição que conecta história, cultura e movimento.",
     "home.quees.onca": "Capoeira Organização Onças no Chile",
     "home.quees.btn": "Conhecer mais sobre nós",
 
@@ -286,21 +160,21 @@ const _T = {
       "Uma família que cresce através do movimento, da música e da tradição afro-brasileira.",
     "nosotros.historia.titulo": "Organização Onça (Chile)",
     "nosotros.historia.p1":
-      "Organização Onça - Chile nasce em 2025, sob a supervisão do contramestre Cabelo Pé de Serra. Desde então, crescemos como comunidade, compartilhando a paixão pela capoeira.",
+      "Organização Onça - Chile nasce no ano de 2025, sob a supervisão do contramestre Cabelo Pé de Serra. Desde então, crescemos como comunidade, compartilhando a paixão pela capoeira.",
     "nosotros.historia.p2":
-      "Com uma longa trajetória de rodas, oficinas e eventos, nos consolidamos como um espaço de encontro, aprendizado e celebração da cultura afro-brasileira em Santiago do Chile. Sendo parte da história da capoeira no Chile, hoje seguimos construindo nosso caminho, com o olhar voltado para o futuro e o coração cheio de alegria e comprometimento com esta extraordinária arte marcial.",
+      "Com uma longa trajetória de rodas, oficinas e eventos, consolidamos um espaço de encontro, aprendizado e celebração da cultura afro-brasileira em Santiago do Chile. Fazendo parte da história da capoeira no Chile, seguimos construindo nosso caminho, com o olhar no futuro e o coração cheio de alegria e compromisso com essa extraordinária arte marcial.",
     "nosotros.filosofia.titulo": "Nossa Filosofia",
     "nosotros.filosofia.p1":
-      "Na Organização Onça acreditamos na Capoeira como uma ferramenta transformadora que promove o respeito, a disciplina e a criatividade. Nossa filosofia se baseia nos valores da comunidade, da inclusão e do aprendizado contínuo, fomentando um ambiente onde cada indivíduo possa crescer tanto física quanto espiritualmente através da prática da Capoeira.",
+      "Na Organização Onça acreditamos na Capoeira como ferramenta transformadora que promove o respeito, a disciplina e a criatividade. Nossa filosofia é baseada nos valores de comunidade, inclusão e aprendizado contínuo, promovendo um ambiente onde cada indivíduo possa crescer tanto física quanto espiritualmente através da prática da Capoeira.",
     "nosotros.filosofia.p2":
-      "Nos esforçamos para manter viva a capoeira e todas as suas vertentes, como o maculelê, o samba de roda e outras expressões da cultura afro-brasileira, promovendo a diversidade e o intercâmbio cultural dentro de nossa comunidade.",
+      "Nos esforçamos para manter viva a capoeira e todas as suas vertentes, como o maculelê, samba de roda, entre outras manifestações da cultura afro-brasileira, promovendo a diversidade e o intercâmbio cultural dentro de nossa comunidade.",
     "nosotros.equipo.titulo": "Nossa Equipe",
     "nosotros.camilo.titulo": "Professor Camilo Donoso",
     "nosotros.camilo.cv":
-      "Grau 2° (10ª graduação), o Professor Camilo Donoso tem mais de 25 anos de experiência na Capoeira. Começou ainda criança nos anos 2000 ao lado de seu irmão Felipe, partilhando desde a infância o caminho da Capoeira. Formou-se sob a orientação do Mestre Zequinha, do grupo Sul da Bahia, com quem mantém até hoje uma excelente relação.",
+      "O Professor Grau 2° Camilo Donoso começou na capoeira na jovem idade de 7 anos, por volta do ano 2000, em uma oficina comunitária de capoeira junto ao seu irmão, e desde então essa disciplina faz parte de sua vida. Com mais de 20 anos de experiência na Capoeira, sendo em seus inícios parte do grupo Sul da Bahia formado pelo Mestre Zequinha, com quem mantém até hoje uma excelente relação.",
     "nosotros.felipe.titulo": "Professor Felipe Donoso",
     "nosotros.felipe.cv":
-      "Grau 2° (10ª graduação), o Professor Felipe Donoso tem mais de 25 anos de experiência na Capoeira. Começou ainda criança nos anos 2000 ao lado de seu irmão Camilo, partilhando desde a infância o caminho da Capoeira. Formou-se sob a orientação do Mestre Zequinha, do grupo Sul da Bahia, com quem mantém até hoje uma excelente relação.",
+      "O Professor Grau 2° Felipe Donoso conta com mais de 20 anos de experiência na Capoeira. Começou ainda criança nos anos 2000 junto ao seu irmão Camilo, compartilhando desde a infância o caminho da Capoeira. Formou-se sob a orientação do Mestre Zequinha, do grupo Sul da Bahia, com quem mantém até hoje uma excelente relação.",
 
     "noticias.hero.titulo": "Notícias & Eventos",
     "noticias.hero.sub": "O que está acontecendo na Organização Onça",
@@ -308,59 +182,58 @@ const _T = {
     "noticias.vacia": "Não há notícias publicadas no momento.",
     "noticias.error": "Não foi possível carregar as notícias.",
     "noticias.error.sub":
-      "Abra o site a partir de um servidor (ex: Live Server no VS Code).",
+      "Certifique-se de abrir o site a partir de um servidor (ex: Live Server no VS Code).",
     "noticias.ver": "Ver cartaz",
 
     "galeria.hero.titulo": "Galeria",
     "galeria.hero.sub": "Nossa história em imagens.",
     "galeria.momentos.titulo": "Nossos Momentos",
-    "galeria.2025.desc": "Fotos de rodas, treinos e eventos de 2025. Venha reviver nossos momentos.",
+    "galeria.2025.desc": "Fotos de rodas, treinos e eventos de 2025. Venha e reviva nossos momentos.",
     "galeria.2026.desc": "Fotos de rodas, treinos e eventos de 2026. Continuamos construindo história.",
 
     "saopaulo.hero.titulo": "São Paulo – Raiz da Organização Onça",
     "saopaulo.hero.sub": "O coração do grupo, onde tradição, música e movimento se encontram.",
     "saopaulo.origenes.titulo": "Nossas Origens",
-    "saopaulo.origenes.p1": "A Organização Onça nasce a partir de uma das raízes mais tradicionais da Capoeira Regional em Salvador, Bahia. Provenimos diretamente da linha do Mestre Bimba, criador da Capoeira Regional e responsável por transformar a arte em um método, disciplina e identidade cultural.",
-    "saopaulo.origenes.p2": "A história continua com Mestre Joel, discípulo do Mestre Bimba, que difundiu essa essência em Itapuã e formou o Mestre Cobrinha, consolidando a linha Onça que hoje preservamos e expandimos.",
+    "saopaulo.origenes.p1": "A Organização Onça nasce a partir de uma das raízes mais tradicionais da Capoeira Regional em Salvador, Bahia. Viemos diretamente da linhagem de Mestre Bimba, criador da Capoeira Regional e responsável por transformar a arte em um método, disciplina e identidade cultural.",
+    "saopaulo.origenes.p2": "A história continua com Mestre Joel, discípulo de Mestre Bimba, que difundiu essa essência em Itapuã e formou Mestre Cobrinha, consolidando a linhagem Onça que hoje preservamos e expandimos.",
     "saopaulo.linaje.titulo": "Nossa Linhagem – Árvore Genealógica",
     "saopaulo.linaje.sub": "A raiz da nossa capoeira: Mestre Bimba → Mestre Joel → Mestre Cobrinha → Contramestre Cabelo Pé de Serra.",
     "saopaulo.matriz.titulo": "A Matriz em São Paulo",
-    "saopaulo.matriz.p1": "De São Paulo se desenvolve e fortalece nossa linha, mantendo viva a essência deixada pelos nossos mestres e projetando-nos para o futuro da capoeira no mundo.",
+    "saopaulo.matriz.p1": "De São Paulo se desenvolve e fortalece a nossa linhagem, mantendo viva a essência deixada pelos nossos mestres e projetando-nos para o futuro da capoeira no mundo.",
     "saopaulo.matriz.p2": "Este espaço é um ponto de encontro, aprendizado e formação, onde tradição e modernidade convivem em harmonia.",
     "saopaulo.joel.titulo": "Mestre Joel",
-    "saopaulo.joel.p1": "Nascido em 28 de fevereiro de 1944 em Santo Amaro, Brasil, Mestre Joel cresceu em Feira de Santana e iniciou-se na capoeira sob a orientação do Mestre Arara, discípulo direto do Mestre Bimba. Desde seus primeiros anos como praticante, destacou-se pelo compromisso com as raízes e tradições desta arte. Durante a década de 1960, começou a viajar com frequência para São Paulo, onde foi figura-chave na fundação e expansão de vários grupos de capoeira. Em 1972, o Mestre Bimba o reconheceu oficialmente como mestre.",
+    "saopaulo.joel.p1": "Nascido em 28 de fevereiro de 1944 em Santo Amaro, Brasil, Mestre Joel cresceu em Feira de Santana e iniciou-se na capoeira sob a orientação de Mestre Arara, discípulo direto de Mestre Bimba. Desde seus primeiros anos como praticante, destacou-se pelo compromisso com as raízes e tradições dessa arte. Durante a década de 1960 começou a viajar com frequência a São Paulo, onde foi figura-chave na fundação e expansão de vários grupos de capoeira. Em 1972, Mestre Bimba o reconheceu oficialmente como mestre.",
     "saopaulo.joel.p2": "Fundou também a Associação de Capoeira Ilha de Itapuã, consolidando assim seu legado como formador e organizador.",
-    "saopaulo.joel.p3": "Sua influência transcendeu a Bahia e deixou uma marca indelével na capoeira paulista. É lembrado como um dos primeiros mestres a gravar música de capoeira, preservando para as gerações futuras as canções e tradições que dão vida a esta arte marcial.",
+    "saopaulo.joel.p3": "Sua influência transcendeu a Bahia e deixou uma marca indelével na capoeira paulista. É lembrado como um dos primeiros mestres a gravar música de capoeira, preservando para as gerações futuras as canções e tradições que dão vida a essa arte marcial.",
     "saopaulo.cobrinha.titulo": "Mestre Cobrinha",
-    "saopaulo.cobrinha.p1": "Mestre Cobrinha, filho do Mestre Joel, referência da capoeira em São Paulo e da roda da Praça da República.",
+    "saopaulo.cobrinha.p1": "Mestre Cobrinha, filho de Mestre Joel, referência da capoeira em São Paulo e na roda da Praça da República.",
     "saopaulo.cabelo.titulo": "Contramestre Cabelo Pé de Serra",
-    "saopaulo.cabelo.p1": "O Contramestre Cabelo é um dos principais responsáveis pela preservação, ensino e expansão da nossa linha. Supervisiona e acompanha os grupos fora do Brasil, garantindo que nossa essência permaneça firme e autêntica.",
-    "saopaulo.graduaciones.titulo": "Graduações – Organização Onça",
-    "saopaulo.graduaciones.sub": "Cada graduação simboliza o crescimento espiritual, técnico e cultural dos nossos alunos. Uma tradição que celebramos com alegria, respeito e união.",
-    "saopaulo.grad.ninos": "Graduação – Crianças",
-    "saopaulo.grad.adultos": "Graduação – Adultos",
+    "saopaulo.cabelo.p1": "Contramestre Cabelo é um dos principais responsáveis pela preservação, ensino e expansão de nossa linhagem. Supervisiona e acompanha os grupos fora do Brasil, garantindo que nossa essência permaneça firme e autêntica.",
+    "saopaulo.graduaciones.titulo": "Formatura – Organização Onça",
+    "saopaulo.graduaciones.sub": "Cada formatura simboliza o crescimento espiritual, técnico e cultural de nossos alunos. Uma tradição que celebramos com alegria, respeito e união.",
+    "saopaulo.grad.ninos": "Formatura – Crianças",
+    "saopaulo.grad.adultos": "Formatura – Adultos",
 
     "clases.titulo": "Aulas de Capoeira em Santiago",
     "clases.hero.titulo": "Aulas de Capoeira",
     "clases.hero.sub": "Treine conosco e viva uma experiência cultural, musical e esportiva. Temos aulas durante toda a semana em diferentes pontos de Santiago.",
     "clases.lugares.titulo": "📍 Locais de Treino",
     "clases.rojas.titulo": "Centro Cultural Rojas Magallanes",
+    "clases.rojas.parrafo": "A poucos passos do metrô Rojas Magallanes L4",
     "clases.rojas.domingo": "Domingo:",
     "clases.rojas.ninos": "Crianças: 10:00 – 11:00",
     "clases.rojas.adultos": "Adultos: 11:00 – 12:30",
     "clases.rojas.precio": "Preço mensal:",
     "clases.rojas.precio.val": "1 aula por semana:",
-    "clases.semana.titulo": "Aulas na semana",
-    "clases.junta.titulo": 'Junta de Vizinhos "Villa Lomas de Macul" unidade n°18',
-    "clases.junta.dias": "Segundas e sextas:",
-    "clases.junta.horario": "Horário: 19:30 - 21:30",
+    "clases.reloj.label": "Hora no Chile:",
+    "clases.semana.titulo": "Aulas durante a semana",
+    "clases.junta.titulo": 'Junta de Vizinhos "Villa Lomas de Macul" n°18',
+    "clases.junta.parrafo": "Próximo ao metrô Pedrero (L5) ou metrô Macul (L4)",
+    "clases.junta.dias": "Segunda e sexta-feira:",
+    "clases.junta.horario": "Horário: 19:30 – 21:30",
     "clases.junta.precio": "Preço por Aula:",
     "clases.junta.gratis": "Crianças e idosos: Grátis",
     "clases.junta.general": "Público Geral: $2.000",
-    "clases.junta.gratis-label": "Crianças e idosos:",
-    "clases.junta.gratis-val": "Grátis",
-    "clases.junta.general-label": "Público Geral:",
-    "clases.junta.general-val": "$2.000",
     "clases.semana.desc": "Em breve",
     "clases.airlibre.titulo": "Aulas ao ar livre",
     "clases.airlibre.desc": "Em breve",
@@ -373,15 +246,141 @@ const _T = {
     "clases.legend.evento": "Evento especial",
 
     "footer.copy": "Organização Onça © 2026",
-    "footer.instagram": "Instagram",
+  },
+
+  en: {
+    "nav.nosotros": "About Us",
+    "nav.galeria": "Gallery",
+    "nav.noticias": "News",
+    "nav.saopaulo": "São Paulo",
+    "nav.clases": "Classes & Contact",
+
+    "home.hero.titulo": "Capoeira: Movement, Culture and Freedom",
+    "home.hero.sub": "Come Jogo with us",
+
+    "home.noticias.titulo": "News",
+    "home.noticias.badge": "New",
+    "home.noticias.btn": "See all news",
+
+    "home.quees.titulo": "What is Capoeira?",
+    "home.quees.p1":
+      "Capoeira is an Afro-Brazilian cultural expression that combines fighting, music, dance and acrobatics in a single practice. Its origins date back to the 16th century, when enslaved African people in Brazil developed this form of combat as a method of resistance and self-defense, disguising it within rhythmic movements to avoid repression.",
+    "home.quees.p2":
+      "Over time, capoeira evolved from a persecuted practice to become a cultural symbol of Brazil and an intangible heritage recognized in 2014 by UNESCO worldwide.",
+    "home.quees.p3":
+      "Today, capoeira is practiced all over the world, not only as a physical activity, but also as a tool for holistic development. It fosters discipline, coordination, body expression and community work, keeping alive a tradition that connects history, culture and movement.",
+    "home.quees.onca": "Capoeira Organização Onças in Chile",
+    "home.quees.btn": "Learn more about us",
+
+    "home.explora.titulo": "Explore more",
+    "home.explora.clases.titulo": "Classes and contacts",
+    "home.explora.clases.desc": "Schedules and places where we train in Chile.",
+    "home.explora.galeria.titulo": "Gallery",
+    "home.explora.galeria.desc": "Photos of rodas, training and events.",
+    "home.explora.sao.desc": "Our connection with Brazil and the group's roots.",
+
+    "nosotros.hero.titulo": "Who We Are",
+    "nosotros.hero.sub":
+      "A family that grows through movement, music and Afro-Brazilian tradition.",
+    "nosotros.historia.titulo": "Organização Onça (Chile)",
+    "nosotros.historia.p1":
+      "Organização Onça - Chile was founded in 2025, under the supervision of Contramestre Cabelo Pé de Serra. Since then, we have grown as a community, sharing the passion for capoeira.",
+    "nosotros.historia.p2":
+      "With a long history of rodas, workshops and events, we have established ourselves as a space for encounter, learning and celebration of Afro-Brazilian culture in Santiago, Chile. Being part of capoeira's history in Chile, we continue building our path, with our eyes on the future and our hearts full of joy and commitment to this extraordinary martial art.",
+    "nosotros.filosofia.titulo": "Our Philosophy",
+    "nosotros.filosofia.p1":
+      "At Organização Onça we believe in Capoeira as a transformative tool that promotes respect, discipline and creativity. Our philosophy is based on the values of community, inclusion and continuous learning, fostering an environment where each individual can grow both physically and spiritually through the practice of Capoeira.",
+    "nosotros.filosofia.p2":
+      "We strive to keep capoeira alive in all its facets, such as maculelê, samba de roda, and other expressions of Afro-Brazilian culture, promoting diversity and cultural exchange within our community.",
+    "nosotros.equipo.titulo": "Our Team",
+    "nosotros.camilo.titulo": "Professor Camilo Donoso",
+    "nosotros.camilo.cv":
+      "Professor Grau 2° Camilo Donoso started capoeira at the young age of 7, around the year 2000, in a community capoeira workshop together with his brother, and since then this discipline has been part of his life. With more than 20 years of experience in Capoeira, he was initially part of the Sul da Bahia group founded by Mestre Zequinha, with whom he maintains an excellent relationship to this day.",
+    "nosotros.felipe.titulo": "Professor Felipe Donoso",
+    "nosotros.felipe.cv":
+      "Professor Grau 2° Felipe Donoso has more than 20 years of experience in Capoeira. He started as a child in the early 2000s together with his brother Camilo, sharing the path of Capoeira since childhood. He trained under the guidance of Mestre Zequinha, from the Sul da Bahia group, with whom he maintains an excellent relationship to this day.",
+
+    "noticias.hero.titulo": "News & Events",
+    "noticias.hero.sub": "What's happening at Organização Onça",
+    "noticias.cargando": "Loading news…",
+    "noticias.vacia": "No news published at this time.",
+    "noticias.error": "News could not be loaded.",
+    "noticias.error.sub":
+      "Make sure to open the site from a server (e.g.: Live Server in VS Code).",
+    "noticias.ver": "View poster",
+
+    "galeria.hero.titulo": "Gallery",
+    "galeria.hero.sub": "Our history in images.",
+    "galeria.momentos.titulo": "Our Moments",
+    "galeria.2025.desc": "Photos of rodas, training and events from 2025. Come and relive our moments.",
+    "galeria.2026.desc": "Photos of rodas, training and events from 2026. We keep building history.",
+
+    "saopaulo.hero.titulo": "São Paulo – Root of Organização Onça",
+    "saopaulo.hero.sub": "The heart of the group, where tradition, music and movement meet.",
+    "saopaulo.origenes.titulo": "Our Origins",
+    "saopaulo.origenes.p1": "Organização Onça is born from one of the most traditional roots of Capoeira Regional in Salvador, Bahia. We come directly from the lineage of Mestre Bimba, creator of Capoeira Regional and responsible for transforming the art into a method, discipline and cultural identity.",
+    "saopaulo.origenes.p2": "The story continues with Mestre Joel, a disciple of Mestre Bimba, who spread this essence in Itapuã and trained Mestre Cobrinha, consolidating the Onça lineage that we preserve and expand today.",
+    "saopaulo.linaje.titulo": "Our Lineage – Family Tree",
+    "saopaulo.linaje.sub": "The root of our capoeira: Mestre Bimba → Mestre Joel → Mestre Cobrinha → Contramestre Cabelo Pé de Serra.",
+    "saopaulo.matriz.titulo": "The Headquarters in São Paulo",
+    "saopaulo.matriz.p1": "From São Paulo our lineage grows and strengthens, keeping alive the essence left by our mestres and projecting us toward the future of capoeira in the world.",
+    "saopaulo.matriz.p2": "This space is a meeting point for learning and growth, where tradition and modernity coexist in harmony.",
+    "saopaulo.joel.titulo": "Mestre Joel",
+    "saopaulo.joel.p1": "Born on February 28, 1944 in Santo Amaro, Brazil, Mestre Joel grew up in Feira de Santana and began capoeira under the guidance of Mestre Arara, a direct disciple of Mestre Bimba. From his early years as a practitioner, he stood out for his commitment to the roots and traditions of this art. During the 1960s he began traveling frequently to São Paulo, where he was a key figure in the founding and expansion of several capoeira groups. In 1972, Mestre Bimba officially recognized him as a mestre.",
+    "saopaulo.joel.p2": "He also founded the Associação de Capoeira Ilha de Itapuã, consolidating his legacy as a trainer and organizer.",
+    "saopaulo.joel.p3": "His influence transcended Bahia and left an indelible mark on São Paulo capoeira. He is remembered as one of the first mestres to record capoeira music, preserving for future generations the songs and traditions that bring this martial art to life.",
+    "saopaulo.cobrinha.titulo": "Mestre Cobrinha",
+    "saopaulo.cobrinha.p1": "Mestre Cobrinha, son of Mestre Joel, is a reference of capoeira in São Paulo and the roda at Praça da República.",
+    "saopaulo.cabelo.titulo": "Contramestre Cabelo Pé de Serra",
+    "saopaulo.cabelo.p1": "Contramestre Cabelo is one of the main people responsible for the preservation, teaching and expansion of our lineage. He supervises and accompanies groups outside Brazil, ensuring that our essence remains firm and authentic.",
+    "saopaulo.graduaciones.titulo": "Graduations – Organização Onça",
+    "saopaulo.graduaciones.sub": "Each graduation symbolizes the spiritual, technical and cultural growth of our students. A tradition we celebrate with joy, respect and unity.",
+    "saopaulo.grad.ninos": "Graduation – Children",
+    "saopaulo.grad.adultos": "Graduation – Adults",
+
+    "clases.titulo": "Capoeira Classes in Santiago",
+    "clases.hero.titulo": "Capoeira Classes",
+    "clases.hero.sub": "Train with us and live a cultural, musical and sporting experience. We have classes throughout the week at different locations in Santiago.",
+    "clases.lugares.titulo": "📍 Training Locations",
+    "clases.rojas.titulo": "Centro Cultural Rojas Magallanes",
+    "clases.rojas.parrafo": "A few steps from Rojas Magallanes metro L4",
+    "clases.rojas.domingo": "Sunday:",
+    "clases.rojas.ninos": "Children: 10:00 – 11:00",
+    "clases.rojas.adultos": "Adults: 11:00 – 12:30",
+    "clases.rojas.precio": "Monthly price:",
+    "clases.rojas.precio.val": "1 class per week:",
+    "clases.reloj.label": "Time in Chile:",
+    "clases.semana.titulo": "Weekday Classes",
+    "clases.junta.titulo": 'Neighborhood Center "Villa Lomas de Macul" No. 18',
+    "clases.junta.parrafo": "Near Pedrero metro (L5) or Macul metro (L4)",
+    "clases.junta.dias": "Monday and Friday:",
+    "clases.junta.horario": "Schedule: 19:30 – 21:30",
+    "clases.junta.precio": "Price per Class:",
+    "clases.junta.gratis": "Children and seniors: Free",
+    "clases.junta.general": "General Public: $2,000",
+    "clases.semana.desc": "Coming soon",
+    "clases.airlibre.titulo": "Outdoor Classes",
+    "clases.airlibre.desc": "Coming soon",
+    "clases.contacto.titulo": "Want to train with us?",
+    "clases.contacto.sub": "Write to us directly or follow us for more information.",
+    "clases.calendar.prev": "◀ Previous month",
+    "clases.calendar.next": "Next month ▶",
+    "clases.legend.clases": "Training",
+    "clases.legend.parque": "Outdoor activity",
+    "clases.legend.evento": "Special event",
+
+    "footer.copy": "Organização Onça © 2026",
   },
 };
 
 // ── LANGUAGE ─────────────────────────────────────────────────────
+let _activeTranslations = _T.es;
+
 function _applyLang(lang) {
-  const t = _T[lang] || _T.es;
+  _activeTranslations = _T[lang] || _T.es;
+
   document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const val = t[el.getAttribute("data-i18n")];
+    const val = _activeTranslations[el.getAttribute("data-i18n")];
     if (val !== undefined) el.textContent = val;
   });
   document.documentElement.lang = lang === "pt" ? "pt-BR" : lang === "en" ? "en" : "es";
@@ -407,10 +406,8 @@ window.uiSetLang = function (lang) {
   location.reload();
 };
 
-// Expose translations for page scripts that render dynamic content
 window.uiT = function (key) {
-  const lang = localStorage.getItem("onca-lang") || "es";
-  return (_T[lang] || _T.es)[key] || _T.es[key] || key;
+  return _activeTranslations[key] || _T.es[key] || key;
 };
 
 window.uiLang = function () {
@@ -418,8 +415,14 @@ window.uiLang = function () {
 };
 
 // ── INIT ──────────────────────────────────────────────────────────
+// Promise resuelta inmediatamente — las traducciones son síncronas.
+// calendarioYcontactos.js hace "await window.uiReady" antes de renderizar.
+window.uiReady = Promise.resolve();
+
 document.addEventListener("DOMContentLoaded", () => {
-  _applyLang(localStorage.getItem("onca-lang") || "es");
+  const lang = localStorage.getItem("onca-lang") || "es";
+  _applyLang(lang);
+  window.uiReady = Promise.resolve();
 
   // Barra de progreso de scroll
   const progressBar = document.createElement('div');

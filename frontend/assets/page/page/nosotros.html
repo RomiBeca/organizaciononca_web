@@ -1,0 +1,277 @@
+﻿<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Conoce al equipo de Organização Onça Chile: profesores, historia y filosofía de nuestra escuela de Capoeira en Santiago. Raíces brasileñas, corazón chileno."
+    />
+    <link rel="canonical" href="https://organizacaooncachile.cl/frontend/assets/page/nosotros.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://organizacaooncachile.cl/frontend/assets/page/nosotros.html" />
+    <meta property="og:title" content="Quiénes Somos - Organização Onça Chile" />
+    <meta property="og:description" content="Conoce al equipo de Organização Onça Chile: profesores, historia y filosofía de nuestra escuela de Capoeira en Santiago." />
+    <meta property="og:image" content="https://organizacaooncachile.cl/frontend/assets/img/2.logos/organizaçãoOnça_jaguar.png" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:site_name" content="Organização Onça Chile" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Quiénes Somos - Organização Onça Chile" />
+    <meta name="twitter:description" content="Conoce al equipo de Organização Onça Chile: profesores, historia y filosofía de nuestra escuela de Capoeira en Santiago." />
+    <meta name="twitter:image" content="https://organizacaooncachile.cl/frontend/assets/img/2.logos/organizaçãoOnça_jaguar.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../img/2.logos/organizaçãoOnça_jaguar.png"
+    />
+
+    <!-- BOOTSTRAP -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- TU CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/nosotros.css" />
+
+    <title>Quiénes Somos - Organização Onça</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN1YXZMQ9Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VN1YXZMQ9Q');
+    </script>
+  </head>
+
+  <body>
+    <!-- ========================================================= -->
+    <!-- NAVBAR (MISMA DE TU INDEX) -->
+    <!-- ========================================================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../../../index.html">Home</a>
+
+        <div class="nav-ui-controls">
+          <div class="dropdown">
+            <button class="btn btn-lang btn-outline-secondary dropdown-toggle lang-flag-trigger" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Cambiar idioma">
+              <img id="lang-flag-img" src="../img/5.otros_elementos/iconos-banderas/chile.png" alt="Idioma" />
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end lang-flag-menu">
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('es')" data-lang="es"><img src="../img/5.otros_elementos/iconos-banderas/chile.png" alt="" /> Español</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('pt')" data-lang="pt"><img src="../img/5.otros_elementos/iconos-banderas/brasil.png" alt="" /> Português</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="../img/5.otros_elementos/iconos-banderas/reino-unido.png" alt="" /> English</button></li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clases_contactos.html" data-i18n="nav.clases">Clases & Horarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="noticias.html" data-i18n="nav.noticias">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html" data-i18n="nav.galeria">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sao_paulo.html" data-i18n="nav.saopaulo">São Paulo</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========================================================= -->
+    <!-- HERO O IMAGEN PRINCIPAL -->
+    <!-- ========================================================= -->
+    <section
+      class="hero-nosotros d-flex justify-content-center align-items-center text-center"
+    >
+      <div class="container text-white" id="container_tituloNosotros">
+        <h1 class="fw-bold" data-i18n="nosotros.hero.titulo">Quiénes Somos</h1>
+        <p class="mt-3" data-i18n="nosotros.hero.sub">
+          Una familia que crece a través del movimiento, la música y la
+          tradición afrobrasileña.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECCIÓN 1: HISTORIA DEL GRUPO -->
+    <!-- ========================================================= -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <h2 class="fw-bold mb-3" data-i18n="nosotros.historia.titulo">
+              Organização Onça (Chile)
+            </h2>
+            <p class="fs-5" data-i18n="nosotros.historia.p1">
+              Organização Onça - Chile nace en el año 2025, bajo la supervicion
+              del contramestre Cabelo Pé de Serra. Desde entonces, hemos crecido
+              como comunidad, compartiendo la pasión por la capoeira
+            </p>
+
+            <p class="fs-5" data-i18n="nosotros.historia.p2">
+              Con una larga trayectoria de rodas, talleres y eventos, nos hemos
+              consolidado como un espacio de encuentro, aprendizaje y
+              celebración de la cultura afrobrasileña en Santiago de Chile.
+              Siendo parte de la historia de la capoeira en Chile, hoy seguimos
+              construyendo nuestro camino, con la mirada puesta en el futuro y
+              el corazón lleno de alegría y compromiso con esta extraordinaria
+              arte marcial.
+            </p>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card shadow">
+              <img
+                id="historiaPhoto"
+                src="../img/1.Profesores/Chile/fYc_CentroC.jpg"
+                alt="Nuestra historia"
+                class="card-img-top"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECCIÓN 2: FILOSOFÍA DEL GRUPO -->
+    <!-- ========================================================= -->
+    <section class="py-5" style="background-color:var(--onca-bg-card)">
+      <div class="container">
+        <div class="row align-items-center flex-lg-row-reverse">
+          <div class="col-lg-6 mb-4">
+            <h2 class="fw-bold mb-3 tituloNF" data-i18n="nosotros.filosofia.titulo">
+              Nuestra Filosofía
+            </h2>
+            <p class="fs-5 parrafoNF" data-i18n="nosotros.filosofia.p1" >
+              En Organização Onça creemos en la Capoeira como una herramienta
+              transformadora que promueve el respeto, la disciplina y la
+              creatividad. Nuestra filosofía se basa en los valores de la
+              comunidad, la inclusión y el aprendizaje continuo, fomentando un
+              ambiente donde cada individuo pueda crecer tanto física como
+              espiritualmente a través de la práctica de la Capoeira.
+            </p>
+
+            <p class="fs-5 parrafoNF" data-i18n="nosotros.filosofia.p2">
+              Nos esforzamos por mantener viva la capoeira y todas sus aristas
+              como el maculele, samba de roda entre otras instancias de la
+              cultura afrobrasileña, promoviendo la diversidad y el intercambio
+              cultural dentro de nuestra comunidad.
+            </p>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card shadow">
+              <img
+                id="filosofiaPhoto"
+                src="../img/6.Galeria/2025/5.Muestra_talleres_2025_centro_cultural_rojas_magallanes/IMG_9797.jpg"
+                alt="Nuestra filosofía"
+                class="card-img-top"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECCIÓN 3: INSTRUCTORES -->
+    <!-- ========================================================= -->
+    <section class="py-5">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-5" data-i18n="nosotros.equipo.titulo">
+          Nuestro Equipo
+        </h2>
+
+        <div class="row g-4">
+          <!-- EJEMPLO DE INSTRUCTOR -->
+          <div class="col-md-6 profesor_cd">
+            <h3 data-i18n="nosotros.camilo.titulo">Profesor Camilo Donoso</h3>
+            <p class="cv" data-i18n="nosotros.camilo.cv">
+              Grau 2° (10ª graduación), el Profesor Camilo Donoso cuenta con más
+              de 25 años de experiencia en la Capoeira. Comenzó desde niño en
+              los años 2000 junto a su hermano Felipe, compartiendo desde la
+              infancia el camino de la Capoeira. Se formó bajo la guía del
+              Mestre Zequinha, del grupo Sul da Bahia, con quien mantiene hasta
+              hoy una excelente relación.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow p-3">
+              <img
+                id="camiloPhoto"
+                src="../img/1.Profesores/Chile/Camilo_2_2.jpg"
+                class="card-img-top rounded"
+                alt="Profesor Camilo Donoso, Grau 2° - Organização Onça Chile"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow p-3">
+              <img
+                id="felipePhoto"
+                src="../img/1.Profesores/Chile/felipe_2.jpg"
+                class="card-img-top rounded"
+                alt="Profesor Felipe Donoso, Grau 2° - Organização Onça Chile"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 data-i18n="nosotros.felipe.titulo">Profesor Felipe Donoso</h3>
+            <p class="cv" data-i18n="nosotros.felipe.cv">
+              Grau 2° (10ª graduación), el Profesor Felipe Donoso cuenta con más
+              de 25 años de experiencia en la Capoeira. Comenzó desde niño en
+              los años 2000 junto a su hermano Camilo, compartiendo desde la
+              infancia el camino de la Capoeira. Se formó bajo la guía del
+              Mestre Zequinha, del grupo Sul da Bahia, con quien mantiene hasta
+              hoy una excelente relación.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================================= -->
+    <footer class="py-4 bg-dark text-white">
+      <div class="container text-center">
+        <p class="mb-2" data-i18n="footer.copy">Organização Onça © 2026</p>
+        <a href="https://instagram.com/organizacaooncaschile" target="_blank" rel="noopener noreferrer" class="text-warning" aria-label="Instagram @organizacaooncaschile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/ui.js"></script>
+  </body>
+</html>

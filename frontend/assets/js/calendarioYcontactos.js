@@ -1,114 +1,13 @@
 // =============================================
-// CLASES QUE SE REPITEN CADA SEMANA
-// 0=Dom 1=Lun 2=Mar 3=Mié 4=Jue 5=Vie 6=Sáb
-// =============================================
-const clasesSemanales = {
-  0: {
-    color: "bg-warning",
-    key: "clases.rojas", // Referencia a las claves i18n
-    type: "rojas"
-  },
-  1: {
-    color: "bg-warning",
-    key: "clases.junta",
-    type: "junta"
-  },
-  5: {
-    color: "bg-warning",
-    key: "clases.junta",
-    type: "junta"
-  },
-};
-
-// Fecha a partir de la cual comienzan las clases (5 de junio 2026)
-const FECHA_INICIO_CLASES = new Date(2026, 5, 5); // mes 5 = junio (0-indexed)
-
-// =============================================
-// ESTRUCTURA DETALLADA DE CLASES (para modal)
-// =============================================
-const clasesDetalle = {
-  rojas: {
-    nombreKey: "clases.rojas.titulo",
-    diasKey: "clases.rojas.domingo",
-    horariosKeys: [
-      "clases.rojas.ninos",
-      "clases.rojas.adultos"
-    ],
-    preciosKeys: [
-      "clases.rojas.precio.val"
-    ],
-    preciosValores: ["$25.000"],
-    ubicacion: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.723567843041!2d-70.59330962450666!3d-33.534572073356465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d0ee6a4ed651%3A0xdc686a5dbe86ba5!2sCentro%20Cultural%20Rojas%20Magallanes!5e0!3m2!1ses-419!2scl!4v1781116092634!5m2!1ses-419!2scl"
-  },
-  junta: {
-    nombreKey: "clases.junta.titulo",
-    diasKey: "clases.junta.dias",
-    horariosKeys: [
-      "clases.junta.horario"
-    ],
-    preciosKeys: [
-      "clases.junta.gratis",
-      "clases.junta.general"
-    ],
-    preciosValores: ["", ""],
-    ubicacion: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5594.999796233695!2d-70.60110354382047!3d-33.506403799365415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d17c369666eb%3A0x2068b0240f7f0dd!2sUnidad%20Vecinal%20N%C2%B018%2C%20Macul!5e0!3m2!1ses-419!2scl!4v1781116003416!5m2!1ses-419!2scl"
-  }
-};
-
-// =============================================
-// DÍAS DE ACTIVIDAD EN PARQUE (por fecha)
-// =============================================
-const diasParque = {};
-
-// =============================================
-// EVENTOS ESPECIALES (por fecha exacta)
-// =============================================
-const eventosEspeciales = {
-  2026: {
-    0: [
-      { dia: 27, nombre: "Intensivo 2026 batizado y troca", comentario: "Intensivo 2026 batizado y troca Capoeira Raza y Oncas" },
-      { dia: 28, nombre: "Intensivo 2026 batizado y troca", comentario: "Intensivo 2026 batizado y troca Capoeira Raza y Oncas" },
-      { dia: 29, nombre: "Intensivo 2026 batizado y troca", comentario: "Intensivo 2026 batizado y troca Capoeira Raza y Oncas" },
-      { dia: 30, nombre: "Intensivo 2026 batizado y troca", comentario: "Intensivo 2026 batizado y troca Capoeira Raza y Oncas" },
-      { dia: 31, nombre: "Intensivo 2026 batizado y troca", comentario: "Intensivo 2026 batizado y troca Capoeira Raza y Oncas" },
-    ],
-    1: [
-      { dia: 1, nombre: "Intensivo 2026 batizado y troca", comentario: "Intensivo 2026 batizado y troca Capoeira Raza y Oncas" },
-    ],
-    5: [
-      { dia: 5,  color: "bg-warning", nombre: "Inicio de clases — Junta Vecinal Villa Lomas de Macul", comentario: "Inicio de clases en Junta vecinal 'villa lomas de Macul, unidad n°18'" },
-      { dia: 12, color: "bg-danger", nombre: "Roda de Inauguración", comentario: "Roda de inauguracion nuevo espacio de clases en Junta de Vecinos Villa Lomas de Macul" },
-    ],
-  },
-};
-
-// =============================================
-// FERIADOS OFICIALES EN CHILE
-// =============================================
-const feriadosChile = {
-  2025: {
-    11: [
-      { dia: 8, nombre: "Inmaculada Concepción" },
-      { dia: 25, nombre: "Navidad" },
-    ],
-  },
-  2026: {
-    0:  [{ dia: 1,  nombre: "Año Nuevo" }],
-    2:  [{ dia: 29, nombre: "Viernes Santo" }, { dia: 30, nombre: "Sábado Santo" }],
-    4:  [{ dia: 1,  nombre: "Día del Trabajo" }, { dia: 21, nombre: "Glorias Navales" }],
-    5:  [{ dia: 29, nombre: "San Pedro y San Pablo" }],
-    6:  [{ dia: 16, nombre: "Virgen del Carmen" }],
-    7:  [{ dia: 15, nombre: "Asunción de la Virgen" }],
-    8:  [{ dia: 18, nombre: "Independencia" }, { dia: 19, nombre: "Glorias del Ejército" }],
-    9:  [{ dia: 12, nombre: "Encuentro de dos mundos" }, { dia: 31, nombre: "Iglesias Evangélicas y Protestantes" }],
-    10: [{ dia: 1,  nombre: "Todos los Santos" }],
-    11: [{ dia: 8,  nombre: "Inmaculada Concepción" }, { dia: 25, nombre: "Navidad" }],
-  },
-};
-
-// =============================================
 // VARIABLES DEL CALENDARIO
 // =============================================
+let clasesSemanales    = {};
+let clasesDetalle      = {};
+let diasParque         = {};
+let eventosEspeciales  = {};
+let feriadosChile      = {};
+let FECHA_INICIO_CLASES = null;
+
 let fechaActual = new Date();
 
 const calendarTitle = document.getElementById("calendarTitle");
@@ -124,72 +23,63 @@ function getMeses() {
 }
 
 // =============================================
-// FUNCIÓN AUXILIAR: verificar si una fecha es posterior al inicio de clases
+// FUNCIÓN AUXILIAR
 // =============================================
 function esClaseHabilitada(dia, month, year) {
-  const fechaDia = new Date(year, month, dia);
-  return fechaDia >= FECHA_INICIO_CLASES;
+  return new Date(year, month, dia) >= FECHA_INICIO_CLASES;
 }
 
 // =============================================
-// MOSTRAR MODAL CON DETALLE DEL DÍA (ACTUALIZADO)
+// MOSTRAR MODAL CON DETALLE DEL DÍA
 // =============================================
 function mostrarDetalle(dia, month, data, esPasado = false) {
-  const lang = localStorage.getItem("onca-lang") || "es";
-
-  // Título: Mes + Día (+ badge "Pasado" si aplica)
   const tituloEl = document.getElementById("diaModal-titulo");
-  tituloEl.innerHTML = `${getMeses()[month]} ${dia}${esPasado ? ' <span class="badge bg-secondary ms-2 align-middle" style="font-size:.65rem;vertical-align:middle">Pasado</span>' : ''}`;
+  tituloEl.innerHTML = `${getMeses()[month]} ${dia}${esPasado
+    ? ' <span class="badge bg-secondary ms-2 align-middle" style="font-size:.65rem;vertical-align:middle">Pasado</span>'
+    : ''}`;
 
-  // Si es un evento especial
   if (data.type === "evento") {
-    document.querySelector("#diaModal-lugar span").textContent = data.nombre || "";
+    document.querySelector("#diaModal-lugar span").textContent   = data.nombre    || "";
     document.querySelector("#diaModal-horario span").textContent = data.comentario || "";
-    document.getElementById("diaModal-dias").style.display = "none";
+    document.getElementById("diaModal-horario").style.display  = "";
+    document.getElementById("diaModal-dias").style.display     = "none";
     document.getElementById("diaModal-horarios").style.display = "none";
-    document.getElementById("diaModal-precios").style.display = "none";
+    document.getElementById("diaModal-precios").style.display  = "none";
   } else {
-    // Es una clase (rojas o junta)
     const detalle = clasesDetalle[data.type];
-    
-    if (!detalle) {
-      console.warn("Detalle de clase no encontrado:", data.type);
-      return;
-    }
+    if (!detalle) { console.warn("Detalle no encontrado:", data.type); return; }
 
-    // Nombre del lugar
+    document.getElementById("diaModal-horario").style.display = "none";
+
     document.querySelector("#diaModal-lugar span").textContent = window.uiT(detalle.nombreKey);
-    
-    // Días
+
     document.querySelector("#diaModal-dias span").textContent = window.uiT(detalle.diasKey);
     document.getElementById("diaModal-dias").style.display = "";
-    
-    // Horarios (múltiples)
-    const horariosContainer = document.querySelector("#diaModal-horarios ul");
-    horariosContainer.innerHTML = "";
-    
-    if (detalle.horariosKeys && detalle.horariosKeys.length > 0) {
+
+    const horariosUl = document.querySelector("#diaModal-horarios ul");
+    horariosUl.innerHTML = "";
+    if (detalle.horariosKeys?.length) {
       detalle.horariosKeys.forEach(key => {
         const li = document.createElement("li");
         li.textContent = window.uiT(key);
-        horariosContainer.appendChild(li);
+        horariosUl.appendChild(li);
       });
       document.getElementById("diaModal-horarios").style.display = "";
     } else {
       document.getElementById("diaModal-horarios").style.display = "none";
     }
-    
-    // Precios (múltiples)
-    const preciosContainer = document.querySelector("#diaModal-precios ul");
-    preciosContainer.innerHTML = "";
-    
-    if (detalle.preciosKeys && detalle.preciosKeys.length > 0) {
-      detalle.preciosKeys.forEach((key, index) => {
-        const li = document.createElement("li");
-        const texto = window.uiT(key);
-        const valor = detalle.preciosValores[index];
-        li.innerHTML = valor ? `${texto} <strong class="text-success">${valor}</strong>` : `<strong class="text-success">${texto}</strong>`;
-        preciosContainer.appendChild(li);
+
+    const preciosUl = document.querySelector("#diaModal-precios ul");
+    preciosUl.innerHTML = "";
+    if (detalle.preciosKeys?.length) {
+      detalle.preciosKeys.forEach((key, i) => {
+        const li  = document.createElement("li");
+        const txt = window.uiT(key);
+        const val = detalle.preciosValores[i];
+        li.innerHTML = val
+          ? `${txt} <strong class="text-success">${val}</strong>`
+          : `<strong class="text-success">${txt}</strong>`;
+        preciosUl.appendChild(li);
       });
       document.getElementById("diaModal-precios").style.display = "";
     } else {
@@ -222,14 +112,14 @@ function generarCalendario() {
   for (let i = 0; i < inicio; i++) fila.appendChild(document.createElement("td"));
 
   for (let dia = 1; dia <= ultimoDia; dia++) {
-    const celda = document.createElement("td");
-    celda.innerHTML = `<span>${dia}</span>`;
+    const celda      = document.createElement("td");
+    celda.innerHTML  = `<span>${dia}</span>`;
     celda.classList.add("text-dark");
 
-    const diaSemana  = new Date(year, month, dia).getDay();
-    const fechaDia   = new Date(year, month, dia);
-    const esPasado   = fechaDia < hoy;
-    let eventoData   = null;
+    const diaSemana = new Date(year, month, dia).getDay();
+    const fechaDia  = new Date(year, month, dia);
+    const esPasado  = fechaDia < hoy;
+    let eventoData  = null;
 
     // 1. Feriados (rojo)
     const feriado = feriadosChile[year]?.[month]?.find(f => f.dia === dia);
@@ -239,7 +129,7 @@ function generarCalendario() {
       celda.title = feriado.nombre;
     }
 
-    // 2. Eventos especiales (naranjo)
+    // 2. Eventos especiales (color definido en JSON, por defecto naranjo)
     const evento = eventosEspeciales[year]?.[month]?.find(e => e.dia === dia);
     if (evento) {
       celda.classList.add(evento.color || "bg-evento");
@@ -247,7 +137,7 @@ function generarCalendario() {
       celda.title = evento.nombre;
     }
 
-    // 3. Clases semanales (amarillo) — solo si no hay evento especial ni feriado, Y si está habilitado
+    // 3. Clases semanales (amarillo) — solo si no hay evento ni feriado, y si ya comenzaron
     if (clasesSemanales[diaSemana] && !feriado && !evento && esClaseHabilitada(dia, month, year)) {
       const cls = clasesSemanales[diaSemana];
       celda.classList.add(cls.color, "text-dark");
@@ -261,7 +151,7 @@ function generarCalendario() {
       celda.title = "Actividad en Parque";
     }
 
-    // 5. Días pasados: atenuar / Día actual: círculo amarillo
+    // 5. Pasado / hoy
     if (esPasado) {
       celda.classList.add("cal-pasado");
     } else if (fechaDia.getTime() === hoy.getTime()) {
@@ -286,55 +176,74 @@ function generarCalendario() {
 }
 
 // =============================================
-// BOTONES MES
+// RELOJ HORA CHILE
 // =============================================
-prevBtn.addEventListener("click", () => {
-  fechaActual.setMonth(fechaActual.getMonth() - 1);
-  generarCalendario();
-});
-nextBtn.addEventListener("click", () => {
-  fechaActual.setMonth(fechaActual.getMonth() + 1);
-  generarCalendario();
-});
-
-// =============================================
-// CONTACTO
-// =============================================
-const instagramOncas   = "organizacaooncaschile";
-const telefonoContacto = "+56963711123";
-const mensaje          = "Hola! Quiero información sobre clases de capoeira";
-
-const instagramLink = document.getElementById("instagramLink");
-const instagramUser = document.getElementById("instagramUser");
-
-instagramLink.href          = `https://instagram.com/${instagramOncas}`;
-instagramUser.textContent   = `@${instagramOncas}`;
-
-document.getElementById("btnWhatsApp").addEventListener("click", () => {
-  window.open(
-    `https://wa.me/${telefonoContacto}?text=${encodeURIComponent(mensaje)}`,
-    "_blank"
-  );
-});
-
-// Inicializar
-generarCalendario();
-
-// =============================================
-// RELOJ HORA CHILE (America/Santiago)
-// =============================================
-(function iniciarReloj() {
+function iniciarReloj() {
   const el = document.getElementById("reloj-chile");
   if (!el) return;
   function tick() {
     el.textContent = new Date().toLocaleTimeString("es-CL", {
       timeZone: "America/Santiago",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: false,
+      hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false,
     });
   }
   tick();
   setInterval(tick, 1000);
-})();
+}
+
+// =============================================
+// INICIALIZAR CON DATOS DEL JSON
+// =============================================
+async function inicializar(cfg) {
+  // Esperar que las traducciones estén listas antes de renderizar
+  if (window.uiReady) await window.uiReady;
+  // Datos del calendario
+  clasesSemanales   = cfg.clases.semanales;
+  clasesDetalle     = cfg.clases.detalle;
+  diasParque        = cfg.diasParque;
+  eventosEspeciales = cfg.eventosEspeciales;
+  feriadosChile     = cfg.feriadosChile;
+
+  // Fecha de inicio (formato "YYYY-MM-DD")
+  const [y, m, d]   = cfg.clases.fechaInicio.split("-").map(Number);
+  FECHA_INICIO_CLASES = new Date(y, m - 1, d);
+
+  // Contacto
+  const { instagram, telefono, mensajeWhatsApp } = cfg.contacto;
+
+  const instagramLink = document.getElementById("instagramLink");
+  const instagramUser = document.getElementById("instagramUser");
+  if (instagramLink) instagramLink.href = `https://instagram.com/${instagram}`;
+  if (instagramUser) instagramUser.textContent = `@${instagram}`;
+
+  const btnWA = document.getElementById("btnWhatsApp");
+  if (btnWA) {
+    btnWA.addEventListener("click", () => {
+      window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensajeWhatsApp)}`, "_blank");
+    });
+  }
+
+  // Navegación del calendario
+  prevBtn.addEventListener("click", () => {
+    fechaActual.setMonth(fechaActual.getMonth() - 1);
+    generarCalendario();
+  });
+  nextBtn.addEventListener("click", () => {
+    fechaActual.setMonth(fechaActual.getMonth() + 1);
+    generarCalendario();
+  });
+
+  generarCalendario();
+  iniciarReloj();
+}
+
+// =============================================
+// CARGA DEL JSON
+// =============================================
+fetch("../data/calendario.json")
+  .then(r => {
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  })
+  .then(inicializar)
+  .catch(err => console.error("Error cargando calendario.json:", err));
