@@ -3,7 +3,7 @@
 /* ========================================================= */
 .galeria-hero {
   height: 45vh;
-  background: url("../img/5.otros_elementos/Wallpaper/Gemini_Generated_Image_3.png") center/cover no-repeat;
+  background: url("../img/6.Galeria/2025/2-visita-chile-mestre-levi-octubre-2025/MG_0874.webp") center/cover no-repeat;
   position: relative;
 }
 
@@ -137,6 +137,23 @@ a:has(.galeria-small):hover .galeria-small {
 .galeria-year-card:hover .year-badge {
   background: #ffc107;
   color: #000;
+}
+
+.year-ver-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #ffc107;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.galeria-year-card:hover .year-ver-btn {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .year-2025-card {

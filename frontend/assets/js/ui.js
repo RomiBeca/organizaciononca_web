@@ -65,7 +65,10 @@ const _T = {
     "galeria.hero.sub": "Nuestra historia en imágenes.",
     "galeria.momentos.titulo": "Nuestros Momentos",
     "galeria.2025.desc": "Fotos de rodas, entrenamientos y eventos del 2025. Ven y revive nuestros momentos.",
+    "galeria.2025.badge": "4 eventos · Fotos & Videos",
     "galeria.2026.desc": "Fotos de rodas, entrenamientos y eventos del 2026. Seguimos construyendo historia.",
+    "galeria.2026.badge": "Fotos & Videos",
+    "galeria.ver.btn": "Ver galería →",
 
     "saopaulo.hero.titulo": "São Paulo – Raíz de la Organização Onça",
     "saopaulo.hero.sub": "El corazón del grupo, donde tradición, música y movimiento se encuentran.",
@@ -189,7 +192,10 @@ const _T = {
     "galeria.hero.sub": "Nossa história em imagens.",
     "galeria.momentos.titulo": "Nossos Momentos",
     "galeria.2025.desc": "Fotos de rodas, treinos e eventos de 2025. Venha e reviva nossos momentos.",
+    "galeria.2025.badge": "4 eventos · Fotos & Vídeos",
     "galeria.2026.desc": "Fotos de rodas, treinos e eventos de 2026. Continuamos construindo história.",
+    "galeria.2026.badge": "Fotos & Vídeos",
+    "galeria.ver.btn": "Ver galeria →",
 
     "saopaulo.hero.titulo": "São Paulo – Raiz da Organização Onça",
     "saopaulo.hero.sub": "O coração do grupo, onde tradição, música e movimento se encontram.",
@@ -313,7 +319,10 @@ const _T = {
     "galeria.hero.sub": "Our history in images.",
     "galeria.momentos.titulo": "Our Moments",
     "galeria.2025.desc": "Photos of rodas, training and events from 2025. Come and relive our moments.",
+    "galeria.2025.badge": "4 events · Photos & Videos",
     "galeria.2026.desc": "Photos of rodas, training and events from 2026. We keep building history.",
+    "galeria.2026.badge": "Photos & Videos",
+    "galeria.ver.btn": "View gallery →",
 
     "saopaulo.hero.titulo": "São Paulo – Root of Organização Onça",
     "saopaulo.hero.sub": "The heart of the group, where tradition, music and movement meet.",
