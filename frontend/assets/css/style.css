@@ -1,6 +1,14 @@
-/* ── PÁRRAFOS JUSTIFICADOS (global) ─────────────────────────── */
+/* ── PÁRRAFOS JUSTIFICADOS (solo contenido largo) ───────────── */
 p {
   text-align: justify;
+}
+
+/* Excepciones: footer, tarjetas y contenedores centrados */
+footer p,
+.card p,
+.noticia-card p,
+.text-center p {
+  text-align: center;
 }
 
 /* ── THEME VARIABLES ─────────────────────────────────────────── */
