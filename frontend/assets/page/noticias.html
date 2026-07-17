@@ -275,11 +275,11 @@
               <div class="row g-4">
                 ${items.map(n => `
                   <div class="col-md-6" id="noticia-${n.id}">
-                    <div class="noticia-full-card${n.destacado ? ' noticia-destacada' : ''}${n.fecha_iso && n.fecha_iso < hoy ? ' noticia-pasada' : ''}">
+                    <div class="noticia-full-card${n.destacado ? ' noticia-destacada' : ''}${n.fecha_iso && n.fecha_iso < hoy ? ' noticia-pasada' : ''}" style="cursor: ${n.enlace ? 'pointer' : 'default'}" data-enlace="${n.enlace || ''}">
                       ${n.imagen
-                        ? `<div class="noticia-img-wrapper" data-bs-toggle="modal" data-bs-target="#modal-afiche" data-src="../${n.imagen}" data-alt="${n['titulo_' + lang] || n.titulo}">
+                        ? `<div class="noticia-img-wrapper" ${n.enlace ? '' : `data-bs-toggle="modal" data-bs-target="#modal-afiche" data-src="../${n.imagen}" data-alt="${n['titulo_' + lang] || n.titulo}"`} style="cursor: pointer;">
                              <img src="../${n.imagen}" alt="${n['titulo_' + lang] || n.titulo}" class="noticia-full-img" loading="lazy">
-                             <div class="noticia-img-overlay"><span>${verAfiche}</span></div>
+                             <div class="noticia-img-overlay"><span>${n.enlace ? 'Ver evento' : verAfiche}</span></div>
                            </div>`
                         : `<div class="noticia-img-placeholder"></div>`
                       }
@@ -289,10 +289,15 @@
                         <h4 class="noticia-titulo">${n['titulo_' + lang] || n.titulo}</h4>
                         <p class="noticia-desc">${n['descripcion_' + lang] || n.descripcion}</p>
                         <div class="d-flex justify-content-end mt-2">
-                          <button class="btn btn-sm btn-outline-warning btn-compartir-card" data-titulo="${n['titulo_' + lang] || n.titulo}" data-id="${n.id}">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
-                            ${lang === 'pt' ? 'Compartilhar' : 'Compartir'}
-                          </button>
+                          ${n.enlace
+                            ? `<a href="./${n.enlace}" class="btn btn-sm btn-warning fw-bold">
+                                 Ver evento completo →
+                               </a>`
+                            : `<button class="btn btn-sm btn-outline-warning btn-compartir-card" data-titulo="${n['titulo_' + lang] || n.titulo}" data-id="${n.id}">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                                 ${lang === 'pt' ? 'Compartilhar' : 'Compartir'}
+                               </button>`
+                          }
                         </div>
                       </div>
                     </div>

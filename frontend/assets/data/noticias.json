@@ -1,5 +1,22 @@
 [
   {
+    "id": 2,
+    "mes": "Julio 2026",
+    "mes_pt": "Julho 2026",
+    "fecha": "Jueves 25 Jul 2026",
+    "fecha_pt": "Quinta 25 Jul 2026",
+    "titulo": "Winter Open 2026 – Campeonato de Capoeira en Santiago",
+    "titulo_pt": "Winter Open 2026 – Campeonato de Capoeira em Santiago",
+    "resumen": "Winter Open 2026 llega a Santiago. Conoce los detalles del evento y los participantes de Organização Onça.",
+    "resumen_pt": "Winter Open 2026 chega a Santiago. Conheça os detalhes do evento e os participantes de Organização Onça.",
+    "descripcion": "Primer campeonato de capoeira de esta magnitud en Chile. Capoeiristas de Organização Onça participarán en el evento.",
+    "descripcion_pt": "Primeiro campeonato de capoeira desta magnitude no Chile. Capoeiristas de Organização Onça participarão no evento.",
+    "imagen": "img/7.Noticias/2.winterOpen2026/winterOpenLogo.webp",
+    "fecha_iso": "2026-07-25",
+    "destacado": true,
+    "enlace": "noticia_winteropen_2026.html"
+  },
+  {
     "id": 1,
     "mes": "Junio 2026",
     "mes_pt": "Junho 2026",

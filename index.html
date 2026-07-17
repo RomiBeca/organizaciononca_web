@@ -425,6 +425,7 @@
           container.innerHTML = noticias.map(n => `
             <div class="col-md-6 col-lg-4">
               <div class="noticia-card${n.fecha_iso && n.fecha_iso < hoy ? ' noticia-pasada' : ''}">
+                ${n.imagen ? `<img src="frontend/assets/${n.imagen}" alt="Noticia" class="noticia-imagen" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">` : ''}
                 <div class="noticia-fecha">${n['fecha_' + lang] || n.fecha}</div>
                 <h5 class="noticia-titulo">${n['titulo_' + lang] || n.titulo}</h5>
                 <p class="noticia-desc">${n['resumen_' + lang] || n.resumen}</p>
