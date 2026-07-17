@@ -33,11 +33,20 @@
     "embed_id": "Wuw2HQ4vN70"
   },
   {
-    "id": 4,
+  "id": 4,
+  "año": 2026,
+  "titulo": "Roda de Inaguracion Espacio Macul - Santiago Chile Junio 2026",
+  "descripcion": "Roda de Inaguracion en sede Vecinal n°18, Macul - Registro: Canal de youtube @OnçasChile",
+  "plataforma": "youtube",
+  "embed_id": "ozwAN8f-pFM"
+},
+  {
+    "id": 5,
     "año": 2026,
     "titulo": "Proximamente",
     "descripcion": "Proximamente",
     "plataforma": "instagram",
     "url": "https://www.instagram.com/reel/PEGA_AQUI_EL_ID_DEL_REEL/"
   }
+
 ]
