@@ -30,74 +30,241 @@
 }
 
 .noticia-card {
-  background-color: #f7f7f7;
-  border-left: 4px solid #ffc107;
-  border-radius: 10px;
-  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(180deg, #2b2b2b 0%, #222 100%);
+  border: 1px solid #3a3a3a;
+  border-top: 4px solid #ffc107;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .noticia-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(255, 193, 7, 0.2);
+  transform: translateY(-5px);
+  border-color: #ffc107;
+  box-shadow: 0 14px 32px rgba(255, 193, 7, 0.22);
 }
 
+.noticia-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111;
+}
+
+.noticia-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.noticia-card:hover .noticia-imagen {
+  transform: scale(1.05);
+}
+
+.noticia-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem 1.4rem 1.4rem;
+}
+
+.noticia-fecha {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffc107;
+  background: rgba(255, 193, 7, 0.12);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3em 0.75em;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.noticia-titulo {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+}
+
+.noticia-card .noticia-desc {
+  color: #d9d9d9;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
+
+.noticia-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto; /* botones siempre abajo, alineados entre tarjetas */
+}
+
+/* Afiches verticales: la tarjeta mantiene su tamaño y un botón abre el afiche completo */
+.noticia-ver-afiche {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  z-index: 3;
+  border: 1px solid #ffc107;
+  background: rgba(15, 15, 15, 0.85);
+  color: #ffc107;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4em 1em;
+  border-radius: 20px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.noticia-ver-afiche:hover,
+.noticia-ver-afiche:focus-visible {
+  background: #ffc107;
+  color: #000;
+}
+
+.noticia-media.is-afiche {
+  cursor: zoom-in;
+}
+
+/* ---- Noticias pasadas: se ven a color, solo llevan la etiqueta ---- */
 .noticia-card.noticia-pasada {
-  opacity: 0.45;
-  filter: grayscale(1);
   position: relative;
 }
 
 .noticia-card.noticia-pasada::after {
   content: 'Evento pasado';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(20, 20, 20, 0.82);
-  color: #ccc;
-  font-size: 0.75rem;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(20, 20, 20, 0.85);
+  color: #eee;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 0.45em 1.4em;
+  letter-spacing: 0.1em;
+  padding: 0.4em 1em;
   border-radius: 20px;
-  border: 1.5px solid #888;
-  white-space: nowrap;
+  border: 1px solid #888;
   pointer-events: none;
-  z-index: 5;
-}
-
-.noticia-card.noticia-pasada:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-.noticia-fecha {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #ffc107;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.5rem;
-}
-
-.noticia-titulo {
-  color: #000 !important;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-
-.noticia-desc {
-  color: var(--onca-text-muted);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+  z-index: 2;
 }
 
 /* Reserva espacio mientras el JS carga las noticias (evita salto de layout) */
 #noticias-container:empty {
   min-height: 180px;
+}
+
+/* ---- Carrusel de noticias ---- */
+.noticias-carousel {
+  position: relative;
+}
+
+.noticias-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 0.5rem 0.25rem 1rem; /* deja espacio para el hover/sombra */
+  outline: none;
+}
+
+.noticias-track::-webkit-scrollbar {
+  display: none;
+}
+
+.noticias-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .noticias-slide { flex-basis: calc((100% - 1.5rem) / 2); }
+}
+
+@media (min-width: 992px) {
+  .noticias-slide { flex-basis: calc((100% - 3rem) / 3); }
+}
+
+/* Si hay pocas noticias y caben todas, centrarlas */
+@media (min-width: 768px) {
+  .noticias-track:not(:has(.noticias-slide:nth-child(2))) { justify-content: center; }
+}
+@media (min-width: 992px) {
+  .noticias-track:not(:has(.noticias-slide:nth-child(3))) { justify-content: center; }
+}
+
+.noticias-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #ffc107;
+  background: rgba(20, 20, 20, 0.85);
+  color: #ffc107;
+  font-size: 1.1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.noticias-nav[hidden] {
+  display: none;
+}
+
+.noticias-nav:hover,
+.noticias-nav:focus-visible {
+  background: #ffc107;
+  color: #000;
+}
+
+.noticias-prev { left: -10px; }
+.noticias-next { right: -10px; }
+
+@media (min-width: 1200px) {
+  .noticias-prev { left: -56px; }
+  .noticias-next { right: -56px; }
+}
+
+.noticias-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.noticias-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #555;
+  transition: background-color 0.2s ease, width 0.2s ease;
+}
+
+.noticias-dot.active {
+  width: 26px;
+  border-radius: 5px;
+  background: #ffc107;
 }
 
 /* ========================================= */
@@ -226,21 +393,21 @@
 
 /* CLASES */
 .clases-card:hover {
-  background-image: url("../img/2.logos/organizaçãoOnça_jaguar.png"); /* 👈 CAMBIA ESTO */
+  background-image: url("../img/2.logos/organizaçãoOnça_jaguar.webp"); /* 👈 CAMBIA ESTO */
   background-size: cover;
   background-position: center;
 }
 
 /* GALERÍA — cambia la imagen en la línea de abajo */
 .galeria-card:hover {
-  background-image: url("../img/6.Galeria/2025/5.Muestra_talleres_2025_centro_cultural_rojas_magallanes/IMG_9797.jpg");
+  background-image: url("../img/6.Galeria/2025/5.Muestra_talleres_2025_centro_cultural_rojas_magallanes/IMG_9797.webp");
   background-size: cover;
   background-position: center;
 }
 
 /* SAO PAULO */
 .sao-card:hover {
-  background-image: url("../img/5.otros_elementos/brasil.png");
+  background-image: url("../img/5.otros_elementos/brasil.webp");
   background-size: cover;
   background-position: center;
 }
@@ -359,4 +526,58 @@
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+/* Portada: fotografía original y contenido bajo la mirada de la onça. */
+.hero.inicio-portada {
+  position: relative;
+  display: block;
+  min-height: 0;
+  padding: 58px 0 0;
+  overflow: hidden;
+  background: #070908;
+}
+.inicio-portada__imagen {
+  display: block;
+  width: 100%;
+  height: clamp(420px, 68vh, 680px);
+  object-fit: cover;
+  object-position: 50% 35%;
+}
+.inicio-portada__velo {
+  position: absolute;
+  inset: auto 0 0;
+  height: 340px;
+  pointer-events: none;
+  background: linear-gradient(0deg, #070908 40%, rgba(7,9,8,.88) 60%, transparent);
+}
+.inicio-portada__contenido {
+  position: relative;
+  z-index: 1;
+  margin-top: -132px;
+  padding-top: 28px;
+  padding-bottom: 48px;
+}
+.inicio-portada .titulo1 {
+  max-width: 950px;
+  margin: 0 auto;
+  font-size: clamp(2.1rem, 3.8vw, 3.55rem);
+  line-height: 1.12;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+  text-shadow: 0 2px 18px #000;
+}
+.inicio-portada .subtitulo1 { color: #ffc107; margin-bottom: 24px; }
+.home-acciones { position: static; }
+.home-acciones .btn { min-height: 48px; padding: 12px 22px; border-radius: 7px; }
+@media (max-width: 767px) {
+  .inicio-portada__imagen { height: clamp(360px, 53svh, 480px); object-position: 50% 38%; }
+  .inicio-portada__velo { height: 380px; background: linear-gradient(0deg, #070908 55%, rgba(7,9,8,.8) 74%, transparent); }
+  .inicio-portada__contenido { margin-top: -52px; padding: 20px 22px 36px; }
+  .inicio-portada .titulo1 { font-size: clamp(1.85rem, 7.6vw, 2.6rem); line-height: 1.16; }
+  .inicio-portada .subtitulo1 { font-size: 1.1rem !important; margin-top: 14px !important; margin-bottom: 22px; }
+  .home-acciones { max-width: 360px; margin: 0 auto; }
+  .home-acciones .btn { width: 100%; font-size: .95rem; }
+  .parrafo_quees p { text-align: left; line-height: 1.65; }
+  .noticia-acciones .btn { min-height: 44px; display: inline-flex; align-items: center; }
 }

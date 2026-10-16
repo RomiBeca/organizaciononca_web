@@ -1,16 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="description" content="Galería 2026 de Organização Onça Chile. Eventos, rodas y momentos del año 2026.">
-    <link rel="icon" type="image/png" href="../../img/2.logos/organizaçãoOnça_jaguar.png">
+    <link rel="icon" type="image/webp" href="../../img/2.logos/organizaçãoOnça_jaguar.webp">
 
     <!-- BOOTSTRAP -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="../../vendor/bootstrap/bootstrap.min.css"
       rel="stylesheet"
     />
 
@@ -22,13 +22,14 @@
     <title>Galería - Capoeira Organização Onça</title>
     
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN1YXZMQ9Q"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VN1YXZMQ9Q');
-    </script>
+    
+    
+  
+    <!-- Recursos locales para abrir la página sin servidor. -->
+    <script src="../../data/datos-locales.js"></script>
+    <script src="../../js/datos.js"></script>
+    <script src="../../js/ui.js"></script>
+    <script defer src="../../js/analytics.js"></script>
   </head>
 
   <body>
@@ -37,17 +38,17 @@
     <!-- ========================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="../../../../index.html">Home</a>
+        <a class="navbar-brand fw-bold" href="../../../../index.html" data-i18n="nav.inicio">Inicio</a>
 
         <div class="nav-ui-controls">
           <div class="dropdown">
             <button class="btn btn-lang btn-outline-secondary dropdown-toggle lang-flag-trigger" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Cambiar idioma">
-              <img id="lang-flag-img" src="../../img/5.otros_elementos/iconos-banderas/chile.png" alt="Idioma" />
+              <img id="lang-flag-img" src="../../img/5.otros_elementos/iconos-banderas/chile.webp" alt="Idioma" />
             </button>
             <ul class="dropdown-menu dropdown-menu-end lang-flag-menu">
-              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('es')" data-lang="es"><img src="../../img/5.otros_elementos/iconos-banderas/chile.png" alt="" /> Español</button></li>
-              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('pt')" data-lang="pt"><img src="../../img/5.otros_elementos/iconos-banderas/brasil.png" alt="" /> Português</button></li>
-              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="../../img/5.otros_elementos/iconos-banderas/reino-unido.png" alt="" /> English</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('es')" data-lang="es"><img src="../../img/5.otros_elementos/iconos-banderas/chile.webp" alt="" /> Español</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('pt')" data-lang="pt"><img src="../../img/5.otros_elementos/iconos-banderas/brasil.webp" alt="" /> Português</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="../../img/5.otros_elementos/iconos-banderas/reino-unido.webp" alt="" /> English</button></li>
             </ul>
           </div>
           
@@ -71,7 +72,7 @@
               <a class="nav-link" href="../nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../clases_contactos.html" data-i18n="nav.clases">Clases & Horarios</a>
+              <a class="nav-link" href="../clases_contactos.html" data-i18n="nav.clases">Clases y horarios</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../noticias.html" data-i18n="nav.noticias">Noticias</a>
@@ -135,7 +136,7 @@
                 <div class="col-4">
                   <a href="./galeria_dias_intensivo_2026.html">
                     <img
-                      src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1584.webp"
+                      src="../../img/miniaturas/13185c9223732106.webp"
                       alt="Días Intensivo Capoeira Raça y Organização Onça 2026 – foto 1"
                       class="img-fluid rounded galeria-small" loading="lazy"
                     />
@@ -144,7 +145,7 @@
                 <div class="col-4">
                   <a href="./galeria_dias_intensivo_2026.html">
                     <img
-                      src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1868.webp"
+                      src="../../img/miniaturas/074ef56919719725.webp"
                       alt="Días Intensivo Capoeira Raça y Organização Onça 2026 – foto 2"
                       class="img-fluid rounded galeria-small" loading="lazy"
                     />
@@ -153,8 +154,64 @@
                 <div class="col-4">
                   <a href="./galeria_dias_intensivo_2026.html">
                     <img
-                      src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2489.webp"
+                      src="../../img/miniaturas/6ba2fbad4a43e8a2.webp"
                       alt="Días Intensivo Capoeira Raça y Organização Onça 2026 – foto 3"
+                      class="img-fluid rounded galeria-small" loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- EVENTO 2: WINTER OPEN 2026 -->
+        <!-- ========================================================= -->
+        <div class="galeria-card mb-5 p-4 shadow rounded-4" id="winter-open-2026">
+          <div class="row align-items-center">
+            <!-- Texto -->
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <h3 class="fw-bold text-warning">Winter Open 2026</h3>
+              <h4 class="fw-bold text-dark">25 de Julio 2026</h4>
+              <p class="text-muted">
+                Campeonato de capoeira en Santiago. Camilo y Romina consiguieron el 3er lugar en sus respectivas categorías.
+              </p>
+
+              <a
+                href="./galeria_winter_open_2026.html"
+                class="btn btn-warning fw-bold"
+              >
+                Ver galería completa →
+              </a>
+            </div>
+
+            <!-- Mini galería -->
+            <div class="col-lg-7">
+              <div class="row g-3">
+                <div class="col-4">
+                  <a href="./galeria_winter_open_2026.html">
+                    <img
+                      src="../../img/miniaturas/6433af458df1668a.webp"
+                      alt="Camilo y Romina, 3er lugar Winter Open 2026"
+                      class="img-fluid rounded galeria-small" loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="./galeria_winter_open_2026.html">
+                    <img
+                      src="../../img/miniaturas/1f61a1a86bc36915.webp"
+                      alt="Winter Open 2026 – Camilo"
+                      class="img-fluid rounded galeria-small" loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a href="./galeria_winter_open_2026.html">
+                    <img
+                      src="../../img/miniaturas/1ff5ea7c7148634f.webp"
+                      alt="Winter Open 2026 – Romina"
                       class="img-fluid rounded galeria-small" loading="lazy"
                     />
                   </a>
@@ -179,8 +236,8 @@
     </footer>
 
     <!-- BOOTSTRAP JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../js/ui.js"></script>
+    <script src="../../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    
     <script src="../../js/onca-widget.js"></script>
   </body>
 </html>

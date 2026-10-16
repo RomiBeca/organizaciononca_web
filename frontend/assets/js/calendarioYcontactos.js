@@ -19,14 +19,23 @@ const mesesES = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agost
 const mesesPT = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
 
 function getMeses() {
-  return (localStorage.getItem("onca-lang") || "es") === "pt" ? mesesPT : mesesES;
+  const lang = window.uiLang();
+  if (lang === 'pt') return mesesPT;
+  if (lang === 'en') return ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  return mesesES;
 }
 
 // =============================================
 // FUNCIÓN AUXILIAR
 // =============================================
-function esClaseHabilitada(dia, month, year) {
-  return new Date(year, month, dia) >= FECHA_INICIO_CLASES;
+function esClaseHabilitada(dia, month, year, desde) {
+  const fecha = new Date(year, month, dia);
+  // "desde" (opcional, YYYY-MM-DD) permite que un lugar nuevo empiece en otra fecha
+  if (desde) {
+    const [y, m, d] = desde.split("-").map(Number);
+    if (fecha < new Date(y, m - 1, d)) return false;
+  }
+  return fecha >= FECHA_INICIO_CLASES;
 }
 
 // =============================================
@@ -98,6 +107,11 @@ function generarCalendario() {
   const month = fechaActual.getMonth();
 
   calendarTitle.textContent = `${getMeses()[month]} ${year}`;
+  // Actualiza los encabezados del calendario con el mismo idioma de la página.
+  const locale = {es:'es-CL',pt:'pt-BR',en:'en-US'}[window.uiLang()];
+  document.querySelectorAll('.calendar-box thead th').forEach((th,i) => {
+    th.textContent = new Intl.DateTimeFormat(locale,{weekday:'short',timeZone:'UTC'}).format(new Date(Date.UTC(2026,0,5+i)));
+  });
 
   const primerDia = new Date(year, month, 1).getDay();
   const ultimoDia = new Date(year, month + 1, 0).getDate();
@@ -133,12 +147,12 @@ function generarCalendario() {
     const evento = eventosEspeciales[year]?.[month]?.find(e => e.dia === dia);
     if (evento) {
       celda.classList.add(evento.color || "bg-evento");
-      eventoData = { nombre: evento.nombre, comentario: evento.comentario, type: "evento" };
-      celda.title = evento.nombre;
+      eventoData = { nombre: evento["nombre_"+window.uiLang()] || evento.nombre, comentario: evento["comentario_"+window.uiLang()] || evento.comentario, type: "evento" };
+      celda.title = eventoData.nombre;
     }
 
     // 3. Clases semanales (amarillo) — solo si no hay evento ni feriado, y si ya comenzaron
-    if (clasesSemanales[diaSemana] && !feriado && !evento && esClaseHabilitada(dia, month, year)) {
+    if (clasesSemanales[diaSemana] && !feriado && !evento && esClaseHabilitada(dia, month, year, clasesSemanales[diaSemana].desde)) {
       const cls = clasesSemanales[diaSemana];
       celda.classList.add(cls.color, "text-dark");
       eventoData = { type: cls.type };
@@ -162,6 +176,15 @@ function generarCalendario() {
     if (eventoData && !feriado) {
       celda.classList.add("cal-clickable");
       celda.addEventListener("click", () => mostrarDetalle(dia, month, eventoData, esPasado));
+      celda.tabIndex = 0;
+      celda.setAttribute('role', 'button');
+      celda.setAttribute('aria-label', `${dia} ${getMeses()[month]} ${year}: ${celda.title}`);
+      celda.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          mostrarDetalle(dia, month, eventoData, esPasado);
+        }
+      });
     }
 
     fila.appendChild(celda);
@@ -225,10 +248,12 @@ async function inicializar(cfg) {
 
   // Navegación del calendario
   prevBtn.addEventListener("click", () => {
+    fechaActual.setDate(1);
     fechaActual.setMonth(fechaActual.getMonth() - 1);
     generarCalendario();
   });
   nextBtn.addEventListener("click", () => {
+    fechaActual.setDate(1);
     fechaActual.setMonth(fechaActual.getMonth() + 1);
     generarCalendario();
   });
@@ -240,10 +265,6 @@ async function inicializar(cfg) {
 // =============================================
 // CARGA DEL JSON
 // =============================================
-fetch("../data/calendario.json")
-  .then(r => {
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return r.json();
-  })
+window.oncaLoadJSON('calendario')
   .then(inicializar)
   .catch(err => console.error("Error cargando calendario.json:", err));

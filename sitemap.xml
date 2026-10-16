@@ -45,4 +45,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://organizacaooncachile.cl/frontend/assets/page/noticia_resultados_winteropen_2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://organizacaooncachile.cl/frontend/assets/page/page_photo/galeria_winter_open_2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>

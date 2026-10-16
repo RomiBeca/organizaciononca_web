@@ -44,7 +44,7 @@
 
   function buildList() {
     images = Array.from(document.querySelectorAll('a .galeria-img')).map(img => ({
-      src: img.src,
+      src: img.closest('a').href,
       alt: img.alt || 'Foto galería'
     }));
   }
@@ -67,7 +67,7 @@
     e.preventDefault();
 
     if (!images.length) buildList();
-    const idx = images.findIndex(i => i.src === img.src);
+    const idx = images.findIndex(i => i.src === link.href);
     show(idx >= 0 ? idx : 0);
 
     bootstrap.Modal.getOrCreateInstance(modalEl).show();

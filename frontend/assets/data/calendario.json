@@ -4,75 +4,284 @@
     "telefono": "+56963711123",
     "mensajeWhatsApp": "Hola! Quiero información sobre clases de capoeira"
   },
-
   "clases": {
     "fechaInicio": "2026-06-05",
-
     "semanales": {
-      "0": { "color": "bg-warning", "key": "clases.rojas", "type": "rojas" },
-      "1": { "color": "bg-warning", "key": "clases.junta", "type": "junta" },
-      "5": { "color": "bg-warning", "key": "clases.junta", "type": "junta" }
-    },
-
-    "detalle": {
-      "rojas": {
-        "nombreKey":   "clases.rojas.titulo",
-        "diasKey":     "clases.rojas.domingo",
-        "horariosKeys": ["clases.rojas.ninos", "clases.rojas.adultos"],
-        "preciosKeys":  ["clases.rojas.precio.val"],
-        "preciosValores": ["$25.000"],
-        "ubicacion": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.723567843041!2d-70.59330962450666!3d-33.534572073356465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d0ee6a4ed651%3A0xdc686a5dbe86ba5!2sCentro%20Cultural%20Rojas%20Magallanes!5e0!3m2!1ses-419!2scl!4v1781116092634!5m2!1ses-419!2scl"
+      "0": {
+        "color": "bg-warning",
+        "key": "clases.rojas",
+        "type": "rojas"
       },
+      "1": {
+        "color": "bg-warning",
+        "key": "clases.junta",
+        "type": "junta"
+      },
+      "4": {
+        "color": "bg-warning",
+        "key": "clases.junta23",
+        "type": "junta23",
+        "desde": "2026-10-15"
+      },
+      "5": {
+        "color": "bg-warning",
+        "key": "clases.junta",
+        "type": "junta"
+      }
+    },
+    "detalle": {
       "junta": {
-        "nombreKey":   "clases.junta.titulo",
-        "diasKey":     "clases.junta.dias",
-        "horariosKeys": ["clases.junta.horario"],
-        "preciosKeys":  ["clases.junta.gratis", "clases.junta.general"],
-        "preciosValores": ["", ""],
-        "ubicacion": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5594.999796233695!2d-70.60110354382047!3d-33.506403799365415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d17c369666eb%3A0x2068b0240f7f0dd!2sUnidad%20Vecinal%20N%C2%B018%2C%20Macul!5e0!3m2!1ses-419!2scl!4v1781116003416!5m2!1ses-419!2scl"
+        "nombreKey": "clases.junta.titulo",
+        "diasKey": "clases.junta.dias",
+        "horariosKeys": [
+          "clases.junta.horario"
+        ],
+        "preciosKeys": [
+          "clases.junta.gratis",
+          "clases.junta.general"
+        ],
+        "preciosValores": [
+          "",
+          ""
+        ],
+        "ubicacion": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5594.999796233695!2d-70.60110354382047!3d-33.506403799365415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d17c369666eb%3A0x2068b0240f7f0dd!2sUnidad%20Vecinal%20N%C2%B018%2C%20Macul!5e0!3m2!1ses-419!2scl!4v1781116003416!5m2!1ses-419!2scl",
+        "comuna": "Macul",
+        "direccionKey": "sedes.junta.direccion",
+        "imagen": "img/8.lugares/junta-n18-macul.webp",
+        "mapaUrl": "https://www.google.com/maps/search/?api=1&query=Unidad%20Vecinal%2018%20Villa%20Lomas%20de%20Macul%20Santiago%20Chile"
+      },
+      "rojas": {
+        "nombreKey": "clases.rojas.titulo",
+        "diasKey": "clases.rojas.domingo",
+        "horariosKeys": [
+          "clases.rojas.ninos",
+          "clases.rojas.adultos"
+        ],
+        "preciosKeys": [
+          "clases.rojas.precio.val"
+        ],
+        "preciosValores": [
+          "$25.000"
+        ],
+        "ubicacion": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.723567843041!2d-70.59330962450666!3d-33.534572073356465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d0ee6a4ed651%3A0xdc686a5dbe86ba5!2sCentro%20Cultural%20Rojas%20Magallanes!5e0!3m2!1ses-419!2scl!4v1781116092634!5m2!1ses-419!2scl",
+        "comuna": "La Florida",
+        "direccionKey": "sedes.rojas.direccion",
+        "imagen": "img/8.lugares/centro-rojas-magallanes.webp",
+        "mapaUrl": "https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20Rojas%20Magallanes%20La%20Florida%20Chile"
+      },
+      "junta23": {
+        "nombreKey": "clases.junta23.titulo",
+        "diasKey": "clases.junta23.dias",
+        "horariosKeys": [
+          "clases.junta23.horario"
+        ],
+        "preciosKeys": [
+          "clases.junta23.general",
+          "clases.junta23.gratis"
+        ],
+        "preciosValores": [
+          "",
+          ""
+        ],
+        "ubicacion": "https://www.google.com/maps/embed?pb=!4v1792073831027!6m8!1m7!1s_WqBOqRzDt33aYPfETWezw!2m2!1d-33.49347479704411!2d-70.60300631676256!3f288.64011433238966!4f-2.3324777880035725!5f0.7820865974627469",
+        "comuna": "Macul",
+        "direccionKey": "sedes.junta23.direccion",
+        "imagen": "img/8.lugares/junta-23-enero-macul.webp",
+        "mapaUrl": "https://www.google.com/maps/search/?api=1&query=Las%20Constelaciones%204329%20Macul%20Chile"
       }
     }
   },
-
   "diasParque": {},
-
   "eventosEspeciales": {
     "2026": {
       "0": [
-        { "dia": 27, "nombre": "Intensivo 2026 batizado y troca", "comentario": "Intensivo 2026 batizado y troca Capoeira Raza y Oncas" },
-        { "dia": 28, "nombre": "Intensivo 2026 batizado y troca", "comentario": "Intensivo 2026 batizado y troca Capoeira Raza y Oncas" },
-        { "dia": 29, "nombre": "Intensivo 2026 batizado y troca", "comentario": "Intensivo 2026 batizado y troca Capoeira Raza y Oncas" },
-        { "dia": 30, "nombre": "Intensivo 2026 batizado y troca", "comentario": "Intensivo 2026 batizado y troca Capoeira Raza y Oncas" },
-        { "dia": 31, "nombre": "Intensivo 2026 batizado y troca", "comentario": "Intensivo 2026 batizado y troca Capoeira Raza y Oncas" }
+        {
+          "dia": 27,
+          "nombre": "Intensivo 2026 batizado y troca",
+          "comentario": "Intensivo 2026 batizado y troca Capoeira Raza y Oncas",
+          "nombre_pt": "Intensivo 2026 · batizado e troca",
+          "nombre_en": "2026 intensive · batizado and graduation",
+          "comentario_pt": "Intensivo 2026, batizado e troca · Capoeira Raça e Organização Onça.",
+          "comentario_en": "2026 intensive, batizado and graduation · Capoeira Raça and Organização Onça."
+        },
+        {
+          "dia": 28,
+          "nombre": "Intensivo 2026 batizado y troca",
+          "comentario": "Intensivo 2026 batizado y troca Capoeira Raza y Oncas",
+          "nombre_pt": "Intensivo 2026 · batizado e troca",
+          "nombre_en": "2026 intensive · batizado and graduation",
+          "comentario_pt": "Intensivo 2026, batizado e troca · Capoeira Raça e Organização Onça.",
+          "comentario_en": "2026 intensive, batizado and graduation · Capoeira Raça and Organização Onça."
+        },
+        {
+          "dia": 29,
+          "nombre": "Intensivo 2026 batizado y troca",
+          "comentario": "Intensivo 2026 batizado y troca Capoeira Raza y Oncas",
+          "nombre_pt": "Intensivo 2026 · batizado e troca",
+          "nombre_en": "2026 intensive · batizado and graduation",
+          "comentario_pt": "Intensivo 2026, batizado e troca · Capoeira Raça e Organização Onça.",
+          "comentario_en": "2026 intensive, batizado and graduation · Capoeira Raça and Organização Onça."
+        },
+        {
+          "dia": 30,
+          "nombre": "Intensivo 2026 batizado y troca",
+          "comentario": "Intensivo 2026 batizado y troca Capoeira Raza y Oncas",
+          "nombre_pt": "Intensivo 2026 · batizado e troca",
+          "nombre_en": "2026 intensive · batizado and graduation",
+          "comentario_pt": "Intensivo 2026, batizado e troca · Capoeira Raça e Organização Onça.",
+          "comentario_en": "2026 intensive, batizado and graduation · Capoeira Raça and Organização Onça."
+        },
+        {
+          "dia": 31,
+          "nombre": "Intensivo 2026 batizado y troca",
+          "comentario": "Intensivo 2026 batizado y troca Capoeira Raza y Oncas",
+          "nombre_pt": "Intensivo 2026 · batizado e troca",
+          "nombre_en": "2026 intensive · batizado and graduation",
+          "comentario_pt": "Intensivo 2026, batizado e troca · Capoeira Raça e Organização Onça.",
+          "comentario_en": "2026 intensive, batizado and graduation · Capoeira Raça and Organização Onça."
+        }
       ],
       "1": [
-        { "dia": 1, "nombre": "Intensivo 2026 batizado y troca", "comentario": "Intensivo 2026 batizado y troca Capoeira Raza y Oncas" }
+        {
+          "dia": 1,
+          "nombre": "Intensivo 2026 batizado y troca",
+          "comentario": "Intensivo 2026 batizado y troca Capoeira Raza y Oncas",
+          "nombre_pt": "Intensivo 2026 · batizado e troca",
+          "nombre_en": "2026 intensive · batizado and graduation",
+          "comentario_pt": "Intensivo 2026, batizado e troca · Capoeira Raça e Organização Onça.",
+          "comentario_en": "2026 intensive, batizado and graduation · Capoeira Raça and Organização Onça."
+        }
+      ],
+      "9": [
+        {
+          "dia": 15,
+          "color": "bg-warning",
+          "nombre": "Inicio de clases — Junta de Vecinos 23 de Enero",
+          "comentario": "Inicio del Taller de Capoeira en la Junta de Vecinos 23 de Enero (Las Constelaciones 4329, Macul), junto al Centro Cultural Raíces de Macul. Jueves a las 19:00 hrs.",
+          "nombre_pt": "Início das aulas · Junta de Vecinos 23 de Enero",
+          "nombre_en": "Classes begin · Junta de Vecinos 23 de Enero",
+          "comentario_pt": "Aulas de capoeira às quintas-feiras, às 19:00, em Las Constelaciones 4329, Macul, com o Centro Cultural Raíces de Macul.",
+          "comentario_en": "Thursday capoeira classes at 19:00, Las Constelaciones 4329, Macul, with Centro Cultural Raíces de Macul."
+        }
       ],
       "5": [
-        { "dia": 5,  "color": "bg-warning", "nombre": "Inicio de clases — Junta Vecinal Villa Lomas de Macul", "comentario": "Inicio de clases en Junta vecinal 'villa lomas de Macul, unidad n°18'" },
-        { "dia": 12, "color": "bg-danger",  "nombre": "Roda de Inauguración", "comentario": "Roda de inauguración nuevo espacio de clases en Junta de Vecinos Villa Lomas de Macul" }
+        {
+          "dia": 5,
+          "color": "bg-warning",
+          "nombre": "Inicio de clases — Junta Vecinal Villa Lomas de Macul",
+          "comentario": "Inicio de clases en Junta vecinal 'villa lomas de Macul, unidad n°18'",
+          "nombre_pt": "Início das aulas · Villa Lomas de Macul",
+          "nombre_en": "Classes begin · Villa Lomas de Macul",
+          "comentario_pt": "Início das aulas na Junta de Vecinos Villa Lomas de Macul, unidade 18.",
+          "comentario_en": "Classes begin at Junta de Vecinos Villa Lomas de Macul, Unit 18."
+        },
+        {
+          "dia": 12,
+          "color": "bg-danger",
+          "nombre": "Roda de Inauguración",
+          "comentario": "Roda de inauguración nuevo espacio de clases en Junta de Vecinos Villa Lomas de Macul",
+          "nombre_pt": "Roda de inauguração",
+          "nombre_en": "Opening roda",
+          "comentario_pt": "Roda de inauguração do espaço na Junta de Vecinos Villa Lomas de Macul.",
+          "comentario_en": "An opening roda at Junta de Vecinos Villa Lomas de Macul."
+        }
       ]
     }
   },
-
   "feriadosChile": {
     "2025": {
       "11": [
-        { "dia": 8,  "nombre": "Inmaculada Concepción" },
-        { "dia": 25, "nombre": "Navidad" }
+        {
+          "dia": 8,
+          "nombre": "Inmaculada Concepción"
+        },
+        {
+          "dia": 25,
+          "nombre": "Navidad"
+        }
       ]
     },
     "2026": {
-      "0":  [{ "dia": 1,  "nombre": "Año Nuevo" }],
-      "2":  [{ "dia": 29, "nombre": "Viernes Santo" }, { "dia": 30, "nombre": "Sábado Santo" }],
-      "4":  [{ "dia": 1,  "nombre": "Día del Trabajo" }, { "dia": 21, "nombre": "Glorias Navales" }],
-      "5":  [{ "dia": 29, "nombre": "San Pedro y San Pablo" }],
-      "6":  [{ "dia": 16, "nombre": "Virgen del Carmen" }],
-      "7":  [{ "dia": 15, "nombre": "Asunción de la Virgen" }],
-      "8":  [{ "dia": 18, "nombre": "Independencia" }, { "dia": 19, "nombre": "Glorias del Ejército" }],
-      "9":  [{ "dia": 12, "nombre": "Encuentro de dos mundos" }, { "dia": 31, "nombre": "Iglesias Evangélicas y Protestantes" }],
-      "10": [{ "dia": 1,  "nombre": "Todos los Santos" }],
-      "11": [{ "dia": 8,  "nombre": "Inmaculada Concepción" }, { "dia": 25, "nombre": "Navidad" }]
+      "0": [
+        {
+          "dia": 1,
+          "nombre": "Año Nuevo"
+        }
+      ],
+      "2": [
+        {
+          "dia": 29,
+          "nombre": "Viernes Santo"
+        },
+        {
+          "dia": 30,
+          "nombre": "Sábado Santo"
+        }
+      ],
+      "4": [
+        {
+          "dia": 1,
+          "nombre": "Día del Trabajo"
+        },
+        {
+          "dia": 21,
+          "nombre": "Glorias Navales"
+        }
+      ],
+      "5": [
+        {
+          "dia": 29,
+          "nombre": "San Pedro y San Pablo"
+        }
+      ],
+      "6": [
+        {
+          "dia": 16,
+          "nombre": "Virgen del Carmen"
+        }
+      ],
+      "7": [
+        {
+          "dia": 15,
+          "nombre": "Asunción de la Virgen"
+        }
+      ],
+      "8": [
+        {
+          "dia": 18,
+          "nombre": "Independencia"
+        },
+        {
+          "dia": 19,
+          "nombre": "Glorias del Ejército"
+        }
+      ],
+      "9": [
+        {
+          "dia": 12,
+          "nombre": "Encuentro de dos mundos"
+        },
+        {
+          "dia": 31,
+          "nombre": "Iglesias Evangélicas y Protestantes"
+        }
+      ],
+      "10": [
+        {
+          "dia": 1,
+          "nombre": "Todos los Santos"
+        }
+      ],
+      "11": [
+        {
+          "dia": 8,
+          "nombre": "Inmaculada Concepción"
+        },
+        {
+          "dia": 25,
+          "nombre": "Navidad"
+        }
+      ]
     }
   }
 }

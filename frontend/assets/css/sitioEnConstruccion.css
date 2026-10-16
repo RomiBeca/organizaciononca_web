@@ -18,7 +18,7 @@
 
   /* Fondo negro + logo transparente encima */
   background-color: #000; /* <<<<<< AQUI SE SOLUCIONA */
-  background-image: url("../img/logos/organização onças - fin Fondo_brasilChile_jaguar.png");
+  background-image: url("../img/2.logos/organizaçãoOnça_jaguar.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; /* Mantiene el logo sin deformarse */

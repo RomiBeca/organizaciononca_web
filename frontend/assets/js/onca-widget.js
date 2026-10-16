@@ -2,6 +2,10 @@
    Se pasea cerca de la esquina, de a ratos se sienta y mira hacia donde
    está el cursor, y de a ratos se va (para volver más tarde). Puramente decorativo. */
 (function () {
+  // Por ahora solo se muestra en Galería (galeria.html y las páginas galeria_*).
+  // Para mostrarla en todo el sitio otra vez, borrar esta línea.
+  if (!/\/galeria[^\/]*(\.html)?$/i.test(location.pathname)) return;
+
   var scriptSrc = document.currentScript ? document.currentScript.src : '';
   var BASE = scriptSrc.replace(/js\/onca-widget\.js.*$/, '') +
     'img/onca-widget/' + encodeURIComponent('crea_una_onca_pintada (1)') + '/';

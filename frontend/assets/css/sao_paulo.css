@@ -1,7 +1,7 @@
 .hero-nosotros {
   min-height: 35vh;
   padding-top: 22px; /* 👈 clave */
-  background: url("../img/5.otros_elementos/iclogo.png") no-repeat center center;
+  background: url("../img/5.otros_elementos/iclogo.webp") no-repeat center center;
   background-size: cover;
 }
 p{
@@ -11,3 +11,6 @@ p{
 li{
   text-align: justify;
 }
+/* São Paulo: el título queda por debajo de la navegación fija. */
+.hero-nosotros { padding-top: 90px; padding-bottom: 30px; }
+@media (max-width: 767px) { p, li { text-align: left; } }

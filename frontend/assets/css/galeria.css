@@ -183,7 +183,7 @@ a:has(.galeria-small):hover .galeria-small {
 }
 
 .year-2025-card {
-  background-image: url('../img/6.Galeria/2025/4-Batizado-y-Troca-BrasilSP-14Dic2025/MG_5205.jpg') !important;
+  background-image: url('../img/6.Galeria/2025/4-Batizado-y-Troca-BrasilSP-14Dic2025/MG_5205.webp') !important;
 }
 
 .year-2026-card {
@@ -251,4 +251,11 @@ a:has(.galeria-small):hover .galeria-small {
 .ig-badge {
   background: linear-gradient(90deg, #833ab4, #fd1d1d);
   color: #fff;
+}
+
+/* Galería: la miniatura mantiene su tamaño y el visor abre la foto grande. */
+.galeria-img { height: auto; aspect-ratio: auto; }
+@media (max-width: 767px) {
+  #onca-widget { display: none; }
+  #lb-prev, #lb-next { min-width: 44px; padding-inline: 10px !important; }
 }

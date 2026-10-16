@@ -1,4 +1,16 @@
+# Configuración del editor
 .vscode/
-sitemap.xml
-CNAME
-robots.txt
+
+# Herramientas para abrir/probar la web en el computador (no se publican)
+*.bat
+*.py
+VERIFICACION.txt
+LEEME.md
+
+# Fotos originales del Winter Open (la web usa las versiones .webp)
+frontend/assets/img/6.Galeria/2026/2-winterOpen2026/*.png
+
+# Archivos del sistema
+Thumbs.db
+desktop.ini
+.DS_Store

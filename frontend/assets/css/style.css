@@ -97,7 +97,7 @@ footer p,
 /* ---------- HERO PERSONALIZADO ---------- */
 .hero {
   min-height: 91vh; /* Altura mínima para que no se corte */
-  background: url("../img/5.otros_elementos/Wallpaper/Gemini_Generated_Image_4.png") no-repeat
+  background: url("../img/5.otros_elementos/Wallpaper/Gemini_Generated_Image_4.webp") no-repeat
     center center;
   background-size: cover; /* Ajusta la imagen manteniendo proporción */
   background-position: center;
@@ -221,4 +221,23 @@ footer p,
   .titulo1    { font-size: 2rem; }
   .subtitulo1 { font-size: 1rem; }
   .hero       { min-height: 65vh; }
+}
+
+/* Ajustes compartidos de lectura y accesibilidad; se mantiene la paleta original. */
+html { scroll-padding-top: 84px; }
+button:focus-visible, a:focus-visible, .cal-clickable:focus-visible { outline: 3px solid #ffc107; outline-offset: 3px; }
+#back-to-top { pointer-events: none; }
+#back-to-top.visible { pointer-events: auto; }
+@media (max-width: 767px) {
+  p { text-align: left; }
+  .navbar .nav-link { min-height: 44px; display: flex; align-items: center; }
+  .navbar-toggler, .btn-lang { min-height: 44px; }
+  #whatsapp-float { left: 16px; bottom: 16px; }
+  #back-to-top { right: 16px; bottom: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .fade-in-up { opacity: 1; transform: none; }
+  #onca-widget { display: none; }
 }

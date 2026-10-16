@@ -6,7 +6,7 @@
 
     <!-- BOOTSTRAP -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="../vendor/bootstrap/bootstrap.min.css"
       rel="stylesheet"
     />
 
@@ -17,17 +17,18 @@
     />
 
     <!-- TU CSS -->
-    <link rel="stylesheet" href="assets/css/sitioEnConstruccion.css" />
+    <link rel="stylesheet" href="../css/sitioEnConstruccion.css" />
 
     <title>Sitio en Construcción - Organização Onça</title>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN1YXZMQ9Q"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VN1YXZMQ9Q');
-    </script>
+    
+    
+  
+    <!-- Recursos locales para abrir la página sin servidor. -->
+    <script src="../data/datos-locales.js"></script>
+    <script src="../js/datos.js"></script>
+    <script src="../js/ui.js"></script>
+    <script defer src="../js/analytics.js"></script>
   </head>
 
   <body class="site-wrapper">
@@ -36,14 +37,14 @@
     <!-- ========================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">Home</a>
+        <a class="navbar-brand fw-bold" href="../../../index.html" data-i18n="nav.inicio">Inicio</a>
 
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-        >
+         aria-label="Abrir menú" aria-controls="navbarNav" aria-expanded="false">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -53,18 +54,18 @@
               <a class="nav-link" href="nosotros.html">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="clasesYhorarios.html"
-                >Clases & Horarios</a
+              <a class="nav-link" href="clases_contactos.html"
+                >Clases y horarios</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="galeria.html">Galería</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sao_Paulo.html">São Paulo</a>
+              <a class="nav-link" href="sao_paulo.html">São Paulo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
+              <a class="nav-link" href="clases_contactos.html">Contacto</a>
             </li>
           </ul>
         </div>
@@ -83,7 +84,7 @@
           🐾Gracias por tu paciencia. 🐆<br />
         </p>
         <div id="loader">
-          <img src="assets/img/5.otros/oncapintada.gif" alt="Cargando..." />
+          <img src="../img/5.otros_elementos/animacion/oncapintada.gif" alt="Cargando..." />
         </div>
         <div>
           <a href="javascript:history.back()" class="btn btn-outline-light">
@@ -105,7 +106,7 @@
     </footer>
 
     <!-- BOOTSTRAP JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../js/onca-widget.js"></script>
   </body>
 </html>

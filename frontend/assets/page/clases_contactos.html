@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
@@ -30,7 +30,7 @@
     />
     <meta
       property="og:image"
-      content="https://organizacaooncachile.cl/frontend/assets/img/2.logos/organizaçãoOnça_jaguar.png"
+      content="https://organizacaooncachile.cl/frontend/assets/img/2.logos/organizaçãoOnça_jaguar.webp"
     />
     <meta property="og:locale" content="es_CL" />
     <meta property="og:site_name" content="Organização Onça Chile" />
@@ -47,25 +47,25 @@
     />
     <meta
       name="twitter:image"
-      content="https://organizacaooncachile.cl/frontend/assets/img/2.logos/organizaçãoOnça_jaguar.png"
+      content="https://organizacaooncachile.cl/frontend/assets/img/2.logos/organizaçãoOnça_jaguar.webp"
     />
     <link
       rel="icon"
-      type="image/png"
-      href="../img/2.logos/organizaçãoOnça_jaguar.png"
+      type="image/webp"
+      href="../img/2.logos/organizaçãoOnça_jaguar.webp"
     />
 
     <!-- BOOTSTRAP -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="../vendor/bootstrap/bootstrap.min.css"
       rel="stylesheet"
     />
     <script
       defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      src="../vendor/bootstrap/bootstrap.bundle.min.js"
     ></script>
-    <script defer src="../js/ui.js"></script>
+    
     <script src="../js/onca-widget.js"></script>
     <script defer src="../js/calendarioYcontactos.js"></script>
 
@@ -73,18 +73,8 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/clasesYcontactos.css" />
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-VN1YXZMQ9Q"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-VN1YXZMQ9Q");
-    </script>
+    
+    
 
     <!-- JSON-LD: LocalBusiness para resultados enriquecidos en Google -->
     <script type="application/ld+json">
@@ -94,7 +84,7 @@
         "name": "Organização Onça Chile – Escuela de Capoeira",
         "description": "Escuela de Capoeira en Santiago, Chile. Clases para niños y adultos. Práctica cultural, musical y deportiva de raíz afrobrasileña.",
         "url": "https://organizacaooncachile.cl",
-        "telephone": "+56963680280",
+        "telephone": "+56963711123",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Centro Cultural Rojas Magallanes",
@@ -116,28 +106,35 @@
           }
         ],
         "sameAs": ["https://instagram.com/organizacaooncaschile"],
-        "image": "https://organizacaooncachile.cl/frontend/assets/img/2.logos/organizaçãoOnça_jaguar.png",
+        "image": "https://organizacaooncachile.cl/frontend/assets/img/2.logos/organizaçãoOnça_jaguar.webp",
         "priceRange": "$$",
         "currenciesAccepted": "CLP"
       }
     </script>
+  
+    <!-- Recursos locales para abrir la página sin servidor. -->
+    <script src="../data/datos-locales.js"></script>
+    <script src="../js/datos.js"></script>
+    <script src="../js/ui.js"></script>
+    <script defer src="../js/analytics.js"></script>
+    <script defer src="../js/resumen-semanal.js"></script>
   </head>
 
   <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="../../../index.html">Home</a>
+        <a class="navbar-brand fw-bold" href="../../../index.html" data-i18n="nav.inicio">Inicio</a>
 
         <div class="nav-ui-controls">
           <div class="dropdown">
             <button class="btn btn-lang btn-outline-secondary dropdown-toggle lang-flag-trigger" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Cambiar idioma">
-              <img id="lang-flag-img" src="../img/5.otros_elementos/iconos-banderas/chile.png" alt="Idioma" />
+              <img id="lang-flag-img" src="../img/5.otros_elementos/iconos-banderas/chile.webp" alt="Idioma" />
             </button>
             <ul class="dropdown-menu dropdown-menu-end lang-flag-menu">
-              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('es')" data-lang="es"><img src="../img/5.otros_elementos/iconos-banderas/chile.png" alt="" /> Español</button></li>
-              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('pt')" data-lang="pt"><img src="../img/5.otros_elementos/iconos-banderas/brasil.png" alt="" /> Português</button></li>
-              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="../img/5.otros_elementos/iconos-banderas/reino-unido.png" alt="" /> English</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('es')" data-lang="es"><img src="../img/5.otros_elementos/iconos-banderas/chile.webp" alt="" /> Español</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('pt')" data-lang="pt"><img src="../img/5.otros_elementos/iconos-banderas/brasil.webp" alt="" /> Português</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="../img/5.otros_elementos/iconos-banderas/reino-unido.webp" alt="" /> English</button></li>
             </ul>
           </div>
           
@@ -148,7 +145,7 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-        >
+         aria-label="Abrir menú" aria-controls="navbarNav" aria-expanded="false">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -158,7 +155,7 @@
               <a class="nav-link" href="./nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./clases_contactos.html" data-i18n="nav.clases">Clases & Contacto</a>
+              <a class="nav-link active" href="./clases_contactos.html" data-i18n="nav.clases">Clases y horarios</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./noticias.html" data-i18n="nav.noticias">Noticias</a>
@@ -178,6 +175,18 @@
       <div class="container">
         <h2 class="text-center text-warning mb-5" data-i18n="clases.titulo">Clases de Capoeira en Santiago</h2>
 
+        <!-- Vista rápida de la semana, antes de las sedes y del calendario original. -->
+        <div class="semana-resumen" aria-labelledby="semana-titulo">
+          <div class="semana-cabecera">
+            <div>
+              <h3 id="semana-titulo" data-i18n="clases.resumen.titulo">Horarios de la semana</h3>
+              <p data-i18n="clases.resumen.sub">Encuentra tus días de entrenamiento.</p>
+            </div>
+            <a href="#calendario" data-i18n="clases.resumen.calendario">Ver calendario y eventos ↓</a>
+          </div>
+          <ul id="resumen-semanal" class="semana-dias" aria-live="polite"></ul>
+        </div>
+
         <div class="row g-4">
 
           <!-- COLUMNA IZQUIERDA: Cards + Contacto -->
@@ -190,7 +199,7 @@
               <div class="col-sm-6">
                 <div class="card h-100 border-warning bg-dark text-white">
                   <img
-                    src="../img/8.lugares/junta-n18-macul.png"
+                    src="../img/8.lugares/junta-n18-macul.webp"
                     class="card-img-top"
                     alt="Junta de Vecinos N°18 Macul"
                     style="height: 160px; object-fit: cover;"
@@ -202,12 +211,13 @@
                       <span data-i18n="clases.junta.dias">Lunes y viernes:</span>
                       19:30 – 21:30
                     </p>
-                    <button
+                    <p class="sede-valor small mb-3"><span data-i18n="clases.junta.general">Público general: $2.000</span><br><span data-i18n="clases.junta.gratis">Niños y adultos mayores: Gratis</span></p>
+<button data-i18n="clases.ver.detalles"
                       class="btn btn-outline-warning btn-sm mt-auto"
                       data-bs-toggle="modal"
                       data-bs-target="#lugarModal1"
                     >
-                      Ver horarios y valores
+                      Ver ubicación y detalles
                     </button>
                   </div>
                 </div>
@@ -217,7 +227,7 @@
               <div class="col-sm-6">
                 <div class="card h-100 border-warning bg-dark text-white">
                   <img
-                    src="../img/8.lugares/centro-rojas-magallanes.png"
+                    src="../img/8.lugares/centro-rojas-magallanes.webp"
                     class="card-img-top"
                     alt="Centro Cultural Rojas Magallanes"
                     style="height: 160px; object-fit: cover;"
@@ -229,12 +239,42 @@
                       <span data-i18n="clases.rojas.domingo">Domingo:</span>
                       10:00 – 12:30
                     </p>
-                    <button
+                    <p class="sede-valor small mb-3"><span data-i18n="clases.rojas.precio">Valor mensual:</span> <strong>$25.000</strong></p>
+<button data-i18n="clases.ver.detalles"
                       class="btn btn-outline-warning btn-sm mt-auto"
                       data-bs-toggle="modal"
                       data-bs-target="#lugarModal2"
                     >
-                      Ver horarios y valores
+                      Ver ubicación y detalles
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card Macul – Junta 23 de Enero (nuevo) -->
+              <div class="col-sm-6">
+                <div class="card h-100 border-warning bg-dark text-white position-relative">
+                  <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">¡Nuevo!</span>
+                  <img
+                    src="../img/8.lugares/junta-23-enero-macul.webp"
+                    class="card-img-top"
+                    alt="Junta de Vecinos 23 de Enero, Macul"
+                    style="height: 160px; object-fit: cover;"
+                  />
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-warning mb-1">Macul</h5>
+                    <p class="card-text text-secondary small mb-1" data-i18n="clases.junta23.titulo">Junta de Vecinos 23 de Enero</p>
+                    <p class="card-text text-light small mb-3">
+                      <span data-i18n="clases.junta23.dias">Jueves:</span>
+                      19:00
+                    </p>
+                    <p class="sede-valor small mb-3"><span data-i18n="clases.junta23.general">Mensualidad: $10.000</span><br><span data-i18n="clases.junta23.gratis">Niñeces hasta 15 años y adultos mayores: Gratis</span></p>
+<button data-i18n="clases.ver.detalles"
+                      class="btn btn-outline-warning btn-sm mt-auto"
+                      data-bs-toggle="modal"
+                      data-bs-target="#lugarModal3"
+                    >
+                      Ver ubicación y detalles
                     </button>
                   </div>
                 </div>
@@ -279,13 +319,13 @@
           <!-- COLUMNA DERECHA: Calendario -->
           <div class="col-lg-6 text-center">
             <img
-              src="../img/2.logos/organizaçãoOnça_jaguar.png"
+              src="../img/2.logos/organizaçãoOnça_jaguar.webp"
               class="img-fluid rounded mb-4"
               alt="Clases de Capoeira"
               style="max-height: 200px"
             />
 
-            <div class="calendar-box p-3 bg-dark bg-opacity-50 rounded">
+            <div id="calendario" class="calendar-box p-3 bg-dark bg-opacity-50 rounded">
               <!-- Reloj hora Chile -->
               <div class="text-center mb-2">
                 <small class="opacity-75">
@@ -453,7 +493,7 @@
           </div>
           <div class="modal-body">
             <img
-              src="../img/8.lugares/junta-n18-macul.png"
+              src="../img/8.lugares/junta-n18-macul.webp"
               class="img-fluid rounded mb-3"
               alt="Junta de Vecinos N°18 Macul"
             />
@@ -501,7 +541,7 @@
           </div>
           <div class="modal-body">
             <img
-              src="../img/8.lugares/centro-rojas-magallanes.png"
+              src="../img/8.lugares/centro-rojas-magallanes.webp"
               class="img-fluid rounded mb-3"
               alt="Centro Cultural Rojas Magallanes"
             />
@@ -534,6 +574,55 @@
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 title="Centro Cultural Rojas Magallanes"
+              ></iframe>
+            </div>
+          </div>
+          <div class="modal-footer border-warning">
+            <button type="button" class="btn btn-warning fw-bold" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Lugar 3 - Macul, Junta de Vecinos 23 de Enero -->
+    <div class="modal fade" id="lugarModal3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border border-warning">
+          <div class="modal-header border-warning">
+            <h5 class="modal-title text-warning fw-bold">
+              📍 <span data-i18n="clases.junta23.titulo">Junta de Vecinos 23 de Enero</span>
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="../img/8.lugares/junta-23-enero-macul.webp"
+              class="img-fluid rounded mb-3"
+              alt="Junta de Vecinos 23 de Enero, Macul"
+            />
+            <p class="small text-secondary mb-3" data-i18n="clases.junta23.parrafo">Las Constelaciones N°4329, Macul · junto al Centro Cultural Raíces de Macul</p>
+            <div class="mb-3">
+              <span class="text-warning fw-bold">📅 Días</span><br />
+              <span class="text-light" data-i18n="clases.junta23.dias">Jueves:</span>
+            </div>
+            <div class="mb-3">
+              <span class="text-warning fw-bold">⏰ Horario</span><br />
+              <span class="text-light" data-i18n="clases.junta23.horario">Horario: 19:00 hrs</span>
+            </div>
+            <div class="mb-3">
+              <span class="text-warning fw-bold">💰 Valores</span>
+              <ul class="list-unstyled ms-2 mt-2 text-light">
+                <li data-i18n="clases.junta23.general">Mensualidad: $10.000</li>
+                <li data-i18n="clases.junta23.gratis">Niñeces hasta 15 años y adultos mayores: Gratis</li>
+              </ul>
+            </div>
+            <div class="map-responsive">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!4v1792073831027!6m8!1m7!1s_WqBOqRzDt33aYPfETWezw!2m2!1d-33.49347479704411!2d-70.60300631676256!3f288.64011433238966!4f-2.3324777880035725!5f0.7820865974627469"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Junta de Vecinos 23 de Enero, Macul"
               ></iframe>
             </div>
           </div>

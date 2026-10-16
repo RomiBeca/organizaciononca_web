@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Días Intensivo Capoeira Raça y Organização Onça 2026, entrenamientos previos al Batizado y Troca de Cordeles.">
-    <link rel="icon" type="image/png" href="../../img/2.logos/organizaçãoOnça_jaguar.png">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="../../js/ui.js"></script>
+    <link rel="icon" type="image/webp" href="../../img/2.logos/organizaçãoOnça_jaguar.webp">
+    
+    <link href="../../vendor/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <script defer src="../../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    
     <script src="../../js/onca-widget.js"></script>
     <script defer src="../../js/lightbox.js"></script>
     <link rel="stylesheet" href="../../css/style.css" />
@@ -16,38 +16,39 @@
     <title>Días Intensivo Capoeira Raça y Organização Onça 2026</title>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VN1YXZMQ9Q"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VN1YXZMQ9Q');
-    </script>
+    
+    
+  
+    <!-- Recursos locales para abrir la página sin servidor. -->
+    <script src="../../data/datos-locales.js"></script>
+    <script src="../../js/datos.js"></script>
+    <script src="../../js/ui.js"></script>
+    <script defer src="../../js/analytics.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="../../../../index.html">Home</a>
+        <a class="navbar-brand fw-bold" href="../../../../index.html" data-i18n="nav.inicio">Inicio</a>
         <div class="nav-ui-controls">
           <div class="dropdown">
             <button class="btn btn-lang btn-outline-secondary dropdown-toggle lang-flag-trigger" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Cambiar idioma">
-              <img id="lang-flag-img" src="../../img/5.otros_elementos/iconos-banderas/chile.png" alt="Idioma" />
+              <img id="lang-flag-img" src="../../img/5.otros_elementos/iconos-banderas/chile.webp" alt="Idioma" />
             </button>
             <ul class="dropdown-menu dropdown-menu-end lang-flag-menu">
-              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('es')" data-lang="es"><img src="../../img/5.otros_elementos/iconos-banderas/chile.png" alt="" /> Español</button></li>
-              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('pt')" data-lang="pt"><img src="../../img/5.otros_elementos/iconos-banderas/brasil.png" alt="" /> Português</button></li>
-              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="../../img/5.otros_elementos/iconos-banderas/reino-unido.png" alt="" /> English</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('es')" data-lang="es"><img src="../../img/5.otros_elementos/iconos-banderas/chile.webp" alt="" /> Español</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('pt')" data-lang="pt"><img src="../../img/5.otros_elementos/iconos-banderas/brasil.webp" alt="" /> Português</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="../../img/5.otros_elementos/iconos-banderas/reino-unido.webp" alt="" /> English</button></li>
             </ul>
           </div>
           
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Abrir menú" aria-controls="navbarNav" aria-expanded="false">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="../nosotros.html" data-i18n="nav.nosotros">Nosotros</a></li>
-            <li class="nav-item"><a class="nav-link" href="../clases_contactos.html" data-i18n="nav.clases">Clases & Horarios</a></li>
+            <li class="nav-item"><a class="nav-link" href="../clases_contactos.html" data-i18n="nav.clases">Clases y horarios</a></li>
             <li class="nav-item"><a class="nav-link" href="../noticias.html" data-i18n="nav.noticias">Noticias</a></li>
             <li class="nav-item"><a class="nav-link active" href="../galeria.html" data-i18n="nav.galeria">Galería</a></li>
             <li class="nav-item"><a class="nav-link" href="../sao_paulo.html" data-i18n="nav.saopaulo">São Paulo</a></li>
@@ -75,282 +76,282 @@
         <div class="row g-3">
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1584.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1584.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/13185c9223732106.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1597.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1597.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/52e9ce0bdb8717b2.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1598.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1598.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/a2ede6e91b686854.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1599.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1599.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/eaa3016f915d8f3b.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1612.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1612.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/2cb9148fa2c0e36c.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1698.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1698.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/b18a84c57fe48f0b.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1729.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1729.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/84ae0f1ba6931408.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1733.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1733.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/c806799c8b0c3909.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1769.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1769.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/64bc76d87444ae23.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1772.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1772.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/e90b468fcbfb7876.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1828.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1828.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/cca9279bcf4c6442.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1829.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1829.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/f32766cc0c801cce.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1838.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1838.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/f4bf003fa928e745.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1856.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1856.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/98fecd870256802b.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1868.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1868.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/074ef56919719725.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1921.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1921.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/f413684cba1763ff.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1947.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1947.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/5e7f7a75dce936c0.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1957.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_1957.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/680dc4909c468034.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2025.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2025.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/4dbeaa7032d98857.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2030.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2030.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/ef6ac5ec6514aa32.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2096.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2096.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/737ad1b6e6eb2825.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2143.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2143.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/f5ab89073071cba3.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2168.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2168.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/93f849284bebe6d0.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2189.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2189.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/987601649708edee.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2199.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2199.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/9f59eb42de2625ca.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2216.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2216.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/3238258d977bb95a.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2230.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2230.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/6a8079842b077ae7.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2241.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2241.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/38cd813fc354a694.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2257.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2257.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/6600cd9033de850a.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2261.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2261.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/89322ef37ab2822c.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2298.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2298.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/d627c82270c4593e.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2301.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2301.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/789bfb17e090f24e.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2489.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2489.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/6ba2fbad4a43e8a2.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2523.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2523.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/c5e215b3a4e16fbc.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2585.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2585.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/02601beeb1008787.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2614.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2614.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/ac90901d69196574.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2642.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2642.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/f812c52294bf67a0.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2662.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2662.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/92a99994017682b6.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2669.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2669.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/8a8a36a1b0780d9c.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2700.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2700.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/cb923d3754caccc4.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2701.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2701.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/b6d86c6174907118.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2709.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2709.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/8560245357a8a474.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2738.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2738.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/4c8c01e59e6b8fe0.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2748.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2748.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/d459a21e3b746ca8.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2750.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2750.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/bbe3253e1758a5df.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2763.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2763.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/696f1d317fbd34ae.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2782.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2782.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/ba8774e5ae9864ac.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2783.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2783.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/8b5459493c9f0174.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2787.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2787.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/cfd46ea9dfe64e27.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2797.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2797.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/5f17b4fcbcd977ad.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2802.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2802.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/8c62ff7b700082c0.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2806.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2806.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/300eb7f09471ce8d.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2807.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2807.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/75cd6e675e41914a.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2837.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2837.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/671bc89059ce518f.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2848.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2848.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/856356b8a93eb983.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <a href="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2849.webp" target="_blank">
-              <img src="../../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/_MG_2849.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
+              <img src="../../img/miniaturas/6525352466eef237.webp" class="img-fluid galeria-img w-100" style="height:200px;object-fit:cover;" loading="lazy" alt="Días Intensivo Capoeira Raça y Organização Onça 2026"/>
             </a>
           </div>
         </div>

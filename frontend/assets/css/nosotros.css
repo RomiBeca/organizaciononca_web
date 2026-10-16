@@ -2,7 +2,7 @@
 .hero-nosotros {
       min-height: 68vh;
     padding-top: 180px; /* 👈 clave */
-  background: url("../img/5.otros_elementos/Wallpaper/Gemini_Generated_Image_1.png") no-repeat center center;
+  background: url("../img/5.otros_elementos/Wallpaper/Gemini_Generated_Image_1.webp") no-repeat center center;
   background-size: cover;
 }
 
@@ -58,4 +58,30 @@
   #historiaPhoto  { width: 100%; }
   #camiloPhoto    { width: 70%; }
   #felipePhoto    { width: 65%; }
+}
+
+/* Fichas de profesores: cada fotografía y biografía forman una unidad. */
+.equipo-section { background: #151515; }
+.equipo-intro { color: #bbb; font-size: 1.08rem; }
+.equipo-fichas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.profesor-ficha { overflow: hidden; border: 1px solid #3b3b3b; border-radius: 14px; background: #222; }
+.profesor-ficha__foto { padding: 24px 24px 0; background: #111; border-bottom: 3px solid #ffc107; }
+.profesor-ficha #camiloPhoto,
+.profesor-ficha #felipePhoto {
+  display: block;
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  object-position: center bottom;
+}
+.profesor-ficha__contenido { padding: 30px; }
+.profesor-ficha .profesor-ficha__grado { display: inline-block; margin: 0 0 16px; padding: 6px 12px; border: 1px solid #756022; border-radius: 5px; color: #ffd04a; font-size: .85rem; font-weight: 700; }
+.profesor-ficha h3 { margin-bottom: 26px; color: #fff; font-size: clamp(1.65rem, 2.5vw, 2.1rem); line-height: 1.18; }
+.profesor-ficha h4 { margin: 24px 0 8px; color: #ffc107; font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.profesor-ficha p { margin-bottom: 0; color: #ddd; text-align: left; line-height: 1.75; }
+@media (max-width: 767px) {
+  .equipo-fichas { grid-template-columns: 1fr; gap: 32px; }
+  .profesor-ficha__foto { padding: 18px 18px 0; }
+  .profesor-ficha #camiloPhoto, .profesor-ficha #felipePhoto { height: 440px; }
+  .profesor-ficha__contenido { padding: 24px; }
 }
