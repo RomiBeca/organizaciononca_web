@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Preventa de la polera Homenaje a Mestre Chita, Intensivo Casa dos Capoeiras Chile 2027. Conoce su sentido y reserva la tuya por WhatsApp." />
+    <link rel="canonical" href="https://organizacaooncachile.cl/frontend/assets/page/noticia_polera_mestre_chita_2027.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://organizacaooncachile.cl/frontend/assets/page/noticia_polera_mestre_chita_2027.html" />
+    <meta property="og:title" content="Preventa: polera Homenaje a Mestre Chita" />
+    <meta property="og:description" content="Polera oficial del Intensivo Casa dos Capoeiras Chile 2027. ¡Reserva la tuya por WhatsApp!" />
+    <meta property="og:image" content="https://organizacaooncachile.cl/frontend/assets/img/7.Noticias/4.poleraMestreChita2027/poleraMestreChita2027.jpg" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:site_name" content="Organização Onças Chile" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Preventa: polera Homenaje a Mestre Chita" />
+    <meta name="twitter:description" content="Polera oficial del Intensivo Casa dos Capoeiras Chile 2027. ¡Reserva la tuya por WhatsApp!" />
+    <meta name="twitter:image" content="https://organizacaooncachile.cl/frontend/assets/img/7.Noticias/4.poleraMestreChita2027/poleraMestreChita2027.jpg" />
+    <link rel="icon" type="image/webp" href="../img/2.logos/organizaçãoOnça_jaguar.webp" />
+
+    <!-- BOOTSTRAP -->
+    <link href="../vendor/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/noticia_evento.css" />
+
+    <title>Polera Homenaje a Mestre Chita – Organização Onças</title>
+
+    <!-- Recursos locales para abrir la página sin servidor. -->
+    <script src="../data/datos-locales.js"></script>
+    <script src="../js/datos.js"></script>
+    <script src="../js/ui.js"></script>
+    <script defer src="../js/analytics.js"></script>
+
+    <style>
+      /* Estilos propios de esta noticia */
+      .polera-afiche-btn {
+        display: block;
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+        background: none;
+        cursor: zoom-in;
+      }
+      .polera-afiche-btn img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      }
+      .polera-dato {
+        padding: 1.5rem;
+        text-align: center;
+        border: 2px solid rgba(255, 193, 7, 0.3);
+        background: rgba(255, 193, 7, 0.05);
+        height: 100%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .polera-dato .icono { font-size: 2rem; margin-bottom: 0.8rem; line-height: 1; }
+      .polera-dato h3 { font-size: 0.9rem; color: #ffc107; font-weight: 600; margin: 0 0 0.5rem 0; }
+      .polera-dato p { font-size: 0.95rem; color: var(--onca-text); margin: 0; }
+      .polera-pasos { counter-reset: paso; list-style: none; padding: 0; margin: 0 0 1.5rem 0; }
+      .polera-pasos li {
+        counter-increment: paso;
+        position: relative;
+        padding-left: 2.8rem;
+        margin-bottom: 1rem;
+        color: var(--onca-text);
+        line-height: 1.6;
+      }
+      .polera-pasos li::before {
+        content: counter(paso);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: #ffc107;
+        color: #000;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn-whatsapp-reserva {
+        background: #25d366;
+        color: #000;
+        font-weight: 700;
+        padding: 0.8rem 1.6rem;
+        border-radius: 30px;
+        border: 0;
+      }
+      /* Introducción (sección 2): al lado del afiche, con línea amarilla a la izquierda */
+      .polera-intro {
+        border-left: 4px solid #ffc107;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .polera-intro__etiqueta {
+        display: inline-block;
+        background: #ffc107;
+        color: #000;
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        margin-bottom: 1.25rem;
+      }
+      .polera-intro p {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        color: var(--onca-text);
+        margin-bottom: 1rem;
+      }
+      .polera-intro .polera-intro__destacado {
+        color: #ffc107;
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin: 1.5rem 0;
+      }
+      @media (max-width: 576px) {
+        .polera-intro { padding-left: 1rem; }
+        .polera-intro p { font-size: 1.05rem; }
+        .polera-intro .polera-intro__destacado { font-size: 1.2rem; }
+      }
+      /* Fotos al costado derecho de las secciones 3 y 4 */
+      .polera-foto-lateral {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+      @media (min-width: 768px) {
+        .polera-foto-lateral { margin-right: 0; }
+      }
+      .btn-whatsapp-reserva:hover,
+      .btn-whatsapp-reserva:focus-visible { background: #1ebe5a; color: #000; }
+    </style>
+  </head>
+
+  <body>
+    <!-- ========================================================= -->
+    <!-- NAVBAR -->
+    <!-- ========================================================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../../../index.html" data-i18n="nav.inicio">Inicio</a>
+
+        <div class="nav-ui-controls">
+          <div class="dropdown">
+            <button class="btn btn-lang btn-outline-secondary dropdown-toggle lang-flag-trigger" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Cambiar idioma">
+              <img id="lang-flag-img" src="../img/5.otros_elementos/iconos-banderas/chile.webp" alt="Idioma" />
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end lang-flag-menu">
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('es')" data-lang="es"><img src="../img/5.otros_elementos/iconos-banderas/chile.webp" alt="" /> Español</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('pt')" data-lang="pt"><img src="../img/5.otros_elementos/iconos-banderas/brasil.webp" alt="" /> Português</button></li>
+              <li><button class="dropdown-item lang-flag-btn" onclick="uiSetLang('en')" data-lang="en"><img src="../img/5.otros_elementos/iconos-banderas/reino-unido.webp" alt="" /> English</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="clases_contactos.html" data-i18n="nav.clases">Clases y horarios</a></li>
+            <li class="nav-item"><a class="nav-link" href="noticias.html" data-i18n="nav.noticias">Noticias</a></li>
+            <li class="nav-item"><a class="nav-link" href="galeria.html" data-i18n="nav.galeria">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="sao_paulo.html" data-i18n="nav.saopaulo">São Paulo</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========================================================= -->
+    <!-- IDIOMAS                                                    -->
+    <!-- ESPAÑOL: se ve tal cual está escrito en este archivo.      -->
+    <!-- Puedes editar los textos aquí directamente.               -->
+    <!-- PORTUGUÉS / INGLÉS: los textos con data-i18n="polera.xxx"  -->
+    <!-- se toman de frontend/assets/data/traducciones.json (y de   -->
+    <!-- datos-locales.js). Si cambias el sentido de una frase en   -->
+    <!-- español, actualiza también su traducción allí.             -->
+    <!-- Ojo: en portugués/inglés no se conservan <b> ni <strong>   -->
+    <!-- puestos DENTRO de un texto con data-i18n.                  -->
+    <!-- Si no ves un cambio, recarga con Ctrl + F5.                -->
+    <!-- ========================================================= -->
+
+    <!-- ========================================================= -->
+    <!-- TÍTULO DE LA NOTICIA                                       -->
+    <!-- ========================================================= -->
+    <section class="text-center" style="background-color: var(--onca-bg-section); padding-top: 6rem; padding-bottom: 1.5rem;">
+      <div class="container text-white">
+        <div class="hero-evento-badge" style="margin-bottom: 1rem;" data-i18n="polera.badge">Preventa</div>
+        <h1 class="fw-bold hero-evento-titulo" data-i18n="polera.titulo">Homenaje a Mestre Chita</h1>
+        <p class="hero-evento-fecha" data-i18n="polera.sub">Intensivo Casa dos Capoeiras · Chile 2027</p>
+      </div>
+
+      <!-- Botón compartir (esquina superior derecha) -->
+      <div style="position: fixed; top: 80px; right: 20px; z-index: 1000;">
+        <div class="dropdown">
+          <button class="btn btn-warning dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.9rem; padding: 0.5rem 1rem;" data-i18n="polera.compartir">
+            ↗ Compartir
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="https://wa.me/?text=Preventa%20de%20la%20polera%20Homenaje%20a%20Mestre%20Chita%20-%20Intensivo%20Casa%20dos%20Capoeiras%20Chile%202027%20https%3A%2F%2Forganizacaooncachile.cl%2Ffrontend%2Fassets%2Fpage%2Fnoticia_polera_mestre_chita_2027.html" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#" id="btn-copiar-link-hero" onclick="copiarEnlaceHero(event)" data-i18n="polera.copiar">Copiar enlace</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- CONTENIDO PRINCIPAL                                        -->
+    <!-- ========================================================= -->
+    <section class="py-5" style="background-color: var(--onca-bg-section)">
+      <div class="container">
+
+        <!-- ======================================================= -->
+        <!-- SECCIONES 1 y 2: AFICHE + INTRODUCCIÓN (lado a lado)     -->
+        <!-- Izquierda: afiche (al hacer clic se abre en grande).      -->
+        <!-- Derecha: texto de entrada con el sentido del homenaje.    -->
+        <!-- En celular el texto queda debajo del afiche.              -->
+        <!-- Estilos: .polera-intro (arriba, en <style>).              -->
+        <!-- ======================================================= -->
+        <div class="row align-items-center g-4 g-lg-5 mb-5">
+
+          <!-- SECCIÓN 1: AFICHE DE LA PREVENTA -->
+          <div class="col-lg-6">
+            <button type="button" class="polera-afiche-btn" data-bs-toggle="modal" data-bs-target="#modalAfiche" aria-label="Ver afiche en grande">
+              <img src="../img/7.Noticias/4.poleraMestreChita2027/poleraMestreChita2027.jpg" alt="Afiche de preventa de la polera Homenaje a Mestre Chita, Intensivo Casa dos Capoeiras Chile 2027" />
+            </button>
+            <p class="text-center text-body-secondary mt-2 mb-0" style="font-size: 0.9rem;" data-i18n="polera.afiche.hint">Toca la imagen para verla en grande</p>
+          </div>
+
+          <!-- SECCIÓN 2: INTRODUCCIÓN (sentido del homenaje) -->
+          <!-- Cada párrafo es un <p> distinto.               -->
+          <div class="col-lg-6">
+            <div class="polera-intro">
+              <span class="polera-intro__etiqueta" data-i18n="polera.intro.etiqueta">Homenaje</span>
+              <p data-i18n="polera.sentido.p1">
+                La Casa dos Capoeiras de Santiago de Chile tiene el honor de recibir una vez más a Mestre Chita, de la roda de la Praça da República de São Paulo.
+              </p>
+              <p data-i18n="polera.sentido.p2">
+                Esta vez queremos rendirle un homenaje por ser un ejemplo de resistencia en la roda de calle y en la cultura popular brasileña.
+              </p>
+              <p class="polera-intro__destacado" data-i18n="polera.sentido.p3">
+                ¡¡No te quedes sin la tuya!!
+              </p>              
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================================================= -->
+        <!-- SECCIÓN 3: QUIÉN ES MESTRE CHITA                          -->
+        <!-- Breve reseña de su trayectoria.                           -->
+        <!-- Texto a la izquierda (col-md-8) y foto a la derecha       -->
+        <!-- (col-md-4). En celular la foto queda debajo del texto.    -->
+        <!-- ======================================================= -->
+        <section class="evento-seccion mb-5" style="background: rgba(255, 193, 7, 0.08); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #ffc107;">
+          <div class="row align-items-center g-4">
+            <!-- Columna izquierda: texto -->
+            <div class="col-md-8">
+              <h2 class="evento-titulo-seccion" style="margin-bottom: 0.75rem;" data-i18n="polera.quien.titulo">¿Quién es Mestre Chita?</h2>
+              <p class="evento-texto" style="margin-bottom: 0;" data-i18n="polera.quien.p">
+                Aloísio Brito, más conocido como Mestre Chita, es una figura central de la capoeira en São Paulo, con más de cinco décadas de participación ininterrumpida en la histórica roda de la Praça da República, fundada por Mestre Ananias. Ha participado en encuentros internacionales, como los intensivos en Chile organizados por la Casa dos Capoeiras, y en homenajes culturales.
+              </p>
+            </div>
+            <!-- Columna derecha: foto de Mestre Chita -->
+            <div class="col-md-4">
+              <img class="polera-foto-lateral" src="../img/6.Galeria/2026/1-diasIntensivoCapoeiraRazaYOnca/mestrechita.jpg" alt="Mestre Chita" loading="lazy" />
+            </div>
+          </div>
+        </section>
+
+        <!-- ======================================================= -->
+        <!-- SECCIÓN 4: EL DISEÑO (frente, espalda y confección)       -->
+        <!-- Texto a la izquierda (col-md-8) e imagen de la polera a   -->
+        <!-- la derecha (col-md-4). En celular queda debajo.           -->
+        <!-- ======================================================= -->
+        <article class="evento-article mb-5">
+          <div class="row align-items-center g-4">
+            <!-- Columna izquierda: texto -->
+            <div class="col-md-8">
+              <h2 class="evento-titulo-seccion" data-i18n="polera.diseno.titulo">El diseño</h2>
+              <p class="evento-texto">
+                <strong style="color: #ffc107;" data-i18n="polera.diseno.frente.label">Frente:</strong>
+                <span data-i18n="polera.diseno.frente">Ilustración de Mestre Chita tocando el berimbau, enmarcada en un círculo con colores y patrones de inspiración africana.</span>
+              </p>
+              <p class="evento-texto">
+                <strong style="color: #ffc107;" data-i18n="polera.diseno.espalda.label">Espalda:</strong>
+                <span data-i18n="polera.diseno.espalda">La leyenda “Mestre Chita · Santiago – Chile · Intensivo de Capoeira 2027”.</span>
+              </p>
+              <p class="evento-texto mb-0">
+                <strong style="color: #ffc107;" data-i18n="polera.diseno.material.label">Confección:</strong>
+                <span data-i18n="polera.diseno.material">Polera 100% algodón, con serigrafía hiperrealista a 8 colores.</span>
+              </p>
+            </div>
+            <!-- Columna derecha: imagen de la polera -->
+            <div class="col-md-4">
+              <img class="polera-foto-lateral" src="../img/7.Noticias/4.poleraMestreChita2027/poleraMestreChita2027.jpg" alt="Polera Homenaje a Mestre Chita, frente y espalda" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- ======================================================= -->
+        <!-- SECCIÓN 5: DETALLES DE LA PREVENTA                        -->
+        <!-- Tarjetas: precio, tallas, plazo y entrega.                -->
+        <!-- Para quitar una tarjeta, borra su <div class="col-...">   -->
+        <!-- completo.                                                 -->
+        <!-- ======================================================= -->
+        <section class="evento-seccion mb-5" style="padding: 2rem;">
+          <h2 class="evento-titulo-seccion text-center" style="margin-bottom: 2rem;" data-i18n="polera.detalles.titulo">Detalles de la preventa</h2>
+
+          <div class="row g-3 justify-content-center">
+            <!-- Tarjeta: PRECIO -->
+            <div class="col-sm-6 col-lg-3">
+              <div class="polera-dato">
+                <div class="icono" aria-hidden="true">💲</div>
+                <h3 data-i18n="polera.precio.titulo">Precio</h3>
+                <p data-i18n="polera.precio">$20.000 CLP </p>
+                <p><b>(en Brasil: R$ 120,00)</b></p>
+              </div>
+            </div>
+
+            <!-- Tarjeta: TALLAS -->
+            <div class="col-sm-6 col-lg-3">
+              <div class="polera-dato">
+                <div class="icono" aria-hidden="true">👕</div>
+                <h3 data-i18n="polera.tallas.titulo">Tallas</h3>
+                <p class="text-center" data-i18n="polera.tallas">Consulta por las tallas disponibles</p>
+              </div>
+            </div>
+
+            <!-- Tarjeta: PLAZO DE LA PREVENTA -->
+            <div class="col-sm-6 col-lg-3">
+              <div class="polera-dato">
+                <div class="icono" aria-hidden="true">📅</div>
+                <h3 data-i18n="polera.plazo.titulo">Preventa hasta</h3>
+                <p data-i18n="polera.plazo">15 de enero de 2027</p>
+              </div>
+            </div>
+
+            <!-- Tarjeta: ENTREGA -->
+            <div class="col-sm-6 col-lg-3">
+              <div class="polera-dato">
+                <div class="icono" aria-hidden="true">📦</div>
+                <h3 data-i18n="polera.entrega.titulo">Entrega</h3>
+                <p data-i18n="polera.entrega">A coordinar</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ======================================================= -->
+        <!-- SECCIÓN 6: CÓMO CONSEGUIR TU POLERA                       -->
+        <!-- Pasos para reservar + botones.                            -->
+        <!-- El botón verde abre WhatsApp al +56 9 6371 1123 con un    -->
+        <!-- mensaje ya escrito en el idioma elegido (ver el script    -->
+        <!-- al final). Para cambiar el número, edita "56963711123"    -->
+        <!-- en el href del botón Y en el script del final.            -->
+        <!-- ======================================================= -->
+        <section class="evento-seccion mb-5" style="background: rgba(255, 193, 7, 0.08); padding: 2rem; border-radius: 12px; border-left: 4px solid #ffc107;">
+          <h2 class="evento-titulo-seccion" data-i18n="polera.reserva.titulo">¿Cómo conseguir la tuya?</h2>
+          <ol class="polera-pasos">
+            <li data-i18n="polera.reserva.paso1">Escríbenos por WhatsApp al <b>+56 9 6371 1123</b> (@feli_donoso) indicando tu nombre, la talla y cuántas poleras quieres.</li>
+            <li data-i18n="polera.reserva.paso2">Reserva antes del 15 de enero de 2027 para asegurar el precio de preventa.</li>
+            <li data-i18n="polera.reserva.paso3">La entrega se coordina directamente por WhatsApp.</li>
+          </ol>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a class="btn btn-whatsapp-reserva" id="btn-reservar-whatsapp" href="https://wa.me/56963711123?text=Hola%21%20Quiero%20reservar%20la%20polera%20Homenaje%20a%20Mestre%20Chita%20%28Intensivo%20Casa%20dos%20Capoeiras%202027%29.%20Mi%20nombre%20es%3A%20%20%20Talla%3A%20%20%20Cantidad%3A%20" target="_blank" rel="noopener noreferrer" data-i18n="polera.reserva.btn">
+              Reservar por WhatsApp
+            </a>
+            <!-- Publicación oficial de la polera en Instagram -->
+            <a class="btn btn-outline-warning fw-bold" style="border-radius: 30px; padding: 0.8rem 1.6rem;" href="https://www.instagram.com/p/DfvHuEihZ02/" target="_blank" rel="noopener noreferrer" data-i18n="polera.reserva.insta">
+              Ver publicación en Instagram
+            </a>
+          </div>
+        </section>
+
+        <!-- ======================================================= -->
+        <!-- SECCIÓN 7: ORGANIZAN                                      -->
+        <!-- Grupos que aparecen en el afiche.                         -->
+        <!-- ======================================================= -->
+        <section class="evento-seccion mb-4 text-center">
+          <h2 class="evento-titulo-seccion" data-i18n="polera.organizan">Organizan</h2>
+          <p class="evento-texto mb-0">
+            Organização Onças · Casa dos Capoeiras · Capoeira Raça Chile
+          </p>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- MODAL: AFICHE EN GRANDE                                    -->
+    <!-- ========================================================= -->
+    <div class="modal fade" id="modalAfiche" tabindex="-1" aria-labelledby="modalAficheLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-secondary">
+            <h2 class="modal-title text-white fs-5" id="modalAficheLabel" data-i18n="polera.titulo">Homenaje a Mestre Chita</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body text-center p-0">
+            <img src="../img/7.Noticias/4.poleraMestreChita2027/poleraMestreChita2027.jpg" alt="Afiche de preventa de la polera Homenaje a Mestre Chita" style="max-width: 100%; height: auto; display: block;" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================================= -->
+    <footer class="py-4 bg-dark text-white border-top border-secondary">
+      <div class="container text-center">
+        <p class="mb-2">Organização Onças © 2026</p>
+        <a href="https://instagram.com/organizacaooncaschile" target="_blank" rel="noopener noreferrer" class="text-warning" aria-label="Instagram @organizacaooncaschile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
+        </a>
+      </div>
+    </footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/onca-widget.js"></script>
+
+    <script>
+      function copiarEnlaceHero(e) {
+        e.preventDefault();
+        const btn = document.getElementById('btn-copiar-link-hero');
+        const originalText = btn.textContent;
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          btn.textContent = window.uiT('polera.copiado');
+          setTimeout(() => { btn.textContent = originalText; }, 2000);
+        }).catch(() => {
+          btn.textContent = '✗ Error';
+        });
+      }
+
+      // Mensaje de WhatsApp ya escrito, en el idioma elegido.
+      // El texto de cada idioma está en traducciones.json → "polera.reserva.mensaje".
+      window.uiReady.then(() => {
+        const enlace = 'https://wa.me/56963711123?text=' + encodeURIComponent(window.uiT('polera.reserva.mensaje'));
+        // Aplica a los dos botones de reserva (introducción y sección 6)
+        document.querySelectorAll('#btn-reservar-whatsapp, .js-reservar-whatsapp').forEach(a => { a.href = enlace; });
+      });
+    </script>
+  </body>
+</html>
