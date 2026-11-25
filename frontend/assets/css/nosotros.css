@@ -79,6 +79,7 @@
 .profesor-ficha h3 { margin-bottom: 26px; color: #fff; font-size: clamp(1.65rem, 2.5vw, 2.1rem); line-height: 1.18; }
 .profesor-ficha h4 { margin: 24px 0 8px; color: #ffc107; font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .profesor-ficha p { margin-bottom: 0; color: #ddd; text-align: left; line-height: 1.75; }
+.profesor-ficha p.profesor-ficha__estudio { margin-top: 14px; }
 @media (max-width: 767px) {
   .equipo-fichas { grid-template-columns: 1fr; gap: 32px; }
   .profesor-ficha__foto { padding: 18px 18px 0; }
